@@ -526,7 +526,7 @@ function fitJourney(){
 }
 try{ if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fitJourney); }catch(e){}
 var lastHash=location.hash;
-window.addEventListener("hashchange",function(){ if(location.hash!=="#manage"){editing=null;confirmDel=null;} if(location.hash!==lastHash){statusMsg=null;} lastHash=location.hash; render(); window.scrollTo(0,0); });
+window.addEventListener("hashchange",function(){ if(location.hash!=="#manage"){editing=null;confirmDel=null;} if(location.hash!==lastHash){statusMsg=null;} lastHash=location.hash; render(); if(location.hash==="#gallery-list"){document.getElementById("gallery-list").scrollIntoView();}else window.scrollTo(0,0); });
 
 app.addEventListener("click",function(e){
   var t=e.target.closest("button"); if(!t) return;

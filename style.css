@@ -43,3 +43,7 @@ input[type=file]{max-width:100%;width:100%;font-size:14px}label{overflow-wrap:br
 }
 .detail .art { max-width: 42rem; margin-inline: auto; }
 .full-image-link { text-align: center; margin: .5rem 0 1rem; }
+
+.card .art,.detail .art {position:relative;isolation:isolate;contain:layout paint;}
+.art > .artifact-photo {position:absolute;inset:0;max-width:100%;max-height:100%;}
+.card-body,.detail p,.detail .factrow {min-width:0;overflow-wrap:anywhere;}

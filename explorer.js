@@ -2,9 +2,9 @@
 'use strict';
 const $=id=>document.getElementById(id),parts=window.MUSEUM_EXPLORER_OPTIONS;
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
-const base={v:1,hair:'ShortOne',hairColor:'#252535',skinColor:'#c89068',outfit:'hoodie',topColor:'#8478a8',pantsColor:'#3a4048',faceDetail:'none',expression:'chill',frames:'round',graphic:'plain',accessory:'none',glasses:false,pose:'stand',bubble:true};
+const base={v:1,hair:'ShortOne',hairColor:'#252535',skinColor:'#c89068',outfit:'hoodie',topColor:'#8478a8',pantsColor:'#3a4048',faceShape:'oval',faceDetail:'none',expression:'chill',frames:'round',graphic:'plain',accessory:'none',glasses:false,pose:'stand',bubble:true};
 const key='museum-explorer:'+String(window.MUSEUM_SETTINGS?.collectionId||'default');
-function normalize(value){const v=value&&typeof value==='object'?value:{};const out={...base};for(const field of ['hairColor','skinColor','topColor','pantsColor'])if(/^#[a-f\d]{6}$/i.test(v[field]||''))out[field]=v[field];if(Object.hasOwn(parts.hair,v.hair||''))out.hair=v.hair;if(['tee','hoodie','sweater','overalls','cardigan','dress'].includes(v.outfit))out.outfit=v.outfit;if(['stand','wave','peace','present'].includes(v.pose))out.pose=v.pose;for(const [f,values]of Object.entries({expression:['chill','smile','smirk','hyped'],faceDetail:['none','freckles','blush'],frames:['round','square','cat-eye'],graphic:['plain','star','stripe','frog','cat','duck','artifact','moon','mountain'],accessory:['none','headphones','beanie','bow','sprout','duck','ufo']}))if(values.includes(v[f]))out[f]=v[f];for(const f of ['glasses','bubble'])if(typeof v[f]==='boolean')out[f]=v[f];return out}
+function normalize(value){const v=value&&typeof value==='object'?value:{};const out={...base};for(const field of ['hairColor','skinColor','topColor','pantsColor'])if(/^#[a-f\d]{6}$/i.test(v[field]||''))out[field]=v[field];if(Object.hasOwn(parts.hair,v.hair||''))out.hair=v.hair;if(['tee','hoodie','sweater','overalls','cardigan','dress'].includes(v.outfit))out.outfit=v.outfit;if(['stand','wave','peace','present'].includes(v.pose))out.pose=v.pose;for(const [f,values]of Object.entries({expression:['chill','smile','smirk','hyped','curious','wink'],faceShape:['oval','round','square','heart','oblong','diamond'],faceDetail:['none','freckles','blush'],frames:['round','square','cat-eye'],graphic:['plain','star','stripe','frog','cat','duck','artifact','moon','mountain'],accessory:['none','headphones','beanie','bow','sprout','duck','ufo']}))if(values.includes(v[f]))out[f]=v[f];for(const f of ['glasses','bubble'])if(typeof v[f]==='boolean')out[f]=v[f];return out}
 let explorer={...base};try{explorer=normalize(JSON.parse(localStorage.getItem(key)))}catch{}
 let requestId;try{requestId=new URLSearchParams(location.search).get('exhibit')}catch{}
 const entry=requestId?(window.EXHIBITS||[]).find(e=>e.id===requestId&&e.published!==false):null;
@@ -43,8 +43,73 @@ function headSVG(layer='front',model=explorer){const {hair,hairColor:h,skinColor
  if(hair==='HighPuff'){back=shape('M143-9Q139-30 158-36Q169-54 186-41Q209-49 217-29Q240-24 232-3Q245 15 225 29Q216 49 195 39Q176 53 161 37Q138 43 133 22Q114 8 129-8Z');front=shape(centerCap)+strand('M125 74Q151 56 175 49M235 74Q211 56 185 49');}
  if(hair==='Bun'||hair==='SpaceBuns'){back=hair==='Bun'?shape('M143 10Q138-20 166-31Q195-43 216-17Q234 7 213 27Q187 43 158 29Z'):shape('M75 34Q64 2 91-13Q123-27 141 2Q157 31 130 48Q97 64 75 34Z')+shape('M285 34Q296 2 269-13Q237-27 219 2Q203 31 230 48Q263 64 285 34Z');front=shape(centerCap)+strand('M180 29V50');}
  if(hair==='Ponytail'){back=shape('M233 57Q274 28 293 62Q312 92 291 129Q270 165 297 218Q264 224 246 197Q231 173 247 130Q259 94 231 91Z');front=shape(shortCap)+strand('M137 47Q180 30 229 54');}
- if(hair==='BantuKnots'){back='';for(const [x,y]of [[108,37],[141,12],[180,4],[219,12],[252,37]])back+=shape(`M${x-11} ${y+6}L${x-10} ${y+52}H${x+10}L${x+11} ${y+6}Z`)+shape(`M${x-17} ${y+9}Q${x-26} ${y-10} ${x-8} ${y-20}Q${x+12} ${y-27} ${x+19} ${y-9}Q${x+27} ${y+8} ${x+10} ${y+15}Z`)+strand(`M${x-11} ${y-5}q10-8 20 1`);front=shape(centerCap);}
- if(hair==='Twists'||hair==='Locs'){back='';const isLoc=hair==='Locs';for(const [x,top,len]of [[101,69,161],[121,49,187],[240,49,187],[260,69,161]]){back+=shape(`M${x-9} ${top}Q${x-14} ${top+55} ${x-10} ${top+len-9}Q${x} ${top+len+9} ${x+10} ${top+len-9}Q${x+14} ${top+55} ${x+9} ${top}Z`);if(!isLoc)for(let y=top+15;y<top+len-12;y+=20)back+=strand(`M${x-7} ${y}q14 7 0 14`);else back+=strand(`M${x-2} ${top+17}q-4 50 1 ${len-40}`);}front=shape(centerCap);for(const [x,y]of [[127,57],[151,41],[177,34],[203,41],[227,57]])front+=shape(`M${x-8} ${y}Q${x-14} ${y+24} ${x-8} ${y+41}Q${x} ${y+53} ${x+8} ${y+41}Q${x+14} ${y+24} ${x+8} ${y}Z`);}
+ // Soft, narrow reflections keep the texture legible even with very dark swatches.
+ const light=d=>`<path d="${d}" fill="none" stroke="#fff6e4" opacity=".32" stroke-width="3" stroke-linecap="round"/>`;
+ if(hair==='Afro'||hair==='CoilyCrop'||hair==='HighPuff'){
+   const coils=hair==='Afro'?[[99,49],[128,35],[161,24],[207,31],[244,44],[270,66],[84,100],[272,115]]:
+     hair==='HighPuff'?[[147,0],[160,-17],[184,-25],[207,-14],[216,6]]:[[123,54],[153,39],[181,43],[208,38],[235,55]];
+   const curls=coils.map(([x,y])=>light(`M${x} ${y}q0-9 9-9q6 0 7 5`)).join('');
+   if(hair==='HighPuff')back+=curls;else front+=curls;
+ }
+ if(hair==='BantuKnots'){
+   front=shape(shortCap);
+   for(const [x,y,angle] of [[107,58,-28],[132,34,-15],[164,23,-5],[199,23,7],[231,35,18],[254,59,28]]){
+     front+=`<g transform="translate(${x} ${y}) rotate(${angle})">`+
+       shape('M-17 8Q-22 0-13-6Q-12-16-4-18Q-1-28 6-22Q14-20 12-12Q21-8 17 1Q20 12 4 14Q-10 16-17 8Z')+
+       light('M-12 3Q-3 9 11 2M-8-8Q1-3 8-9')+'</g>';
+   }
+ }
+ // Each hanging strand has its own bend and tip. Twists carry paired ridges,
+ // box braids interlace, and locs have gently irregular uninterrupted lengths.
+ if(['Twists','Locs','BoxBraids'].includes(hair)){
+   const loc=hair==='Locs',braid=hair==='BoxBraids';
+   const locks=[[107,66,222,-9],[121,55,243,-6],[136,48,231,-4],[222,48,234,5],[238,55,245,8],[252,65,217,12]];
+   function lock(x,y,end,bend){
+     const mid=(end-y)*.52,dy=end-y,w=braid?7:loc?8:9;
+     let art=shape(`M${x-w} ${y}q-5 ${mid/2} ${bend/2} ${mid}t${bend/2} ${dy-mid-6}q${w} 12 ${w*1.6} 1q4 -16 1 -35q-5 -${mid/2} -${bend/2} -${mid}L${x+w} ${y}Z`);
+     if(!loc){
+       const pitch=braid?11:16, steps=Math.floor((dy-6)/pitch);
+       const center=t=>x+bend*t/dy;
+       let outline=`M${x} ${y-3}`;
+       for(let j=0;j<steps;j++){
+         const t=j*pitch;
+         outline+=`Q${center(t)+w+3} ${y+t+3} ${center(t+pitch)+w*.48} ${y+t+pitch}`;
+       }
+       outline+=`Q${center(dy)+3} ${end+5} ${center(dy)-w*.55} ${end-2}`;
+       for(let j=steps-1;j>=0;j--){
+         const t=j*pitch;
+         outline+=`Q${center(t)-w-4} ${y+t+pitch*.5} ${center(t)-w*.45} ${y+t}`;
+       }
+       art=shape(outline+'Z');
+     }
+     for(let offset=12;offset<dy-12;offset+=loc?37:14){
+       const cx=x+bend*offset/dy,cy=y+offset;
+       art+=light(loc?`M${cx-3} ${cy}q-2 6 0 12`:braid?`M${cx-5} ${cy-3}l6 5 4-5`:`M${cx-5} ${cy}q7-2 10-8`);
+     }return art;
+   }
+   for(const args of locks)back+=lock(...args);
+   front=shape(centerCap)+light('M135 59q16-18 34-20M190 39q18 4 29 17');
+   if(braid)front+=strand('M178 28l1 22M156 33l6 12-10 12M206 35l-6 13 13 12M133 46l8 12-11 15M226 46l-6 14 11 13');
+   if(loc)front+=shape('M198 31Q187 59 160 76Q142 86 137 79Q135 74 147 64Q171 43 177 31Z')+light('M181 42q-11 19-28 29');
+   if(!loc&&!braid)front+=strand('M151 40q-14 8-20 23m32-25q-15 10-20 23m64-19q16 7 20 19');
+
+   front+=lock(116,69,loc?158:190,-5)+lock(246,70,loc?178:205,6);
+ }
+ if(hair==='FeedIn'){
+   front=shape(shortCap);
+   const rows=['M112 94Q106 55 142 42','M122 82Q124 40 162 33','M141 72Q149 36 183 30','M163 71Q176 40 203 34','M185 74Q200 48 224 43','M208 76Q230 58 239 57','M231 85Q244 73 248 72'];
+   for(const d of rows)front+=`<path d="${d}" fill="none" stroke="${ink}" stroke-width="9" stroke-linecap="round"/><path d="${d}" fill="none" stroke="#fff6e4" opacity=".45" stroke-width="3" stroke-dasharray="3 4" stroke-linecap="round"/>`;
+   back=shape('M240 84Q266 84 268 104Q266 143 279 180L274 198Q260 179 254 152Q242 125 240 84Z')+light('M258 110l7 6m-5 5 7 6m-4 5 7 6m-3 5 7 6');
+ }
+ if(hair==='QuiffFade'){
+   front=shape('M103 112Q100 75 111 57Q96 48 94 31Q108 43 123 39Q110 28 116 11Q134 30 161 19Q196 1 222 14Q248 18 253 47Q265 65 256 112L244 99L238 67Q218 78 196 68Q154 87 124 70L115 103Z')+
+     light('M119 43Q143 56 175 37Q204 20 225 29M137 58Q156 62 177 52')+strand('M238 65q11 0 16-7');
+ }
+ if(hair==='FlipBob'){
+   back=shape('M102 87Q90 44 127 27Q180 3 228 28Q266 44 258 100Q247 161 275 166Q258 192 224 175Q183 198 133 176Q103 193 79 170Q110 165 102 87Z');
+   front=shape('M103 113Q90 69 110 43Q143 9 192 22Q242 15 257 57Q265 81 254 111L244 100Q235 70 211 57Q182 99 133 93L147 81Q123 83 114 104Z')+
+    light('M126 61Q149 33 186 34M150 72Q179 63 196 45');
+ }
  // Keep the original option ID so previously saved explorers load the replacement cut.
  if(hair==='Cornrows'){
   back=shape('M110 49Q174 4 242 42Q272 63 260 121Q251 165 271 182Q248 203 218 189Q192 177 165 189Q119 216 89 187Q107 170 97 131Q82 77 110 49Z');
@@ -74,13 +139,26 @@ function headSVG(layer='front',model=explorer){const {hair,hairColor:h,skinColor
  const scalpFill=hair==='Bald'?'':`<path data-part="hair-underlay" d="M103 81Q103 52 138 35Q180 15 222 35Q257 52 257 81L239 70Q180 51 121 70Z" fill="${h}"/>`;
  const ears=`<ellipse cx="103" cy="134" rx="12" ry="17" fill="${skin}" stroke="${ink}" stroke-width="3.5"/><ellipse cx="257" cy="134" rx="12" ry="17" fill="${skin}" stroke="${ink}" stroke-width="3.5"/>`;
  const {expression,frames}=model;
- const eyes=expression==='hyped'?`<ellipse cx="151" cy="133" rx="10" ry="12" fill="#fffaf2" stroke="${ink}" stroke-width="2.5"/><ellipse cx="209" cy="133" rx="10" ry="12" fill="#fffaf2" stroke="${ink}" stroke-width="2.5"/><ellipse cx="152" cy="134" rx="4" ry="7" fill="${ink}"/><ellipse cx="210" cy="134" rx="4" ry="7" fill="${ink}"/>`:expression==='smile'?`<path d="M140 134q11-12 22 0m36 0q11-12 22 0" fill="none" stroke="${ink}" stroke-width="3.5" stroke-linecap="round"/>`:`<path d="M138 130Q151 124 164 130Q153 144 138 130ZM196 130Q209 124 222 130Q211 144 196 130Z" fill="#fffaf2" stroke="${ink}" stroke-width="2.5"/><ellipse cx="${expression==='smirk'?156:152}" cy="132" rx="3.8" ry="5" fill="${ink}"/><ellipse cx="${expression==='smirk'?214:210}" cy="132" rx="3.8" ry="5" fill="${ink}"/>`;
- const brows=expression==='smirk'?'M139 112l22-3m37 0q13-10 23-2':expression==='hyped'?'M140 108q10-10 22-3m36 0q12-7 22 3':'M139 111l22-2m37 0 22 2';
- const mouth=expression==='smile'?`<path d="M160 173Q180 183 200 173Q196 194 180 194Q164 194 160 173Z" fill="#fffaf2" stroke="${ink}" stroke-width="2.5"/>`:expression==='smirk'?`<path d="M165 179q21 8 36-8" fill="none" stroke="${ink}" stroke-width="3.5" stroke-linecap="round"/>`:expression==='hyped'?`<path d="M159 172Q180 185 201 172Q198 201 180 201Q162 201 159 172Z" fill="#fffaf2" stroke="${ink}" stroke-width="2.5"/><path d="M168 195Q180 183 192 195Q180 206 168 195Z" fill="#ee8caa"/>`:`<path d="M164 177q16 7 32-1" fill="none" stroke="${ink}" stroke-width="3.5" stroke-linecap="round"/>`;
+ const dot=(x,y)=>`<ellipse cx="${x}" cy="${y}" rx="8.5" ry="10" fill="${ink}"/><circle cx="${x+3}" cy="${y-4}" r="3" fill="#fffaf2"/>`;
+ const line=(d,width=4)=>`<path d="${d}" fill="none" stroke="${ink}" stroke-width="${width}" stroke-linecap="round"/>`;
+ const eyes=expression==='smile'?line('M140 135q10-13 21 0m37 0q10-13 21 0'):
+   expression==='wink'?dot(151,132)+line('M199 133q9-9 21 0'):dot(expression==='smirk'?155:151,132)+dot(expression==='curious'?212:209,132);
+ const brows=expression==='curious'||expression==='wink'?'M140 111q10 1 18 1m42-8q10-6 18-2':
+   expression==='smirk'?'M140 112l18-2m42-4q10-4 18 0':expression==='hyped'?'M140 107q9-8 18-4m42 0q9-5 18 4':'M140 111q8-2 18-1m42 0q10-1 18 1';
+ const mouth=expression==='hyped'||expression==='smile'?shape('M161 172Q180 180 200 171Q198 193 182 194Q166 194 161 172Z','#fff6e5'):
+   line(expression==='curious'?'M169 179q9-5 18-1':expression==='smirk'?'M165 179q19 6 34-8':expression==='wink'?'M162 175q17 19 35 0':'M165 176q15 11 30 0');
+ const jaw={
+   oval:'L254 158C250 199 216 218 180 218C144 218 110 199 106 158Z',
+   round:'Q269 166 239 193Q215 215 180 215Q145 215 120 194Q92 169 103 107Z',
+   square:'L254 176Q252 195 235 205L211 216H149L125 205Q108 196 106 176Z',
+   heart:'Q263 147 239 173Q219 196 186 219Q180 223 174 219Q139 196 120 172Q98 145 103 107Z',
+   oblong:'L249 171Q245 218 200 227Q180 231 160 227Q115 218 111 171Z',
+   diamond:'L261 145Q253 165 232 183L191 214Q180 221 169 214L128 183Q107 165 99 145Z'
+ }[model.faceShape]||'L254 158Q245 218 180 218Q115 218 106 158Z';
  const cheeks=model.faceDetail==='freckles'?
    '<g fill="#704b37" opacity=".78"><circle cx="129" cy="151" r="2"/><circle cx="137" cy="147" r="2"/><circle cx="143" cy="153" r="1.8"/><circle cx="216" cy="151" r="2"/><circle cx="222" cy="146" r="1.8"/><circle cx="230" cy="152" r="2"/></g>':
    model.faceDetail==='blush'?'<g fill="#cd7380" opacity=".58"><ellipse cx="133" cy="153" rx="12" ry="5"/><ellipse cx="227" cy="153" rx="12" ry="5"/></g>':'';
- const face=`<path d="M103 107 Q102 57 138 39 Q180 19 222 39 Q258 57 257 107 L254 158 C250 199 216 218 180 218 C144 218 110 199 106 158 Z" fill="${skin}" stroke="${ink}" stroke-width="3.5"/><path d="${brows}" fill="none" stroke="${ink}" stroke-width="4.5" stroke-linecap="round"/>${eyes}${cheeks}<path d="M180 142q-7 12 2 14" fill="none" stroke="${ink}" stroke-width="3" stroke-linecap="round"/>${mouth}`;
+ const face=`<path d="M103 107 Q102 57 138 39 Q180 19 222 39 Q258 57 257 107 ${jaw}" fill="${skin}" stroke="${ink}" stroke-width="3.5"/><path d="${brows}" fill="none" stroke="${ink}" stroke-width="6" stroke-linecap="round"/>${eyes}${cheeks}<path d="M177 143q10-2 11 7q0 8-10 8q-4 0-6-3" fill="none" stroke="${ink}" stroke-width="3" stroke-linecap="round"/>${mouth}`;
  const accessory=model.accessory;
  const extras=accessory==='headphones'?`<path d="M96 127Q86 29 180 24Q274 29 264 127" fill="none" stroke="${ink}" stroke-width="12"/><path d="M96 127Q86 29 180 24Q274 29 264 127" fill="none" stroke="#9384bb" stroke-width="6"/><rect x="84" y="113" width="26" height="48" rx="12" fill="#9384bb" stroke="${ink}" stroke-width="3.5"/><rect x="250" y="113" width="26" height="48" rx="12" fill="#9384bb" stroke="${ink}" stroke-width="3.5"/>`:accessory==='beanie'?`<path d="M98 88Q90 10 180 7Q270 10 262 88Z" fill="${model.topColor}" stroke="${ink}" stroke-width="3.5"/><rect x="96" y="70" width="168" height="30" rx="11" fill="${model.topColor}" stroke="${ink}" stroke-width="3.5"/><rect x="169" y="76" width="22" height="18" rx="4" fill="#fffaf2"/>`:accessory==='bow'?`<path d="M237 77Q210 43 208 68Q205 91 237 82Q263 106 267 82Q272 58 237 77Z" fill="#d97895" stroke="${ink}" stroke-width="3"/><circle cx="237" cy="80" r="7" fill="#e9a9bf" stroke="${ink}" stroke-width="3"/>`:accessory==='sprout'?`<path d="M180 30V-4" fill="none" stroke="${ink}" stroke-width="4"/><path d="M180 6Q145 9 145-16Q171-22 180 6ZM180-1Q213 0 217-27Q187-29 180-1Z" fill="#a7c685" stroke="${ink}" stroke-width="3"/>`:accessory==='duck'?`<ellipse cx="180" cy="12" rx="28" ry="19" fill="#f3cc58" stroke="${ink}" stroke-width="3"/><circle cx="195" cy="-9" r="18" fill="#f3cc58" stroke="${ink}" stroke-width="3"/><path d="M209-9l16 4-16 6" fill="#d98348" stroke="${ink}" stroke-width="2.5"/><circle cx="198" cy="-12" r="2.8" fill="${ink}"/><path d="M160 11q10 12 23 0" fill="none" stroke="#d8a636" stroke-width="3"/>`:accessory==='ufo'?`<path d="M161 2Q180-33 199 2" fill="#a7d9ce" stroke="${ink}" stroke-width="3"/><ellipse cx="180" cy="6" rx="43" ry="12" fill="#b6a8db" stroke="${ink}" stroke-width="3"/><path d="M161 17l-7 13m26-10v13m19-16 7 13" stroke="#bf9651" stroke-width="3" stroke-linecap="round"/>`:'';
  const specs=glasses?`<g stroke="${ink}" stroke-width="3.5" fill="#fffaf2" fill-opacity=".1">${frames==='cat-eye'?'<path d="M122 115L171 121Q178 151 150 149Q132 148 122 115ZM238 115L189 121Q182 151 210 149Q228 148 238 115Z"/>':frames==='square'?'<rect x="129" y="118" width="44" height="29" rx="8"/><rect x="187" y="118" width="44" height="29" rx="8"/>':'<circle cx="151" cy="132" r="21"/><circle cx="209" cy="132" r="21"/>'}<path d="M173 128q7-4 14 0 M129 128L103 132 M231 128L257 132" fill="none"/></g>`:'';
@@ -149,14 +227,14 @@ function sceneSVG(){const svgOpen='<svg xmlns="http://www.w3.org/2000/svg" width
  return svgOpen+`<rect width="1200" height="840" fill="#fbf5ec"/><rect x="22" y="22" width="1156" height="796" rx="28" fill="none" stroke="#d6c9b7" stroke-width="2"/>${textBlock(museumTitle,64,66,650,18,'#155b56','Arial',2,22)}<text x="64" y="122" font-family="Arial" font-size="13" letter-spacing="3" fill="#623f65">A MOMENT IN THE MUSEUM</text>${textBlock(entry.object,64,171,655,37,'#254742','Georgia',2,41)}<rect x="64" y="220" width="650" height="410" rx="18" fill="#fffaf2" stroke="#d6c9b7" stroke-width="2"/>${art}<path d="M98 651h580" stroke="#d6c9b7" stroke-width="3"/><rect x="289" y="655" width="202" height="37" rx="9" fill="#e3e8d6"/><text x="390" y="680" text-anchor="middle" font-family="Arial" font-size="17" fill="#155b56">EXHIBIT ${esc(entry.id)}</text>${bubble}<g transform="translate(819 269) scale(.94)">${avatarSVG()}</g>${textBlock(entry.photoIsReference?'Reference photo: '+entry.referenceImage.author+' · '+entry.referenceImage.license+' · Wikimedia Commons':entry.imageCredit?'Artifact photo: '+entry.imageCredit:photo?'Artifact photograph supplied by the museum.':'Prototype keepsake · illustrative placeholder, not an artifact photograph.',64,733,670,14,'#5b6f64','Arial',3,18)}<text x="64" y="797" font-family="Arial" font-size="15" letter-spacing="2" fill="#623f65">LOOK CLOSER. KEEP WONDERING.</text><text x="1090" y="797" font-family="Arial" font-size="28" fill="#bf9651">✦</text></svg>`;
 }
 function draw(){renderHairChoices();currentSVG=sceneSVG();$('scene').innerHTML=currentSVG;for(const b of document.querySelectorAll('[data-pose]'))b.setAttribute('aria-pressed',String(explorer.pose===b.dataset.pose));for(const b of document.querySelectorAll('[data-skin]'))b.setAttribute('aria-pressed',String(explorer.skinColor.toLowerCase()===b.dataset.skin));for(const b of document.querySelectorAll('[data-hair-color]'))b.setAttribute('aria-pressed',String(explorer.hairColor.toLowerCase()===b.dataset.hairColor));$('save-photo').disabled=exporting||imageState==='loading'||!!(requestId&&!entry)||entry?.photoBoothEnabled===false;$('save-photo').textContent=entry?'Save photo…':'Save explorer…';scheduleShare()}
-function setControls(){for(const [id,k]of [['hair-style','hair'],['hair-color','hairColor'],['skin-color','skinColor'],['outfit','outfit'],['top-color','topColor'],['pants-color','pantsColor'],['expression','expression'],['face-detail','faceDetail'],['frames','frames'],['graphic','graphic'],['accessory','accessory']])$(id).value=explorer[k];$('glasses').checked=explorer.glasses;$('frames').disabled=!explorer.glasses;$('show-bubble').checked=explorer.bubble}
+function setControls(){for(const [id,k]of [['hair-style','hair'],['hair-color','hairColor'],['skin-color','skinColor'],['outfit','outfit'],['top-color','topColor'],['pants-color','pantsColor'],['expression','expression'],['face-shape','faceShape'],['face-detail','faceDetail'],['frames','frames'],['graphic','graphic'],['accessory','accessory']])$(id).value=explorer[k];$('glasses').checked=explorer.glasses;$('frames').disabled=!explorer.glasses;$('show-bubble').checked=explorer.bubble}
 for(const [value,part]of Object.entries(parts.hair)){const o=document.createElement('option');o.value=value;o.textContent=part.label;$('hair-style').append(o)}
 const skinTones=[['#fff0e6','Very light warm'],['#f1dcd2','Very light cool'],['#f2d3b5','Light golden'],['#e8c2ab','Light neutral'],['#e4b495','Light warm'],['#d8ae94','Light medium neutral'],['#d09a75','Medium golden'],['#c89068','Medium warm'],['#b78972','Medium cool'],['#ac7455','Medium deep warm'],['#976d57','Medium deep neutral'],['#855940','Deep golden'],['#754b3d','Deep warm'],['#62463b','Deep neutral'],['#50362e','Very deep warm'],['#392b28','Very deep neutral']];
 const funTones=[['#b8a4e0','Lavender'],['#88bfe8','Sky blue'],['#99d3bb','Mint'],['#edabc7','Bubblegum pink'],['#f2d76d','Lemon yellow'],['#a8dc68','Bright green'],['#9275cb','Violet'],['#a5aebe','Cool gray']];
 const hairTones=[['#18191d','Black'],['#352821','Deep brown'],['#654632','Brown'],['#945d38','Chestnut'],['#ba7144','Copper'],['#df9c5d','Ginger'],['#d6b272','Golden blond'],['#ead6a7','Light blond'],['#ddd4cc','Platinum'],['#8b8e95','Gray'],['#f4f0e9','White'],['#631c2e','Burgundy'],['#b34882','Magenta'],['#8760bb','Violet'],['#2b85bc','Blue'],['#347d70','Teal'],['#6c9650','Green'],['#e89ac2','Pink'],['#f0cd49','Yellow'],['#bd3d3f','Red']];
 for(const [mount,colors,field,dataKey,label]of [['skin-swatches',[...skinTones,...funTones],'skinColor','skin','skin color'],['hair-swatches',hairTones,'hairColor','hairColor','hair color']])for(const [color,name]of colors){const b=document.createElement('button');b.type='button';b.dataset[dataKey]=color;b.style.setProperty('--skin',color);b.title=name;b.setAttribute('aria-label',name+' '+label);b.onclick=()=>{explorer[field]=color;$(field==='skinColor'?'skin-color':'hair-color').value=color;remember();draw()};$(mount).append(b)}
 
-for(const [id,k]of [['hair-style','hair'],['hair-color','hairColor'],['skin-color','skinColor'],['outfit','outfit'],['top-color','topColor'],['pants-color','pantsColor'],['expression','expression'],['face-detail','faceDetail'],['frames','frames'],['graphic','graphic'],['accessory','accessory']])$(id).oninput=()=>{explorer=normalize({...explorer,[k]:$(id).value});remember();draw()};for(const [id,k]of [['glasses','glasses'],['show-bubble','bubble']])$(id).onchange=()=>{explorer[k]=$(id).checked;setControls();remember();draw()};document.querySelectorAll('[data-pose]').forEach(b=>b.onclick=()=>{explorer.pose=b.dataset.pose;remember();draw()});
+for(const [id,k]of [['hair-style','hair'],['hair-color','hairColor'],['skin-color','skinColor'],['outfit','outfit'],['top-color','topColor'],['pants-color','pantsColor'],['expression','expression'],['face-shape','faceShape'],['face-detail','faceDetail'],['frames','frames'],['graphic','graphic'],['accessory','accessory']])$(id).oninput=()=>{explorer=normalize({...explorer,[k]:$(id).value});remember();draw()};for(const [id,k]of [['glasses','glasses'],['show-bubble','bubble']])$(id).onchange=()=>{explorer[k]=$(id).checked;setControls();remember();draw()};document.querySelectorAll('[data-pose]').forEach(b=>b.onclick=()=>{explorer.pose=b.dataset.pose;remember();draw()});
 document.querySelectorAll('[data-palette]').forEach(b=>b.onclick=()=>{const palettes={midnight:['#30333e','#555862'],lilac:['#9384bb','#3a4048'],moss:['#68775d','#d3c2a5'],clay:['#a85f4d','#30333e'],cherry:['#9b324d','#eed6d0'],ballet:['#dfabc6','#554664']};[explorer.topColor,explorer.pantsColor]=palettes[b.dataset.palette];setControls();remember();draw()});
 $('forget-explorer').onclick=()=>{if(!confirm('Forget your explorer on this browser? Your museum passport and saved photo files will stay.'))return;try{localStorage.removeItem(key)}catch{}explorer={...base};setControls();draw();$('memory-status').textContent='Explorer forgotten. New choices will be remembered when you customize again.'};
 function imageFromURL(url){return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(Error('Image could not be opened.'));img.src=url})}
@@ -195,7 +273,7 @@ $('share-photo').onclick=async()=>{if(!shareFile||$('share-photo').disabled)retu
 $('save-photo').onclick=async()=>{if(exporting||$('save-photo').disabled)return;exporting=true;draw();$('export-status').textContent='Preparing your keepsake…';try{const svg=currentSVG;const saved=await saveMuseumFile(photoFilename(),()=>photoBlob(svg));$('export-status').textContent=saved?'Your image is ready.':'Save canceled.'}catch{$('export-status').textContent='The photo could not be downloaded here. You can still take a screenshot of the preview.'}finally{exporting=false;draw()}};
 
 // Native disclosure sections shorten the editor without replacing standard form controls.
-(function organizeControls(){const host=document.querySelector('.explorer-controls'),firstColors=$('hair-color').closest('.color-fields'),secondColors=$('top-color').closest('.color-fields');const groups=[['Hair & skin',[$('hair-style').closest('label'),firstColors,...host.querySelectorAll('.swatch-group')]],['Outfit',[$('outfit').closest('label'),secondColors,$('graphic').closest('label'),host.querySelector('.palette-presets')]],['Face & extras',[$('expression').closest('label'),$('face-detail').closest('label'),$('accessory').closest('label'),$('glasses').closest('label'),$('frames').closest('label')]]];const before=host.querySelector('fieldset'),mobile=matchMedia('(max-width:760px)').matches;groups.forEach(([title,nodes],index)=>{const details=document.createElement('details');details.className='explorer-control-group';details.open=!mobile||index===0;const summary=document.createElement('summary');summary.textContent=title;const body=document.createElement('div');nodes.forEach(n=>body.append(n));details.append(summary,body);host.insertBefore(details,before)})})();
+(function organizeControls(){const host=document.querySelector('.explorer-controls'),firstColors=$('hair-color').closest('.color-fields'),secondColors=$('top-color').closest('.color-fields');const groups=[['Hair & skin',[$('hair-style').closest('label'),firstColors,...host.querySelectorAll('.swatch-group')]],['Outfit',[$('outfit').closest('label'),secondColors,$('graphic').closest('label'),host.querySelector('.palette-presets')]],['Face & extras',[$('face-shape').closest('label'),$('expression').closest('label'),$('face-detail').closest('label'),$('accessory').closest('label'),$('glasses').closest('label'),$('frames').closest('label')]]];const before=host.querySelector('fieldset'),mobile=matchMedia('(max-width:760px)').matches;groups.forEach(([title,nodes],index)=>{const details=document.createElement('details');details.className='explorer-control-group';details.open=!mobile||index===0;const summary=document.createElement('summary');summary.textContent=title;const body=document.createElement('div');nodes.forEach(n=>body.append(n));details.append(summary,body);host.insertBefore(details,before)})})();
 $('expand-preview').onclick=()=>{const large=document.body.classList.toggle('large-explorer-preview');$('expand-preview').setAttribute('aria-pressed',String(large));$('expand-preview').textContent=large?'Compact preview':'Larger preview'};
 if(entry){document.title='Pose with '+entry.object+' · '+museumTitle;$('back-link').href='index.html#exhibit/'+encodeURIComponent(entry.id);$('back-link').textContent='← Back to '+entry.object;$('explorer-eyebrow').textContent='Museum photo booth';$('explorer-heading').textContent='You. This object. A story.';$('explorer-lede').textContent='Pose beside '+entry.object+', choose a bubble, and keep a little piece of your visit.';$('preview-label').textContent='Your museum keepsake';$('browse-artifacts').hidden=true;$('photo-note').textContent=entry.image?'Preparing the artifact photo…':'No artifact photo has been added yet. This labeled illustration lets you try the photo booth.';$('bubble-note').textContent=entry.photoPhrase?'This exhibit’s phrase was chosen by your teacher.':'A museum greeting appears until your teacher adds an exhibit phrase.';if(entry.photoBoothEnabled===false){$('scene').hidden=true;$('photo-note').textContent='The photo booth is not enabled for this exhibit.';$('bubble-control').hidden=true}}else{$('scene').classList.add('dressing-room');$('bubble-control').hidden=true;$('bubble-note').hidden=true;$('photo-note').textContent=requestId?'That exhibit is unavailable. Return to the collection and choose an available object.':'Your explorer is ready for every artifact. Open an exhibit and select “Pose with this artifact.”';if(requestId)$('preview-label').textContent='Exhibit unavailable'}
 // Thumbnail choices use the same layered artwork as the exported explorer.
@@ -206,7 +284,7 @@ $('hair-style').closest('label').after(hairBrowser);
 let hairSignature='';
 function renderHairChoices(){
   if(!hairBrowser.open)return;
-  const signature=[explorer.hairColor,explorer.skinColor].join('/');
+  const signature=[explorer.hairColor,explorer.skinColor,explorer.faceShape,explorer.faceDetail].join('/');
   const grid=hairBrowser.querySelector('.hair-grid');
   if(signature!==hairSignature){
     hairSignature=signature;
@@ -216,7 +294,7 @@ function renderHairChoices(){
       const button=document.createElement('button');
       button.type='button';
       button.dataset.style=hair;
-      button.innerHTML='<svg aria-hidden="true" viewBox="38 -12 285 303">'+headSVG('back',model)+headSVG('front',model)+'</svg>';
+      button.innerHTML='<svg aria-hidden="true" viewBox="35 -28 290 318">'+headSVG('back',model)+headSVG('front',model)+'</svg>';
       button.append(document.createTextNode(label));
       button.onclick=()=>{explorer.hair=hair;setControls();remember();draw()};
       grid.append(button);

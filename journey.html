@@ -1,0 +1,569 @@
+<!doctype html><html lang="en" data-theme="light"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><style>
+:root,:root[data-theme="dark"]{color-scheme:light;--wall:#fbf5ec;--panel:#fffaf2;--ink:#254742;--muted:#5e6d60;--line:#d6c9b7;--land:#dce1ce;--land-hi:#bfcbb1;--sea:#eeeee0;--ochre:#155b56;--ochre-soft:#e4e9d9;--display:Georgia,serif;--body:system-ui,sans-serif;--mono:ui-monospace,monospace;--g-africa:#975c46;--g-asia:#155b56;--g-oceania:#517880;--g-europe:#623f65;--g-north-america:#798c63;--g-south-america:#ad7580;--g-new-jersey:#bf9651}
+body{background:var(--wall);background-image:radial-gradient(#aa84601a .7px,transparent .7px);background-size:7px 7px}.nav{background:#fffaf2}.brand{font-family:system-ui,sans-serif;font-size:1rem;font-weight:850;letter-spacing:2px;color:#155b56}.hero{padding:26px 0 10px}.hero h1{color:#623f65;letter-spacing:-2px}.hero:after{content:'✦  A WORLD OF CONNECTIONS  ✦';font-size:11px;letter-spacing:3px;color:#8c744e;margin-top:8px}.journey,.mapbox{border-radius:24px 24px 8px 8px}.gcard{border-radius:60px 60px 8px 8px;padding:30px 22px 24px}.gcard:hover,.icard:hover{border-color:#623f65;box-shadow:0 8px 24px #623f6512}.notice{background:#f1dfc8;border-left:3px solid #b86d51;padding:12px 18px;font-size:14px}.chip:hover{border-color:#623f65;color:#623f65}.wrap{max-width:1176px}.journey svg{min-width:0}.mapbox svg{min-width:0}@media(max-width:600px){.nav .wrap{gap:10px}.chips{flex-basis:100%}.galleries{grid-template-columns:1fr}.hero h1{font-size:3rem}.mapbox{overflow-x:auto}.mapbox svg{min-width:680px}.journey{overflow-x:auto}.journey svg{min-width:500px}}
+</style></head><body>
+<title>Journey of Man</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Young+Serif&display=swap">
+<style id="jm-css">
+/* Layout: museum wall + placards. A wide migration map opens the visit, galleries follow in order of human arrival, each item reads like an exhibit label. */
+:root{
+  --wall:#edf0ed; --panel:#fbfcfa; --ink:#1a2320; --muted:#56645e; --line:#cfd8d2;
+  --land:#d5dcd5; --land-hi:#bfcabf; --sea:#e4ebe8;
+  --ochre:#a9471f; --ochre-soft:#f3e2d6; --ok:#2f6b4a; --ok-soft:#dcece1; --warn:#8a5a00; --warn-soft:#f5ead2;
+  --display:"Young Serif", Georgia, "Times New Roman", serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --g-africa:#9a4a22; --g-asia:#2f6f62; --g-oceania:#2c5f86; --g-europe:#5b4f86; --g-north-america:#3d6a32; --g-south-america:#8a3f55; --g-new-jersey:#355a5e;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --wall:#111715; --panel:#18201d; --ink:#e6ece8; --muted:#9caca5; --line:#2b3732;
+  --land:#27322e; --land-hi:#36443e; --sea:#151d1a;
+  --ochre:#e58a5c; --ochre-soft:#3a2419; --ok:#7cc79a; --ok-soft:#1c3226; --warn:#e3b65c; --warn-soft:#352a14; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --wall:#111715; --panel:#18201d; --ink:#e6ece8; --muted:#9caca5; --line:#2b3732;
+  --land:#27322e; --land-hi:#36443e; --sea:#151d1a;
+  --ochre:#e58a5c; --ochre-soft:#3a2419; --ok:#7cc79a; --ok-soft:#1c3226; --warn:#e3b65c; --warn-soft:#352a14; color-scheme:dark}
+body{background:var(--wall);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+*{box-sizing:border-box}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.nav{border-bottom:1px solid var(--line);background:var(--panel)}
+.nav .wrap{display:flex;align-items:center;gap:16px;padding-block:10px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-size:1.25rem;text-decoration:none}
+.chips{display:flex;gap:6px;overflow-x:auto;flex:1;min-width:0;padding-block:2px}
+.chip{white-space:nowrap;text-decoration:none;font-size:.875rem;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.chip[aria-current="page"]{background:var(--ink);color:var(--wall);border-color:var(--ink)}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.4rem,6vw,4.25rem)}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+h3{font-size:1.3rem}
+p{margin:0;max-width:65ch}
+main{display:flex;flex-direction:column;gap:40px;padding-block:28px 56px}
+.hero{display:grid;gap:14px}
+.lede{font-size:1.2rem;color:var(--muted)}
+.mapbox{background:var(--sea);border:1px solid var(--line);border-radius:14px;overflow-x:auto}
+.mapbox svg{display:block;width:100%;min-width:720px;height:auto}
+.map-land{fill:var(--land);stroke:var(--wall);stroke-width:1}
+.map-link:hover .map-land,.map-link:focus .map-land,.map-land.hi{fill:var(--land-hi)}
+.map-link{cursor:pointer}
+.route{fill:none;stroke:var(--ochre);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:1 7}
+.traveler{fill:var(--ochre)}
+.site{fill:var(--panel);stroke:var(--ochre);stroke-width:2.2}
+.mlabel{font-family:var(--mono);font-size:13px;fill:var(--ink);paint-order:stroke;stroke:var(--sea);stroke-width:4px;stroke-linejoin:round}
+.mlabel.date{fill:var(--ochre);font-weight:500}
+.mlabel.place{font-family:var(--display);font-size:16px;fill:var(--muted)}
+.map-caption{display:flex;gap:18px;flex-wrap:wrap;font-size:.875rem;color:var(--muted)}
+.map-caption span{display:inline-flex;align-items:center;gap:8px}
+.key-dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--ochre);background:var(--panel)}
+.key-line{width:28px;border-top:3px dotted var(--ochre)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.galleries{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.gcard{display:grid;grid-template-rows:auto 1fr auto;gap:8px;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;position:relative;overflow:hidden}
+.gcard:hover{border-color:var(--ochre)}
+.gcard .num{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.gcard .when{font-family:var(--mono);font-size:.8125rem;color:var(--ochre)}
+.gcard .counts{font-size:.875rem;color:var(--muted)}
+.gcard::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--gc)}
+.gcard.local{background:linear-gradient(135deg,var(--panel),var(--ochre-soft))}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.icard{display:flex;flex-direction:column;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.icard:hover{border-color:var(--ochre)}
+.icard .body{display:flex;flex-direction:column;gap:6px;padding:12px 14px 16px}
+.icard .meta{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.thumb{aspect-ratio:4/3;width:100%;max-width:100%;object-fit:cover;display:block;background:var(--land)}
+.ph{aspect-ratio:4/3;width:100%;display:grid;place-items:center;background:var(--gc);color:#fff;position:relative}
+.ph b{font-family:var(--display);font-weight:400;font-size:3.4rem;line-height:1}
+.ph small{position:absolute;bottom:10px;left:12px;font-family:var(--mono);font-size:.75rem;opacity:.85}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;padding:2px 9px;border-radius:999px;width:fit-content}
+.pill.on{background:var(--ok-soft);color:var(--ok)}
+.pill.soon{background:var(--warn-soft);color:var(--warn)}
+.pill.sample{background:var(--ochre-soft);color:var(--ochre)}
+.pills{display:flex;gap:6px;flex-wrap:wrap}
+.crumb{font-size:.9rem;color:var(--muted)}
+.crumb a{color:var(--muted)}
+.ghead{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:start}
+.ghead .mapbox svg{min-width:0}
+.stamp{display:inline-block;font-family:var(--mono);font-size:.875rem;border:1.5px solid var(--ochre);color:var(--ochre);padding:4px 10px;border-radius:6px;width:fit-content}
+.note{font-size:.9rem;color:var(--muted)}
+.soonlist{display:flex;flex-direction:column;gap:8px;padding:0;margin:0;list-style:none}
+.soonlist a{display:flex;justify-content:space-between;gap:12px;text-decoration:none;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:12px 14px}
+.placard{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.photo{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.label{display:flex;flex-direction:column;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:.95rem}
+.facts dt{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.facts dd{margin:0}
+.box{border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.box.know{background:var(--ochre-soft)}
+.box.think{border:1.5px dashed var(--ochre)}
+.box h3{font-family:var(--body);font-weight:700;font-size:1rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{font:inherit;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:9px;border:1.5px solid var(--ink);background:var(--ink);color:var(--wall);cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.small{padding:5px 11px;font-size:.85rem}
+.btn.danger{background:transparent;color:var(--ochre);border-color:var(--ochre)}
+.btn:disabled{opacity:.5;cursor:default}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.qrpanel{display:flex;gap:18px;align-items:center;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.qr{width:150px;height:150px;border-radius:6px;background:#fff;flex:none}
+.footer{border-top:1px solid var(--line);color:var(--muted);font-size:.875rem}
+.footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:18px}
+/* staff */
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line)}
+.tab{font:inherit;background:none;border:0;border-bottom:3px solid transparent;padding:8px 12px;cursor:pointer;color:var(--muted)}
+.tab[aria-selected="true"]{color:var(--ink);border-color:var(--ochre)}
+.tablewrap{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.acc{font-family:var(--mono);font-size:.85rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+form.edit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-weight:700;font-size:.9rem}
+.field .hint{font-size:.8rem;color:var(--muted)}
+input[type=text],select,textarea{font:inherit;font-size:1rem;padding:9px 11px;border-radius:8px;border:1.5px solid var(--line);background:var(--wall);color:var(--ink);width:100%}
+textarea{min-height:96px;resize:vertical}
+.preview{max-width:220px;border-radius:8px;border:1px solid var(--line)}
+.qrgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.qrcard{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.qrcard .qr{width:140px;height:140px}
+.qrcard .meta{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.status{font-size:.9rem;padding:10px 14px;border-radius:10px;background:var(--ok-soft);color:var(--ok)}
+.status.err{background:var(--warn-soft);color:var(--warn)}
+.status.busy{background:var(--ochre-soft);color:var(--ochre)}
+@media (max-width:760px){
+  .ghead,.placard{grid-template-columns:1fr}
+  form.edit{grid-template-columns:1fr}
+}
+.journey{background:var(--sea);border:1px solid var(--line);border-radius:14px;overflow-x:auto;display:flex;justify-content:center;padding-block:12px}
+.journey svg{display:block;width:100%;max-width:760px;min-width:520px;height:auto}
+.jlink{fill:none;stroke:var(--ochre);stroke-width:3;stroke-linecap:round;stroke-dasharray:1 8}
+.jarrow{fill:none;stroke:var(--ochre);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.jnode rect{fill:var(--panel);stroke:var(--line);stroke-width:1.5}
+.jnode:hover rect,.jnode:focus rect{stroke:var(--ochre);stroke-width:2.5}
+.jnode.start rect{fill:var(--ochre-soft);stroke:var(--ochre);stroke-width:2.5}
+.jnode.local rect{stroke-dasharray:6 5}
+.jnode .sil path{fill:var(--land-hi);stroke:none}
+.jnode.start .sil path{fill:var(--ochre)}
+.jname{font-family:var(--display);font-size:21px;fill:var(--ink)}
+.jname.big{font-size:32px}
+.jdate{font-family:var(--mono);font-size:14px;font-weight:500;fill:var(--ochre)}
+.jhow{font-family:var(--body);font-size:14px;fill:var(--muted)}
+.jout{font-family:var(--display);font-size:20px;fill:var(--ochre)}
+@media (prefers-reduced-motion:reduce){.traveler{display:none}}
+</style>
+<div id="app"></div>
+<script type="application/json" id="jm-data">{"nextNo":5,"items":[{"id":"s1axe","no":"JM-001","gallery":"africa","name":"Replica Hand Axe","era":"Style used from about 1.7 million to 130,000 years ago","origin":"East Africa","place":"Case 1","status":"display","description":"Long before our species appeared, early human ancestors in Africa shaped stones like this one by striking them with harder rocks. A hand axe could cut meat, chop wood, and dig for roots. This is a modern replica made the same way.","fact":"Hand axes are one of the longest-used tools in history. People made them in nearly the same shape for over a million years.","question":"What is a tool you use every day? How long do you think people will keep using it?","photo":"","added":"2026-10-20","sample":true},{"id":"s2bone","no":"JM-002","gallery":"asia","name":"Replica Oracle Bone","era":"About 3,200 years ago","origin":"Anyang, China","place":"Case 3","status":"coming","description":"Rulers of China's Shang dynasty asked questions about the future by carving them into bones and turtle shells, then heating them until they cracked. The carvings are the oldest known Chinese writing.","fact":"Some characters on oracle bones still look a lot like Chinese characters used today.","question":"If you could ask one question about the future, what would it be?","photo":"","added":"2026-10-22","sample":true},{"id":"s3cave","no":"JM-003","gallery":"europe","name":"Cave Painting Panel (Reproduction)","era":"About 17,000 years ago","origin":"Lascaux Cave, France","place":"Wall B","status":"display","description":"Ice Age artists painted horses, bulls, and deer deep inside caves using red and yellow ochre and black charcoal. This panel is a hand-painted reproduction of animals from the Lascaux cave.","fact":"The real Lascaux cave was discovered in 1940 by four teenagers following their dog.","question":"Why do you think people painted animals in dark caves where few could see them?","photo":"","added":"2026-10-24","sample":true},{"id":"s4scoop","no":"JM-004","gallery":"new-jersey","name":"Cranberry Harvest Scoop","era":"Early 1900s","origin":"Pine Barrens, New Jersey","place":"Case 7","status":"display","description":"Workers in the Pine Barrens used wooden scoops with long teeth to comb cranberries off the vines. New Jersey has grown cranberries for more than 150 years and is still one of the top cranberry states.","fact":"Cranberries have pockets of air inside, so they float. Farmers flood the bogs and the berries rise to the top.","question":"What crops or foods come from near where you live?","photo":"","added":"2026-10-25","sample":true}]}</script>
+<script src="exhibits.js"></script>
+<script id="jm-main">
+(function(){
+"use strict";
+var ARTIFACT_URL = "";
+var SKELETON_OPEN = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>\n';
+var SKELETON_CLOSE = "\n\n</body></html>";
+var PAGE_TOP = '<title>Journey of Man</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Young+Serif&display=swap">\n';
+var QR_TAG = '<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"><\/script>';
+
+var GALLERIES = [
+ {id:"africa", name:"Africa", title:"Africa: Where It Began", when:"Our species appears about 300,000 years ago",
+  intro:"Every person alive today shares ancestors who lived in Africa. The oldest fossils of our species, Homo sapiens, come from Jebel Irhoud in Morocco (about 300,000 years old) and Omo Kibish in Ethiopia (about 230,000 years old). For most of human history, all people lived in Africa."},
+ {id:"asia", name:"Asia", title:"Asia", when:"Humans spread here about 70,000 to 60,000 years ago",
+  intro:"Around 70,000 to 60,000 years ago, small groups left Africa and moved into Asia, likely along the coast of the Arabian Peninsula and through the Middle East. Over thousands of years their descendants spread across South Asia, East Asia, and north into Siberia."},
+ {id:"oceania", name:"Australia & Oceania", title:"Australia & Oceania", when:"Humans arrive 65,000 to 50,000 years ago",
+  intro:"To reach Australia, people had to cross open sea by boat, even when sea levels were low. Tools found at Madjedbebe in northern Australia suggest people arrived at least 50,000 and possibly 65,000 years ago. Much later, about 3,000 years ago, expert sailors began settling the far islands of the Pacific."},
+ {id:"europe", name:"Europe", title:"Europe", when:"Humans arrive about 45,000 years ago",
+  intro:"Modern humans reached Europe about 45,000 years ago, during the Ice Age. They shared the land with Neanderthals for thousands of years, and many people today carry a little Neanderthal DNA. Europe's Ice Age artists painted caves such as Lascaux and Chauvet."},
+ {id:"north-america", name:"North America", title:"North America", when:"Humans here at least 21,000 years ago",
+  intro:"During the Ice Age, so much water was frozen in glaciers that a land bridge called Beringia joined Siberia and Alaska. People crossed into the Americas over land and possibly by boat along the coast. Footprints at White Sands, New Mexico, show people were here at least 21,000 years ago."},
+ {id:"south-america", name:"South America", title:"South America", when:"Humans here at least 14,500 years ago",
+  intro:"People spread south quickly. At Monte Verde in southern Chile, scientists found a camp about 14,500 years old, with wooden huts, tools, and leftover food. From the Andes Mountains to the Amazon rainforest, people built new ways of life in every environment."},
+ {id:"new-jersey", name:"New Jersey", title:"New Jersey: Our Local Story", when:"People here at least 12,000 years", local:true,
+  intro:"Here the journey comes home to New Jersey. People have lived in the land we now call New Jersey for at least 12,000 years. The Lenape people, whose homeland is called Lenapehoking, lived here long before European settlers arrived in the 1600s. This wing tells the story of our state and our town."}
+];
+var GMAP = {}; GALLERIES.forEach(function(g,i){g.n=i+1;GMAP[g.id]=g;});
+
+var data;
+try{ data = JSON.parse(document.getElementById("jm-data").textContent); }catch(e){ data = {nextNo:1, items:[]}; }
+data.items = (window.EXHIBITS || []).filter(function(e){return e.gallery && e.published!==false;}).map(function(e){return {id:e.id,no:e.id,gallery:e.gallery,name:e.object,era:e.period,origin:e.origin||'See exhibit story',place:'',status:'display',description:e.story,fact:e.connection,question:e.look,photo:e.image||'',sample:e.demo};});
+var art=null, dl=null, canEdit=false, readOnlyReason="";
+var staffTab="items", editing=null, confirmDel=null, statusMsg=null, photoWork=null;
+var flash=null; try{ flash=sessionStorage.getItem("jm-flash"); sessionStorage.removeItem("jm-flash"); }catch(e){}
+if(flash) statusMsg={kind:"ok",text:flash};
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function baseURL(){ return ARTIFACT_URL || String(location.href).split("#")[0]; }
+function itemURL(it){ return baseURL()+"#item-"+it.id; }
+function galleryURL(g){ return baseURL()+"#"+g.id; }
+function itemsIn(gid,status){ return data.items.filter(function(it){return it.gallery===gid && (!status||it.status===status);}).sort(function(a,b){return a.no<b.no?-1:1;}); }
+function prefersReduced(){ try{return matchMedia("(prefers-reduced-motion: reduce)").matches;}catch(e){return false;} }
+
+/* ---------- map ---------- */
+var W=1000,H=378;
+function proj(p,noWrap){ var lon=p[0],lat=p[1]; if(!noWrap && lon<-170) lon+=360; return [ (lon+170)/360*W, (80-lat)/136*H ]; }
+function f(p){return p[0].toFixed(1)+" "+p[1].toFixed(1);}
+function closedPath(pts){
+  var P=pts.map(function(p){return proj(p);}),n=P.length,d="M"+f(P[0]);
+  for(var i=0;i<n;i++){var p0=P[(i-1+n)%n],p1=P[i],p2=P[(i+1)%n],p3=P[(i+2)%n];
+    d+=" C"+f([p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6])+" "+f([p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6])+" "+f(p2);}
+  return d+"Z";
+}
+function openPath(pts,noWrap){
+  var P=pts.map(function(p){return proj(p,noWrap);}),d="M"+f(P[0]);
+  for(var i=0;i<P.length-1;i++){var p0=P[i-1]||P[i],p1=P[i],p2=P[i+1],p3=P[i+2]||p2;
+    d+=" C"+f([p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6])+" "+f([p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6])+" "+f(p2);}
+  return d;
+}
+var LAND={
+ "africa":[[[-17,21],[-16,28],[-10,31],[-6,36],[10,37],[11,33],[20,31],[32,31],[34,28],[39,16],[43,12],[51,12],[48,4],[40,-3],[40,-11],[35,-20],[33,-27],[27,-34],[20,-35],[17,-29],[12,-17],[13,-6],[9,-1],[9,4],[4,6],[-4,5],[-8,4],[-13,8],[-17,14]],
+   [[44,-25],[47,-25],[50,-15],[49,-12],[44,-17]]],
+ "europe":[[[-9,37],[-9,43],[-2,44],[-4,48],[2,51],[8,54],[8,57],[10,59],[5,62],[14,68],[25,71],[31,70],[40,67],[44,68],[60,69],[60,55],[55,50],[50,47],[48,42],[40,41],[29,41],[26,40],[23,37],[21,40],[19,42],[16,38],[12,44],[13,45],[9,44],[3,43],[-1,37],[-5,36]],
+   [[-5,50],[1,51],[2,53],[-2,56],[-2,58],[-5,58],[-5,55],[-3,54],[-5,52]],[[-10,52],[-6,52],[-6,55],[-8,55]],[[-24,65],[-14,64],[-14,66],[-22,66]]],
+ "asia":[[[60,69],[70,73],[80,73],[100,77],[115,74],[130,72],[140,72],[160,70],[180,69],[180,65],[170,60],[163,57],[156,51],[160,61],[150,59],[140,55],[135,44],[129,35],[126,37],[122,40],[121,31],[117,24],[108,21],[106,10],[100,14],[103,1],[98,8],[98,16],[94,17],[90,22],[86,20],[80,15],[77,8],[73,17],[70,22],[67,25],[62,25],[57,25],[59,22],[52,16],[43,13],[39,20],[35,28],[34,31],[36,36],[30,37],[26,39],[29,41],[40,41],[48,42],[50,47],[55,50],[60,55]],
+   [[130,31],[136,34],[140,36],[142,40],[141,45],[143,44],[140,41],[136,37],[131,34]],
+   [[95,5],[98,4],[106,-6],[104,-6],[96,2]],[[109,1],[113,-3],[117,-4],[118,1],[117,7],[111,2]],[[106,-6],[114,-7],[114,-8],[106,-7]],[[120,18],[122,14],[126,7],[122,7],[120,14]],[[80,10],[82,7],[80,6]]],
+ "oceania":[[[114,-22],[122,-18],[126,-14],[132,-11],[136,-12],[137,-16],[141,-12],[143,-14],[146,-19],[153,-25],[153,-30],[150,-37],[146,-39],[140,-38],[135,-35],[131,-31],[124,-34],[115,-34],[113,-26]],
+   [[131,-1],[141,-3],[150,-10],[143,-9],[138,-8],[132,-4]],[[172,-34],[178,-38],[175,-41],[172,-41]],[[172,-41],[174,-41],[171,-44],[167,-46],[168,-44]],[[145,-41],[148,-41],[147,-43]]],
+ "north-america":[[[-168,66],[-162,70],[-150,71],[-140,70],[-128,70],[-115,68],[-100,68],[-95,72],[-85,70],[-80,63],[-90,57],[-93,60],[-95,58],[-82,55],[-78,52],[-79,58],[-74,60],[-65,60],[-60,55],[-56,52],[-66,45],[-70,43],[-70,41],[-74,40],[-76,35],[-81,31],[-80,26],[-82,27],[-85,30],[-89,30],[-94,29],[-97,26],[-98,21],[-96,19],[-90,21],[-87,21],[-88,16],[-83,15],[-83,10],[-78,9],[-80,7],[-86,11],[-92,14],[-96,16],[-105,20],[-110,24],[-112,30],[-115,30],[-110,23],[-117,32],[-121,35],[-124,40],[-124,46],[-123,49],[-130,55],[-135,58],[-145,60],[-152,59],[-158,57],[-163,55],[-158,59],[-164,60],[-166,62],[-163,64]],
+   [[-73,78],[-60,82],[-30,83],[-20,80],[-20,73],[-25,70],[-40,65],[-43,60],[-50,64],[-55,70],[-67,76]],[[-85,22],[-80,23],[-75,20],[-78,20],[-84,21]]],
+ "south-america":[[[-77,8],[-72,12],[-63,10],[-60,8],[-52,5],[-50,0],[-44,-2],[-35,-5],[-35,-9],[-39,-14],[-40,-22],[-48,-26],[-53,-33],[-58,-35],[-57,-38],[-62,-40],[-65,-45],[-68,-50],[-69,-53],[-68,-55],[-72,-53],[-75,-48],[-73,-40],[-71,-30],[-70,-18],[-76,-14],[-81,-6],[-80,-2],[-80,1],[-78,4]]]
+};
+var ROUTES=[
+ {pts:[[36,5],[42,11],[47,15],[55,20],[60,24]]},
+ {pts:[[60,24],[68,24],[76,12],[88,20],[98,12],[104,2],[115,-6],[125,-9],[132,-14],[138,-22]]},
+ {pts:[[34,10],[32,22],[33,29],[35,33],[34,38],[28,40],[20,44],[10,47],[2,48]]},
+ {pts:[[98,12],[106,22],[114,32],[120,38]]},
+ {pts:[[120,38],[128,46],[140,54],[158,62],[176,65],[192,65]]},
+ {pts:[[-172,65],[-160,62],[-150,60],[-136,55],[-125,46],[-117,37],[-106,33]],noWrap:true},
+ {pts:[[-106,33],[-98,20],[-88,13],[-78,6],[-76,-5],[-72,-20],[-73,-41]],noWrap:true}
+];
+var DATES=[
+ {at:[60,25],text:"70,000–60,000",dx:6,dy:-8},
+ {at:[138,-22],text:"65,000–50,000",dx:-40,dy:24},
+ {at:[2,48],text:"45,000",dx:-58,dy:-4},
+ {at:[120,38],text:"40,000",dx:8,dy:16},
+ {at:[-106,33],text:"21,000+",dx:-74,dy:2,noWrap:true},
+ {at:[-73,-41],text:"14,500",dx:10,dy:4,noWrap:true}
+];
+var SITES=[
+ {at:[-8,32],name:"Jebel Irhoud · 300,000",dx:-6,dy:-12,anchor:"middle"},
+ {at:[36,5],name:"Omo Kibish · 230,000",dx:12,dy:18,anchor:"start"}
+];
+var LABELS={"africa":[18,6],"asia":[95,52],"europe":[18,54],"oceania":[133,-28],"north-america":[-103,52],"south-america":[-60,-14]};
+function mapSVG(opts){
+  opts=opts||{}; var hi=opts.highlight, out=[];
+  out.push('<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Map of human migration out of Africa to every continent"><title>How people spread from Africa across the world</title>');
+  Object.keys(LAND).forEach(function(gid){
+    var g=GMAP[gid], shapes=LAND[gid].map(function(s){return '<path class="map-land'+(gid===hi?' hi':'')+'" d="'+closedPath(s)+'"/>';}).join("");
+    out.push('<a class="map-link" href="#'+gid+'" aria-label="'+esc(g.name)+' gallery">'+shapes+'</a>');
+  });
+  var travel=!prefersReduced() && !opts.still;
+  ROUTES.forEach(function(r,i){var d=openPath(r.pts,r.noWrap); out.push('<path class="route" d="'+d+'"/>');
+    if(travel) out.push('<circle class="traveler" r="4.5"><animateMotion dur="'+(5+i%3)+'s" begin="'+(i*0.7)+'s" repeatCount="indefinite" path="'+d+'"/></circle>');});
+  if(!opts.small){
+    Object.keys(LABELS).forEach(function(gid){var p=proj(LABELS[gid]); out.push('<text class="mlabel place" x="'+p[0].toFixed(0)+'" y="'+p[1].toFixed(0)+'" text-anchor="middle">'+esc(GMAP[gid].name)+'</text>');});
+    DATES.forEach(function(d){var p=proj(d.at,d.noWrap); out.push('<text class="mlabel date" x="'+(p[0]+d.dx).toFixed(0)+'" y="'+(p[1]+d.dy).toFixed(0)+'">'+d.text+'</text>');});
+  }
+  SITES.forEach(function(s){var p=proj(s.at); out.push('<circle class="site" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="6"/>');
+    if(!opts.small) out.push('<text class="mlabel" x="'+(p[0]+s.dx).toFixed(0)+'" y="'+(p[1]+s.dy).toFixed(0)+'" text-anchor="'+s.anchor+'">'+s.name+'</text>');});
+  var nj=proj([-74.4,40.1]);
+  out.push('<a class="map-link" href="#new-jersey" aria-label="New Jersey gallery"><circle cx="'+nj[0].toFixed(1)+'" cy="'+nj[1].toFixed(1)+'" r="9" fill="var(--ink)"/><circle cx="'+nj[0].toFixed(1)+'" cy="'+nj[1].toFixed(1)+'" r="3.5" fill="var(--sea)"/>'+(opts.small?'':'<text class="mlabel" x="'+(nj[0]+14).toFixed(0)+'" y="'+(nj[1]+5).toFixed(0)+'" style="font-weight:500">New Jersey · our wing</text>')+'</a>');
+  out.push('</svg>');
+  return out.join("");
+}
+
+/* ---------- journey tree: Africa at the top, routes flowing down ---------- */
+var NJ_SHAPE=[[-75.56,39.63],[-75.4,39.8],[-75.05,40.0],[-74.72,40.15],[-74.97,40.4],[-75.2,40.6],[-75.1,40.85],[-74.69,41.36],[-74.0,41.0],[-73.9,40.98],[-74.02,40.7],[-74.26,40.47],[-73.98,40.3],[-74.1,39.75],[-74.4,39.36],[-74.9,38.93],[-74.97,39.2],[-75.42,39.38]];
+function njProj(p){ return [(p[0]+76)*40, (42-p[1])*52]; }
+function silhouette(gid,cx,cy,maxW,maxH){
+  var shapes=gid==="new-jersey"?[NJ_SHAPE]:LAND[gid], pr=gid==="new-jersey"?njProj:function(p){return proj(p);};
+  var minX=1e9,minY=1e9,maxX=-1e9,maxY=-1e9;
+  shapes.forEach(function(s){s.forEach(function(p){var q=pr(p);minX=Math.min(minX,q[0]);maxX=Math.max(maxX,q[0]);minY=Math.min(minY,q[1]);maxY=Math.max(maxY,q[1]);});});
+  var s=Math.min(maxW/(maxX-minX),maxH/(maxY-minY)), tx=cx-(minX+maxX)/2*s, ty=cy-(minY+maxY)/2*s;
+  var paths=shapes.map(function(sh){var P=sh.map(pr),n=P.length,d="M"+f(P[0]);
+    for(var i=0;i<n;i++){var p0=P[(i-1+n)%n],p1=P[i],p2=P[(i+1)%n],p3=P[(i+2)%n];
+      d+=" C"+f([p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6])+" "+f([p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6])+" "+f(p2);}
+    return '<path d="'+d+'Z"/>';}).join("");
+  return '<g class="sil" transform="translate('+tx.toFixed(1)+' '+ty.toFixed(1)+') scale('+s.toFixed(4)+')">'+paths+'</g>';
+}
+var JW=700, JH=975;
+var JNODES={
+ "africa":{x:350,y:102,w:280,h:196,date:"300,000 years ago",how:"Where it all began"},
+ "asia":{x:350,y:345,w:212,h:176,date:"70,000–60,000 yrs ago",how:"on foot, out of Africa"},
+ "europe":{x:112,y:610,w:204,h:176,date:"45,000 yrs ago",how:"on foot, into the Ice Age"},
+ "north-america":{x:350,y:610,w:204,h:176,date:"21,000+ yrs ago",how:"across Beringia"},
+ "oceania":{x:588,y:610,w:204,h:176,date:"65,000–50,000 yrs ago",how:"by boat, across the sea"},
+ "south-america":{x:228,y:870,w:204,h:176,date:"14,500 yrs ago",how:"south along the coast"},
+ "new-jersey":{x:472,y:870,w:204,h:176,date:"12,000+ yrs ago",how:"east, to our home"}
+};
+var JLINKS=[["africa","asia"],["asia","europe"],["asia","north-america"],["asia","oceania"],["north-america","south-america"],["north-america","new-jersey"]];
+function journeySVG(){
+  var out=['<svg viewBox="0 0 '+JW+' '+JH+'" role="img" aria-label="Diagram of the human journey: it starts in Africa at the top and branches down to Asia, then Europe, Australia and Oceania, and North America, then South America and New Jersey"><title>The human journey, starting in Africa</title>'];
+  var travel=!prefersReduced();
+  JLINKS.forEach(function(l,i){
+    var a=JNODES[l[0]],b=JNODES[l[1]],x1=a.x,y1=a.y+a.h/2,x2=b.x,y2=b.y-b.h/2,my=(y1+y2)/2;
+    var d="M"+x1+" "+y1+" C"+x1+" "+my+" "+x2+" "+my+" "+x2+" "+(y2-6);
+    out.push('<path class="jlink" d="'+d+'"/><path class="jarrow" d="M'+(x2-8)+' '+(y2-14)+' L'+x2+' '+(y2-3)+' L'+(x2+8)+' '+(y2-14)+'"/>');
+    if(travel) out.push('<circle class="traveler" r="5.5"><animateMotion dur="3.6s" begin="'+(i*0.6)+'s" repeatCount="indefinite" path="'+d+'"/></circle>');
+  });
+  out.push('<text class="jout" x="368" y="226">Out of Africa</text><text class="jhow" x="368" y="246">The journey begins</text>');
+  GALLERIES.forEach(function(g){
+    var n=JNODES[g.id], x=n.x-n.w/2, y=n.y-n.h/2, big=g.id==="africa", t;
+    if(big){
+      t=silhouette(g.id,n.x,y+14+44,n.w-80,88)+
+        '<text class="jname big" x="'+n.x+'" y="'+(y+136)+'" text-anchor="middle">Africa</text>'+
+        '<text class="jhow" x="'+n.x+'" y="'+(y+160)+'" text-anchor="middle">'+n.how+'</text>'+
+        '<text class="jdate" x="'+n.x+'" y="'+(y+182)+'" text-anchor="middle">'+n.date+'</text>';
+    } else {
+      t=silhouette(g.id,n.x,y+14+29,n.w-70,58)+
+        '<text class="jname" x="'+n.x+'" y="'+(y+104)+'" text-anchor="middle">'+esc(g.id==="oceania"?"Australia & Oceania":g.name)+'</text>'+
+        '<text class="jdate" x="'+n.x+'" y="'+(y+130)+'" text-anchor="middle">'+n.date+'</text>'+
+        '<text class="jhow" x="'+n.x+'" y="'+(y+152)+'" text-anchor="middle">'+n.how+'</text>';
+    }
+    out.push('<a class="jnode'+(big?' start':'')+(g.local?' local':'')+'" href="#'+g.id+'" aria-label="'+esc(g.title)+' gallery"><rect x="'+x+'" y="'+y+'" width="'+n.w+'" height="'+n.h+'" rx="14"/>'+t+'</a>');
+  });
+  out.push('</svg>');
+  return out.join("");
+}
+
+/* ---------- QR ---------- */
+function qrMatrix(text){ if(typeof window.qrcode!=="function") return null; var q=window.qrcode(0,"M"); q.addData(text); q.make(); return q; }
+function qrSVG(text,label){
+  var q=qrMatrix(text); if(!q) return '<p class="note">The QR code tool didn’t load. Reload the page to try again.</p>';
+  var n=q.getModuleCount(),m=2,p="";
+  for(var r=0;r<n;r++)for(var c=0;c<n;c++) if(q.isDark(r,c)) p+="M"+(c+m)+" "+(r+m)+"h1v1h-1z";
+  return '<svg class="qr" viewBox="0 0 '+(n+2*m)+' '+(n+2*m)+'" shape-rendering="crispEdges" role="img" aria-label="QR code for '+esc(label)+'"><rect width="100%" height="100%" fill="#fff"/><path d="'+p+'" fill="#000"/></svg>';
+}
+function wrapLines(ctx,text,maxW){var words=String(text).split(" "),lines=[],line="";words.forEach(function(w){var t=line?line+" "+w:w;if(ctx.measureText(t).width>maxW&&line){lines.push(line);line=w;}else line=t;});if(line)lines.push(line);return lines;}
+function saveQRImage(text,title,sub,filename,btn){
+  if(!dl) return; var q=qrMatrix(text); if(!q) return;
+  var cw=640,ch=820,c=document.createElement("canvas");c.width=cw;c.height=ch;var x=c.getContext("2d");
+  x.fillStyle="#fff";x.fillRect(0,0,cw,ch);x.fillStyle="#a9471f";x.fillRect(0,0,cw,14);
+  x.fillStyle="#1a2320";x.textAlign="center";x.font="500 22px 'IBM Plex Mono', monospace";x.fillText("JOURNEY OF MAN",cw/2,64);
+  var n=q.getModuleCount(),size=440,cell=Math.floor(size/n),off=(cw-cell*n)/2,top=96;
+  for(var r=0;r<n;r++)for(var col=0;col<n;col++) if(q.isDark(r,col)) x.fillRect(off+col*cell,top+r*cell,cell,cell);
+  var y=top+cell*n+60;x.font="40px 'Young Serif', Georgia, serif";
+  wrapLines(x,title,cw-80).slice(0,2).forEach(function(l){x.fillText(l,cw/2,y);y+=48;});
+  x.font="24px 'Atkinson Hyperlegible', sans-serif";x.fillStyle="#56645e";x.fillText(sub,cw/2,y+4);
+  c.toBlob(function(blob){ if(!blob) return; btn&&(btn.disabled=true);
+    dl.save({filename:filename,data:blob}).catch(function(){}).then(function(){btn&&(btn.disabled=false);}); },"image/png");
+}
+
+/* ---------- pieces ---------- */
+function pills(it){var s='<span class="pill '+(it.status==="display"?'on">On display':'soon">Coming soon')+'</span>'; if(it.sample) s+='<span class="pill sample">Sample item</span>'; return '<div class="pills">'+s+'</div>';}
+function photoOrTile(it,cls){
+  if(it.photo) return '<img class="'+cls+'" src="'+esc(it.photo)+'" alt="'+esc(it.name)+'">';
+  return '<div class="ph" style="--gc:var(--g-'+it.gallery+')" aria-hidden="true"><b>'+esc((it.name||"?").trim().charAt(0).toUpperCase())+'</b><small>'+esc(it.no)+'</small></div>';
+}
+function itemCard(it){
+  return '<a class="icard" href="index.html#exhibit/'+encodeURIComponent(it.id)+'">'+photoOrTile(it,"thumb")+'<div class="body">'+pills(it)+'<h3>'+esc(it.name)+'</h3><div class="meta">'+esc(it.no)+(it.era?' · '+esc(it.era):'')+'</div></div></a>';
+}
+function nav(active){
+  return '<nav class="nav"><div class="wrap"><a class="brand" href="index.html">◈ OBJECT STORIES</a><a class="chip" href="#">Journey of Man</a><a class="chip" href="index.html#trail">My passport</a><div class="chips">'+
+    GALLERIES.map(function(g){return '<a class="chip" href="#'+g.id+'"'+(g.id===active?' aria-current="page"':'')+'>'+esc(g.name)+'</a>';}).join("")+'</div></div></nav>';
+}
+function footer(){
+  return '<footer class="footer"><div class="wrap"><span>Journey of Man · a school museum</span>'+(canEdit?'<a href="#manage">Museum staff: add and edit items</a>':'<span>Scan a QR code at any display to read about it.</span>')+'</div></footer>';
+}
+function statusBox(){ if(!statusMsg) return ""; return '<div class="status'+(statusMsg.kind==="err"?' err':statusMsg.kind==="busy"?' busy':'')+'" role="status">'+esc(statusMsg.text)+'</div>'; }
+
+/* ---------- views ---------- */
+function viewHome(){
+  var recent=data.items.filter(function(i){return i.status==="display";}).sort(function(a,b){return (b.added||"").localeCompare(a.added||"");}).slice(0,4);
+  return nav("")+'<main class="wrap">'+
+   '<section class="hero"><span class="eyebrow">Our school museum</span><h1>Journey of Man</h1>'+
+   '<p class="notice">Preview collection · sample objects, not a confirmed inventory. Migration routes are simplified; dates describe selected evidence, not a complete timeline.</p><p class="lede">Every human story starts in Africa. Follow the trail down from Africa to see how people spread across the world, then tap any stop to visit its gallery.</p></section>'+
+   '<section class="journey">'+journeySVG()+'</section>'+
+   '<section style="display:grid;gap:10px"><div class="section-head" style="margin-bottom:0"><h2>The same journey on a world map</h2></div><div class="mapbox">'+mapSVG()+'</div>'+
+   '<div class="map-caption"><span><i class="key-dot"></i>Dates are approximate · years ago</span><span><i class="key-line"></i>Selected migration routes · simplified</span><span>Tap a continent to open its gallery.</span></div></section>'+
+   '<section><div class="section-head"><h2>The galleries</h2><span class="note">A broad introduction to human migration</span></div><div class="galleries">'+
+   GALLERIES.map(function(g){var on=itemsIn(g.id,"display").length,soon=itemsIn(g.id,"coming").length;
+     return '<a class="gcard'+(g.local?' local':'')+'" href="#'+g.id+'" style="--gc:var(--g-'+g.id+')"><span class="num">Gallery '+g.n+'</span><div style="display:grid;gap:6px;align-content:start"><h3>'+esc(g.title)+'</h3><span class="when">'+esc(g.when)+'</span></div><span class="counts">'+on+' on display'+(soon?' · '+soon+' coming soon':'')+'</span></a>';}).join("")+
+   '</div></section>'+
+   (recent.length?'<section><div class="section-head"><h2>New in the museum</h2></div><div class="items">'+recent.map(itemCard).join("")+'</div></section>':'')+
+  '</main>'+footer();
+}
+function viewGallery(g){
+  var on=itemsIn(g.id,"display"),soon=itemsIn(g.id,"coming");
+  return nav(g.id)+'<main class="wrap">'+
+   '<div class="crumb"><a href="#">Journey of Man</a> / Gallery '+g.n+'</div>'+
+   '<section class="ghead"><div style="display:grid;gap:14px"><span class="eyebrow">Gallery '+g.n+'</span><h1>'+esc(g.title)+'</h1><span class="stamp">'+esc(g.when)+'</span><p>'+esc(g.intro)+'</p></div>'+
+   '<div class="mapbox">'+mapSVG({highlight:g.id,small:true,still:true})+'</div></section>'+
+   '<section><div class="section-head"><h2>On display</h2><span class="note">'+on.length+' item'+(on.length===1?'':'s')+'</span></div>'+
+   (on.length?'<div class="items">'+on.map(itemCard).join("")+'</div>':'<p class="note">Items for this gallery are being prepared. Check back soon!</p>')+'</section>'+
+   (soon.length?'<section><div class="section-head"><h2>Coming soon</h2></div><ul class="soonlist">'+soon.map(function(it){return '<li><a href="index.html#exhibit/'+encodeURIComponent(it.id)+'"><span>'+esc(it.name)+'</span><span class="pill soon">Coming soon</span></a></li>';}).join("")+'</ul></section>':'')+
+   (canEdit?'<section class="qrpanel">'+qrSVG(galleryURL(g),g.title)+'<div style="display:grid;gap:8px;min-width:0"><span class="eyebrow">Staff only</span><h3>Gallery sign QR code</h3><p class="note">Put this on the sign at the entrance to this gallery. It opens this page.</p>'+(dl?'<button class="btn small ghost" data-qr-gallery="'+g.id+'">Save QR image</button>':'')+'</div></section>':'')+
+  '</main>'+footer();
+}
+function viewItem(it){
+  var g=GMAP[it.gallery]||GALLERIES[0], list=itemsIn(g.id,"display"), idx=list.indexOf(it), prev=idx>0?list[idx-1]:null, next=idx>=0&&idx<list.length-1?list[idx+1]:null;
+  var coming=it.status!=="display";
+  return nav(g.id)+'<main class="wrap">'+
+   '<div class="crumb"><a href="#">Journey of Man</a> / <a href="#'+g.id+'">'+esc(g.title)+'</a></div>'+
+   '<section class="placard"><div>'+(it.photo?'<img class="photo" src="'+esc(it.photo)+'" alt="'+esc(it.name)+'">':photoOrTile(it,"photo"))+'</div>'+
+   '<article class="label">'+pills(it)+'<div style="display:grid;gap:6px"><span class="eyebrow">'+esc(it.no)+' · Gallery '+g.n+': '+esc(g.name)+'</span><h1 style="font-size:clamp(2rem,4.4vw,3rem)">'+esc(it.name)+'</h1></div>'+
+   (coming?'<p class="lede">This item is on its way to the museum. Come back soon to see it on display!</p>':'')+
+   '<dl class="facts">'+(it.era?'<dt>When</dt><dd>'+esc(it.era)+'</dd>':'')+(it.origin?'<dt>From</dt><dd>'+esc(it.origin)+'</dd>':'')+(it.place&&!coming?'<dt>Find it</dt><dd>'+esc(it.place)+'</dd>':'')+'</dl>'+
+   (it.description?'<p>'+esc(it.description)+'</p>':'')+
+   (it.fact?'<div class="box know"><h3>Did you know?</h3><p>'+esc(it.fact)+'</p></div>':'')+
+   (it.question?'<div class="box think"><h3>Think about it</h3><p>'+esc(it.question)+'</p></div>':'')+
+   ('speechSynthesis' in window?'<div class="row"><button class="btn ghost" id="read-aloud">Read this to me</button></div>':'')+
+   '</article></section>'+
+   '<nav class="pager">'+(prev?'<a class="btn ghost" href="#item-'+prev.id+'">← '+esc(prev.name)+'</a>':'<span></span>')+(next?'<a class="btn ghost" href="#item-'+next.id+'">'+esc(next.name)+' →</a>':'<a class="btn ghost" href="#'+g.id+'">Back to '+esc(g.name)+'</a>')+'</nav>'+
+   (canEdit?'<section class="qrpanel">'+qrSVG(itemURL(it),it.name)+'<div style="display:grid;gap:8px;min-width:0"><span class="eyebrow">Staff only</span><h3>This item’s QR code</h3><p class="note">The code always opens this page, so you can print it now and edit the item later.</p><div class="row">'+(dl?'<button class="btn small ghost" data-qr-item="'+it.id+'">Save QR image</button>':'')+'<button class="btn small" data-edit="'+it.id+'">Edit item</button></div></div></section>':'')+
+  '</main>'+footer();
+}
+function viewNotFound(){ return nav("")+'<main class="wrap"><h1>We couldn’t find that item</h1><p>It may have been removed from the museum. <a href="#">Go to the museum home</a>.</p></main>'+footer(); }
+
+/* ---------- staff ---------- */
+function blankItem(){ return {id:"",no:"",gallery:"africa",name:"",era:"",origin:"",place:"",status:"coming",description:"",fact:"",question:"",photo:"",added:""}; }
+function viewStaff(){
+  if(!canEdit) return nav("")+'<main class="wrap"><h1>Museum staff</h1><p>'+(readOnlyReason||"Only museum staff with edit access can add or change items. Visitors can explore the galleries from the home page.")+'</p><p><a href="#">Go to the museum home</a></p></main>'+footer();
+  var body;
+  if(editing) body=viewForm();
+  else if(staffTab==="qr") body=viewQRSheet();
+  else body=viewItemTable();
+  return nav("")+'<main class="wrap"><section style="display:grid;gap:10px"><span class="eyebrow">Museum staff</span><h1 style="font-size:clamp(2rem,4.4vw,3rem)">Manage exhibits</h1><p class="note">Add an item when it arrives, then switch it to “On display” when it’s placed in its case. Each item’s QR code stays the same, so printed codes keep working after edits.</p></section>'+statusBox()+
+   (editing?'':'<div class="row" style="justify-content:space-between"><div class="tabs" role="tablist"><button class="tab" role="tab" aria-selected="'+(staffTab==="items")+'" data-tab="items">Items ('+data.items.length+')</button><button class="tab" role="tab" aria-selected="'+(staffTab==="qr")+'" data-tab="qr">QR codes</button></div><button class="btn" data-new="1">Add an item</button></div>')+
+   body+'</main>'+footer();
+}
+function viewItemTable(){
+  if(!data.items.length) return '<p class="note">No items yet. Choose “Add an item” to put the first one in the museum.</p>';
+  var rows=data.items.slice().sort(function(a,b){var ga=GMAP[a.gallery].n,gb=GMAP[b.gallery].n;return ga-gb||(a.no<b.no?-1:1);}).map(function(it){
+    var del=confirmDel===it.id?'<span class="row"><span class="note">Delete for good?</span><button class="btn small danger" data-delyes="'+it.id+'">Delete</button><button class="btn small ghost" data-delno="1">Keep</button></span>':'<button class="btn small ghost" data-del="'+it.id+'">Delete</button>';
+    return '<tr><td class="acc">'+esc(it.no)+'</td><td><a href="index.html#exhibit/'+encodeURIComponent(it.id)+'">'+esc(it.name)+'</a>'+(it.sample?' <span class="pill sample">Sample</span>':'')+'</td><td>'+esc(GMAP[it.gallery].name)+'</td><td>'+(it.status==="display"?'<span class="pill on">On display</span>':'<span class="pill soon">Coming soon</span>')+'</td><td><div class="row">'+
+      (it.status==="display"?'<button class="btn small ghost" data-toggle="'+it.id+'">Mark coming soon</button>':'<button class="btn small" data-toggle="'+it.id+'">Mark on display</button>')+
+      '<button class="btn small ghost" data-edit="'+it.id+'">Edit</button>'+del+'</div></td></tr>';}).join("");
+  var anySample=data.items.some(function(i){return i.sample;});
+  return (anySample?'<p class="note">Items marked “Sample” are examples to show how the museum looks. Delete them once your real items are in.</p>':'')+
+   '<div class="tablewrap"><table><thead><tr><th>No.</th><th>Item</th><th>Gallery</th><th>Status</th><th>Actions</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+}
+function viewQRSheet(){
+  return '<p class="note">Take a screenshot of this page, or save each code as an image to print on labels. Gallery codes go on the sign at each gallery entrance; item codes go next to each item.</p>'+
+   GALLERIES.map(function(g){var its=itemsIn(g.id);
+     return '<section style="display:grid;gap:12px"><h2>'+esc(g.title)+'</h2><div class="qrgrid"><div class="qrcard">'+qrSVG(galleryURL(g),g.title)+'<strong>Gallery sign</strong><span class="meta">Gallery '+g.n+'</span>'+(dl?'<button class="btn small ghost" data-qr-gallery="'+g.id+'">Save image</button>':'')+'</div>'+
+       its.map(function(it){return '<div class="qrcard">'+qrSVG(itemURL(it),it.name)+'<strong>'+esc(it.name)+'</strong><span class="meta">'+esc(it.no)+'</span>'+(dl?'<button class="btn small ghost" data-qr-item="'+it.id+'">Save image</button>':'')+'</div>';}).join("")+
+     '</div></section>';}).join("");
+}
+function field(id,label,val,opts){opts=opts||{};
+  var ctl=opts.area?'<textarea id="'+id+'" name="'+id+'">'+esc(val)+'</textarea>':'<input type="text" id="'+id+'" name="'+id+'" value="'+esc(val)+'"'+(opts.req?' required':'')+'>';
+  return '<div class="field'+(opts.full?' full':'')+'"><label for="'+id+'">'+label+'</label>'+ctl+(opts.hint?'<span class="hint">'+opts.hint+'</span>':'')+'</div>';}
+function viewForm(){
+  var it=editing;
+  return '<form class="edit" id="item-form" novalidate>'+
+   '<div class="field full"><h2>'+(it.id?'Edit '+esc(it.no):'Add an item')+'</h2></div>'+
+   field("f-name","Item name",it.name,{req:true,full:true,hint:"For example: Replica Spear Point"})+
+   '<div class="field"><label for="f-gallery">Gallery</label><select id="f-gallery">'+GALLERIES.map(function(g){return '<option value="'+g.id+'"'+(g.id===it.gallery?' selected':'')+'>'+g.n+'. '+esc(g.title)+'</option>';}).join("")+'</select></div>'+
+   '<div class="field"><label for="f-status">Status</label><select id="f-status"><option value="coming"'+(it.status!=="display"?' selected':'')+'>Coming soon (not placed yet)</option><option value="display"'+(it.status==="display"?' selected':'')+'>On display</option></select></div>'+
+   field("f-era","When is it from?",it.era,{hint:"For example: About 17,000 years ago, or 1920s"})+
+   field("f-origin","Where is it from?",it.origin,{hint:"For example: Lascaux Cave, France"})+
+   field("f-place","Where to find it in the museum",it.place,{hint:"For example: Case 3, top shelf"})+
+   '<div class="field"><label for="f-photo">Photo</label><input type="file" id="f-photo" accept="image/*"><span class="hint">'+(photoWork?esc(photoWork):'JPG or PNG. It’s resized automatically.')+'</span>'+(it.photo?'<img class="preview" src="'+esc(it.photo)+'" alt="Photo preview"><button type="button" class="btn small ghost" data-rmphoto="1" style="width:fit-content">Remove photo</button>':'')+'</div>'+
+   field("f-desc","Description for kids",it.description,{area:true,full:true,hint:"Two to four short sentences: what it is and why it matters."})+
+   field("f-fact","Did you know?",it.fact,{area:true,hint:"One surprising fact."})+
+   field("f-question","Think about it",it.question,{area:true,hint:"A question for visitors to wonder about."})+
+   '<div class="field full"><div class="row"><button class="btn" type="submit">'+(it.id?'Save changes':'Add to museum')+'</button><button class="btn ghost" type="button" data-cancel="1">Cancel</button></div></div>'+
+  '</form>';
+}
+function readForm(){
+  var g=function(id){var el=document.getElementById(id);return el?el.value.trim():"";};
+  editing.name=g("f-name");editing.gallery=g("f-gallery")||"africa";editing.status=g("f-status")==="display"?"display":"coming";
+  editing.era=g("f-era");editing.origin=g("f-origin");editing.place=g("f-place");editing.description=g("f-desc");editing.fact=g("f-fact");editing.question=g("f-question");
+}
+function readPhoto(file){return new Promise(function(res,rej){var fr=new FileReader();fr.onload=function(){var img=new Image();img.onload=function(){var max=1000,w=img.naturalWidth,h=img.naturalHeight,s=Math.min(1,max/Math.max(w,h));w=Math.round(w*s);h=Math.round(h*s);var c=document.createElement("canvas");c.width=w;c.height=h;var x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,w,h);x.drawImage(img,0,0,w,h);res(c.toDataURL("image/jpeg",0.78));};img.onerror=rej;img.src=fr.result;};fr.onerror=rej;fr.readAsDataURL(file);});}
+
+function buildDoc(d){
+  var css=document.getElementById("jm-css").textContent, main=document.getElementById("jm-main").textContent;
+  var json=JSON.stringify(d).replace(/</g,"\\u003c");
+  return SKELETON_OPEN+PAGE_TOP+'<style id="jm-css">'+css+'</style>\n<div id="app"></div>\n<script type="application/json" id="jm-data">'+json+'<\/script>\n'+QR_TAG+'\n<script id="jm-main">'+main+'<\/script>'+SKELETON_CLOSE;
+}
+function save(next,okText){
+  if(!art){statusMsg={kind:"err",text:"Saving isn’t available in this view."};render();return;}
+  statusMsg={kind:"busy",text:"Saving…"};render();
+  try{sessionStorage.setItem("jm-flash",okText);}catch(e){}
+  art.publish(buildDoc(next)).then(function(){ data=next; editing=null; statusMsg={kind:"ok",text:okText}; render(); })
+  .catch(function(err){
+    try{sessionStorage.removeItem("jm-flash");}catch(e){}
+    var code=err&&err.code;
+    if(code==="conflict") statusMsg={kind:"err",text:"Someone else saved at the same moment. The page is reloading with their version, so please make your change again."};
+    else if(code==="not_writer"||code==="not_granted"||code==="not_declared"||code==="consent_required"||code==="capability_disabled"||code==="capability_removed"){canEdit=false;readOnlyReason="This view is read-only, so changes can’t be saved here. Open the museum from your own Claude account to edit it.";statusMsg=null;}
+    else if(code==="too_large") statusMsg={kind:"err",text:"The museum is now too large to save. Remove a few photos or use smaller ones, then try again."};
+    else if(code==="rate_limited") statusMsg={kind:"err",text:"Lots of saves in a row. Wait a minute, then try again."};
+    else statusMsg={kind:"err",text:"The change didn’t save. Wait a moment and try again."};
+    render();
+  });
+}
+function clone(){return JSON.parse(JSON.stringify(data));}
+function newId(){var s;do{s=Math.random().toString(36).slice(2,8);}while(data.items.some(function(i){return i.id===s;}));return s;}
+function today(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+
+/* ---------- router ---------- */
+var app=document.getElementById("app"), speaking=false;
+function render(){
+  var h=(location.hash||"").replace(/^#/,""), html;
+  try{ if(speaking){speechSynthesis.cancel();speaking=false;} }catch(e){}
+  if(!h) html=viewHome();
+  else if(GMAP[h]) html=viewGallery(GMAP[h]);
+  else if(h.indexOf("item-")===0){var it=data.items.find(function(i){return i.id===h.slice(5);});html=it?viewItem(it):viewNotFound();}
+  else if(h==="manage") html=viewStaff();
+  else html=viewHome();
+  app.innerHTML=html;
+  fitJourney();
+}
+function fitJourney(){
+  try{ var nodes=app.querySelectorAll(".jnode"); if(!nodes.length) return;
+    nodes.forEach(function(a){ var r=a.querySelector("rect"), w=parseFloat(r.getAttribute("width"))-28;
+      a.querySelectorAll("text").forEach(function(t){ t.style.fontSize=""; var l=t.getComputedTextLength();
+        if(l>w){ var fs=parseFloat(getComputedStyle(t).fontSize); t.style.fontSize=(fs*w/l).toFixed(1)+"px"; } }); });
+  }catch(e){}
+}
+try{ if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fitJourney); }catch(e){}
+var lastHash=location.hash;
+window.addEventListener("hashchange",function(){ if(location.hash!=="#manage"){editing=null;confirmDel=null;} if(location.hash!==lastHash){statusMsg=null;} lastHash=location.hash; render(); window.scrollTo(0,0); });
+
+app.addEventListener("click",function(e){
+  var t=e.target.closest("button"); if(!t) return;
+  var ds=t.dataset;
+  if(t.id==="read-aloud"){ try{ if(speaking){speechSynthesis.cancel();speaking=false;t.textContent="Read this to me";return;}
+      var it=data.items.find(function(i){return "#item-"+i.id===location.hash;}); if(!it) return;
+      var u=new SpeechSynthesisUtterance([it.name,it.description,it.fact?"Did you know? "+it.fact:"",it.question?"Think about it. "+it.question:""].join(". "));
+      u.rate=0.95; u.onend=function(){speaking=false;var b=document.getElementById("read-aloud");if(b)b.textContent="Read this to me";};
+      speechSynthesis.speak(u); speaking=true; t.textContent="Stop reading"; }catch(err){} return; }
+  if(ds.qrItem){var it2=data.items.find(function(i){return i.id===ds.qrItem;}); if(it2) saveQRImage(itemURL(it2),it2.name,"Scan to learn about this item · "+it2.no,(it2.no||"item")+"-qr.png",t); return;}
+  if(ds.qrGallery){var g=GMAP[ds.qrGallery]; saveQRImage(galleryURL(g),g.title,"Scan to explore Gallery "+g.n,"gallery-"+g.n+"-"+g.id+"-qr.png",t); return;}
+  if(ds.tab){staffTab=ds.tab;confirmDel=null;statusMsg=null;render();return;}
+  if(ds["new"]){editing=blankItem();photoWork=null;statusMsg=null;render();return;}
+  if(ds.edit){var src=data.items.find(function(i){return i.id===ds.edit;}); if(!src) return; editing=JSON.parse(JSON.stringify(src));photoWork=null;statusMsg=null;
+    if(location.hash!=="#manage"){location.hash="manage";} else render(); return;}
+  if(ds.cancel){editing=null;statusMsg=null;render();return;}
+  if(ds.rmphoto){readForm();editing.photo="";render();return;}
+  if(ds.del){confirmDel=ds.del;render();return;}
+  if(ds.delno){confirmDel=null;render();return;}
+  if(ds.delyes){var n=clone(),gone=n.items.find(function(i){return i.id===ds.delyes;});n.items=n.items.filter(function(i){return i.id!==ds.delyes;});confirmDel=null;save(n,"Deleted “"+(gone?gone.name:"item")+"”.");return;}
+  if(ds.toggle){var n2=clone(),x=n2.items.find(function(i){return i.id===ds.toggle;}); if(!x) return; x.status=x.status==="display"?"coming":"display"; save(n2,"“"+x.name+"” is now "+(x.status==="display"?"on display":"marked coming soon")+".");return;}
+});
+app.addEventListener("change",function(e){
+  if(e.target.id!=="f-photo"||!editing) return; var file=e.target.files&&e.target.files[0]; if(!file) return;
+  readForm(); photoWork="Preparing photo…"; render();
+  readPhoto(file).then(function(url){editing.photo=url;photoWork=null;render();}).catch(function(){photoWork="That photo couldn’t be read. Try a JPG or PNG file.";render();});
+});
+app.addEventListener("submit",function(e){
+  if(e.target.id!=="item-form") return; e.preventDefault(); readForm();
+  if(!editing.name){statusMsg={kind:"err",text:"Give the item a name before saving."};render();var f=document.getElementById("f-name");if(f)f.focus();return;}
+  var n=clone(), it=editing;
+  if(!it.id){ it.id=newId(); it.no="JM-"+String(n.nextNo||1).padStart(3,"0"); n.nextNo=(n.nextNo||1)+1; it.added=today(); n.items.push(it); }
+  else { delete it.sample; n.items=n.items.map(function(i){return i.id===it.id?it:i;}); }
+  save(n,(e.submitter&&false)||("Saved “"+it.name+"”."));
+});
+
+render();
+
+})();
+</script>
+
+</body></html>

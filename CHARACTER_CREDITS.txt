@@ -1,0 +1,24 @@
+MUSEUM EXPLORER — FLAT SVG EDITION
+
+All rendered character shapes are custom SVG artwork for this museum prototype. Head, hair, neck, limbs, hands, clothing and accessories use one shared coordinate system. Bitmoji and Animal Crossing were visual references; their artwork is not embedded. The earlier Open Peeps implementation has been replaced.
+
+CUSTOMIZATION
+15 hairstyles. Six outfits: boxy tee, front-view hoodie, crewneck, overalls, cardigan with pleated skirt, and dress with leggings. Four expressions, round or rectangular frames, four color-combination presets and custom color controls. Optional accessories include headphones, beanie, bow, leaf sprout, tiny duck and mini UFO. Optional graphics include star, edge-to-edge stripes, frog, cat, duck and an amphora vase. All controls are available to everyone without gender categories.
+
+RECENT REFINEMENTS
+The hood sits behind the neck; front drawstrings and a kangaroo pocket distinguish the hoodie front. Arms attach inside the shoulder silhouette and bend at shared joints. Hands have separate pose shapes aligned with the wrists. Glasses arms extend to the sides of the head. Shirt stripes are clipped to the garment outline. The amphora graphic has a neck, handles and foot. Shoe diagonals and stray garment lines have been removed.
+
+MEMORY AND PHOTO BOOTH
+Character choices remain in local browser storage for the collection. Forget my explorer clears these preferences without erasing passport progress or downloaded PNGs. No student name, account, selfie or camera permission is requested. No avatar service receives customization choices.
+Teachers may set a photoPhrase up to 140 characters and disable the booth per object with photoBoothEnabled. The photo card uses the teacher-supplied local artifact photograph and includes its credit. Missing or failed photos use an explicitly labeled placeholder. Save photo exports a PNG; screenshots also work. Final school-device and network checks should happen after deployment.
+
+SKIN COLOR PRESETS
+16 natural-tone swatches span very light through very deep shades with varied undertones. Eight playful presets are lavender, sky blue, mint, bubblegum pink, lemon yellow, bright green, violet and cool gray. The full color picker remains available. All swatches update the face, neck, hands and exposed legs and are remembered only in this browser. Hands use softened grouped-finger silhouettes and rounded relaxed palms.
+
+MOBILE AND HAND REFINEMENTS
+Sleeve cuffs cover the wrist ends; wave hands align at the wrist. Natural and playful skin swatches share one row group; hair colors have their own swatches. Mobile controls use collapsible groups and a live compact preview. Native file sharing appears only where supported, with PNG download as the fallback.
+
+POSE UPDATE
+Four shared poses: stand, wave, peace sign and present. Raised hands meet the forearm without a wrist seam. Overall straps reach the shoulder edge. Hyped has a filled pink tongue. Download buttons use plain language.
+
+Present pose: hand rotates along the forearm, with an open wrist outline and no round arm cap crossing the palm.

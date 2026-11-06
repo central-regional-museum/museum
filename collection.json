@@ -42,7 +42,20 @@
       "published": true,
       "mysteryClue": "My characters face backward, but my message comes out readable. What am I?",
       "photoPhrase": "Just my type of discovery.",
-      "photoBoothEnabled": true
+      "photoBoothEnabled": true,
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Movable_type",
+      "wikipediaImageAuto": true,
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal_movable_type.jpg/1280px-Metal_movable_type.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Movable_type",
+        "title": "Movable type",
+        "file": "Metal_movable_type.jpg",
+        "author": "Willi Heidelbach",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Metal_movable_type.jpg",
+        "alt": "Wikipedia reference image for Movable type; not the school artifact."
+      }
     },
     {
       "id": "002",
@@ -71,7 +84,20 @@
       "published": true,
       "mysteryClue": "I can point you in a direction, but I cannot tell you your exact location. What am I?",
       "photoPhrase": "Taking this visit in a new direction.",
-      "photoBoothEnabled": true
+      "photoBoothEnabled": true,
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Compass",
+      "wikipediaImageAuto": true,
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/2016_Busola.JPG/1280px-2016_Busola.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Compass",
+        "title": "Compass",
+        "file": "2016_Busola.JPG",
+        "author": "Jacek Halicki",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:2016_Busola.JPG",
+        "alt": "Wikipedia reference image for Compass; not the school artifact."
+      }
     },
     {
       "id": "003",
@@ -100,7 +126,20 @@
       "published": true,
       "mysteryClue": "I carry thread across other threads, helping turn repeated movements into cloth. What am I?",
       "photoPhrase": "Weaving my way through history.",
-      "photoBoothEnabled": true
+      "photoBoothEnabled": true,
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Shuttle_(weaving)",
+      "wikipediaImageAuto": true,
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/%27Sch%C3%BCtze%27_des_Honegger-Webstuhls_von_1860_-_Amthaus_R%C3%BCti_2011-01-21_15-20-30.JPG/1280px-%27Sch%C3%BCtze%27_des_Honegger-Webstuhls_von_1860_-_Amthaus_R%C3%BCti_2011-01-21_15-20-30.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Shuttle_(weaving)",
+        "title": "Shuttle (weaving)",
+        "file": "'Sch\u00fctze' des Honegger-Webstuhls von 1860 - Amthaus R\u00fcti 2011-01-21 15-20-30.JPG",
+        "author": "Roland zh",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%27Sch%C3%BCtze%27_des_Honegger-Webstuhls_von_1860_-_Amthaus_R%C3%BCti_2011-01-21_15-20-30.JPG",
+        "alt": "Wikipedia reference image for Shuttle (weaving); not the school artifact."
+      }
     },
     {
       "id": "JM-001",
@@ -130,7 +169,20 @@
       "gallery": "africa",
       "mysteryClue": "Hand axes are one of the longest-used tools in history. People made them in nearly the same shape for over a million years.",
       "photoPhrase": "A cutting-edge idea. For its time.",
-      "photoBoothEnabled": true
+      "photoBoothEnabled": true,
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Hand_axe",
+      "wikipediaImageAuto": true,
+      "referenceImage": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Handaxe_by_John_Frere.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "article": "https://en.wikipedia.org/wiki/Hand_axe",
+        "title": "Hand axe",
+        "file": "Handaxe_by_John_Frere.png",
+        "author": "John Frere",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Handaxe_by_John_Frere.png",
+        "alt": "Wikipedia reference image for Hand axe; not the school artifact."
+      }
     },
     {
       "id": "JM-002",
@@ -160,7 +212,20 @@
       "gallery": "asia",
       "mysteryClue": "Some characters on oracle bones still look a lot like Chinese characters used today.",
       "photoPhrase": "The original question-and-answer session.",
-      "photoBoothEnabled": true
+      "photoBoothEnabled": true,
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Oracle_bone",
+      "wikipediaImageAuto": true,
+      "referenceImage": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Orakelknochen.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "article": "https://en.wikipedia.org/wiki/Oracle_bone",
+        "title": "Oracle bone",
+        "file": "Orakelknochen.JPG",
+        "author": "User Herr Klugbeisser on de.wikipedia\nGeschossen von im Shanghai-Museum, Januar 2004\nCreated and published under the GFDL by User Herr Klugbeisser\nOriginally from de.wikipedia; description page is (was) here\n\n18:41, 2. Mai 2004 Herr Klugbeisser 800 x 800 (91585 Byte) (Orakelknochen)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Orakelknochen.JPG",
+        "alt": "Wikipedia reference image for Oracle bone; not the school artifact."
+      }
     },
     {
       "id": "JM-003",
@@ -190,7 +255,20 @@
       "gallery": "europe",
       "mysteryClue": "The real Lascaux cave was discovered in 1940 by four teenagers following their dog.",
       "photoPhrase": "Art class, Ice Age edition.",
-      "photoBoothEnabled": true
+      "photoBoothEnabled": true,
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Cave_painting",
+      "wikipediaImageAuto": true,
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/SantaCruz-CuevaManos-P2210651b.jpg/1280px-SantaCruz-CuevaManos-P2210651b.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Cave_painting",
+        "title": "Cave painting",
+        "file": "SantaCruz-CuevaManos-P2210651b.jpg",
+        "author": "Mariano",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:SantaCruz-CuevaManos-P2210651b.jpg",
+        "alt": "Wikipedia reference image for Cave painting; not the school artifact."
+      }
     },
     {
       "id": "JM-004",
@@ -220,7 +298,20 @@
       "gallery": "new-jersey",
       "mysteryClue": "Cranberries have pockets of air inside, so they float. Farmers flood the bogs and the berries rise to the top.",
       "photoPhrase": "Berry pleased to be here.",
-      "photoBoothEnabled": true
+      "photoBoothEnabled": true,
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Cranberry",
+      "wikipediaImageAuto": true,
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Cranberry_bog.jpg/1280px-Cranberry_bog.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Cranberry",
+        "title": "Cranberry",
+        "file": "Cranberry_bog.jpg",
+        "author": "Photo by Keith Weller",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Cranberry_bog.jpg",
+        "alt": "Wikipedia reference image for Cranberry; not the school artifact."
+      }
     }
   ]
 }

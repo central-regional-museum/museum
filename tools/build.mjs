@@ -27,7 +27,7 @@ if(report.errors.length){console.error(report.errors.map(e=>'ERROR: '+e).join('\
  const published=items.filter(e=>e.published!==false);
  const revision=createHash('sha256').update(JSON.stringify({settings,items:published,specials:11})).digest('hex').slice(0,20);
  settings={...settings,collectionRevision:revision};
- await fs.writeFile(path.join(dist,'collection-status.json'),JSON.stringify({collectionId:settings.collectionId,revision,items:published.map(e=>({id:e.id,object:e.object})),availableStamps:published.length+11,requiredExhibitIds:(settings.requiredExhibitIds||[]).filter(id=>published.some(e=>e.id===id))}));
+ await fs.writeFile(path.join(dist,'collection-status.json'),JSON.stringify({collectionId:settings.collectionId,revision,items:published.map(e=>({id:e.id,object:e.object,fingerprint:createHash('sha256').update(JSON.stringify(e)).digest('hex')})),availableStamps:published.length+11,requiredExhibitIds:(settings.requiredExhibitIds||[]).filter(id=>published.some(e=>e.id===id))}));
  for(const file of ['index.html','journey.html','explorer.html','teacher-check.html','puzzle.html','placards.html']){
    const dest=path.join(dist,file);let html=await fs.readFile(dest,'utf8');
    html=html.replace(/src="(settings|exhibits)\.js"/g,(_,name)=>'src="'+name+'.js?v='+revision+'"');await fs.writeFile(dest,html);

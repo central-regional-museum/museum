@@ -26,7 +26,7 @@
       "shape": "type",
       "summary": "Before a screen could copy a sentence, someone arranged it one letter at a time.",
       "story": "In movable-type printing, individual pieces carry raised characters. A printer arranges them into a page, applies ink, and presses paper against them. The same pieces can then be rearranged for a different page.",
-      "look": "Look at the letter faces. Why might a printer need letters that look reversed?",
+      "look": "Imagine pressing the letters onto paper. Which way would the printed letters face?",
       "connection": "Copying a message changes who can hear it. Compare a printed page with a post shared online: who controls the original, and who can reproduce it?",
       "question": "Why are the printing faces reversed?",
       "choices": [
@@ -68,7 +68,7 @@
       "shape": "compass",
       "summary": "A tiny needle can change an entire journey. But it cannot tell you everything.",
       "story": "A magnetic compass uses a magnetized needle that aligns with the local magnetic field. Used with a map and an understanding of magnetic declination, it helps a traveler determine direction.",
-      "look": "Find the direction markings. Which information would you still need to reach a destination?",
+      "look": "Which part can move while the markings stay still? What could that help you work out?",
       "connection": "A phone can show a route. A compass offers a direction. Think about what each tool depends on to work.",
       "question": "What does a magnetic compass directly help you determine?",
       "choices": [
@@ -110,7 +110,7 @@
       "shape": "shuttle",
       "summary": "An everyday tool can reveal the skill hidden inside an everyday object.",
       "story": "A weaving shuttle carries weft thread across the warp threads on a loom. Repeating this action helps build woven cloth. Shuttles vary with the loom, the fiber, and the weaver’s technique.",
-      "look": "Look for the space that holds thread. How might the shape help it move through the loom?",
+      "look": "Look at its shape. How might it carry thread through a narrow opening?",
       "connection": "Check the fabric of your clothing. Can you see threads crossing, or loops? Woven and knitted textiles are made differently.",
       "question": "What does a weaving shuttle carry?",
       "choices": [
@@ -152,7 +152,7 @@
       "shape": "generic",
       "summary": "Long before our species appeared, early human ancestors in Africa shaped stones like this one by striking them with harder rocks. A hand axe could cut meat, chop wood, and dig for roots. This is a modern replica made the same way.",
       "story": "Long before our species appeared, early human ancestors in Africa shaped stones like this one by striking them with harder rocks. A hand axe could cut meat, chop wood, and dig for roots. This is a modern replica made the same way.",
-      "look": "What is a tool you use every day? How long do you think people will keep using it?",
+      "look": "Pick one edge and one place you might grip. What makes you think each would work?",
       "connection": "Hand axes are one of the longest-used tools in history. People made them in nearly the same shape for over a million years.",
       "question": "What does this replica help us investigate?",
       "choices": [
@@ -195,7 +195,7 @@
       "shape": "generic",
       "summary": "Rulers of China's Shang dynasty asked questions about the future by carving them into bones and turtle shells, then heating them until they cracked. The carvings are the oldest known Chinese writing.",
       "story": "Rulers of China's Shang dynasty asked questions about the future by carving them into bones and turtle shells, then heating them until they cracked. The carvings are the oldest known Chinese writing.",
-      "look": "If you could ask one question about the future, what would it be?",
+      "look": "Look for marks made on purpose. How would you distinguish an inscription from a crack?",
       "connection": "Some characters on oracle bones still look a lot like Chinese characters used today.",
       "question": "What were oracle bones used for?",
       "choices": [
@@ -238,7 +238,7 @@
       "shape": "generic",
       "summary": "Ice Age artists painted horses, bulls, and deer deep inside caves using red and yellow ochre and black charcoal. This panel is a hand-painted reproduction of animals from the Lascaux cave.",
       "story": "Ice Age artists painted horses, bulls, and deer deep inside caves using red and yellow ochre and black charcoal. This panel is a hand-painted reproduction of animals from the Lascaux cave.",
-      "look": "Why do you think people painted animals in dark caves where few could see them?",
+      "look": "Which few lines let you recognize an animal? Trace them in the air.",
       "connection": "The real Lascaux cave was discovered in 1940 by four teenagers following their dog.",
       "question": "Which detail connects this reproduction to Ice Age art?",
       "choices": [
@@ -281,16 +281,16 @@
       "shape": "generic",
       "summary": "Workers in the Pine Barrens used wooden scoops with long teeth to comb cranberries off the vines. New Jersey has grown cranberries for more than 150 years and is still one of the top cranberry states.",
       "story": "Workers in the Pine Barrens used wooden scoops with long teeth to comb cranberries off the vines. New Jersey has grown cranberries for more than 150 years and is still one of the top cranberry states.",
-      "look": "What crops or foods come from near where you live?",
+      "look": "Look at the gaps between the teeth. What could slip through, and what would stay in the scoop?",
       "connection": "Cranberries have pockets of air inside, so they float. Farmers flood the bogs and the berries rise to the top.",
-      "question": "Why can cranberries float?",
+      "question": "Why would spaced teeth work better than a solid blade for picking cranberries?",
       "choices": [
-        "They contain air pockets",
-        "They are made of wood",
-        "They dissolve in water"
+        "They seal the scoop so water stays inside.",
+        "They let thin vines pass between the teeth while the berries are caught.",
+        "They cut the roots so the whole plant comes out."
       ],
-      "answer": 0,
-      "explanation": "They contain air pockets. Cranberries have pockets of air inside, so they float. Farmers flood the bogs and the berries rise to the top.",
+      "answer": 1,
+      "explanation": "The spaces let thin stems pass through while the wider berries catch against the teeth. Look again at the spacing on the scoop.",
       "prompt": "What crops or foods come from near where you live?",
       "sources": [],
       "demo": true,

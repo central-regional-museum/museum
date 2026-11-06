@@ -368,7 +368,7 @@ function itemCard(it){
   return '<a class="icard" href="index.html#exhibit/'+encodeURIComponent(it.id)+'">'+photoOrTile(it,"thumb")+'<div class="body">'+pills(it)+'<h3>'+esc(it.name)+'</h3><div class="meta">'+esc(it.no)+(it.era?' · '+esc(it.era):'')+'</div></div></a>';
 }
 function nav(active){
-return '<header><a class="brand" href="index.html">◈ OBJECT STORIES <small>THE SCHOOL MUSEUM</small></a><nav aria-label="Main"><a href="index.html">Collection</a><a href="journey.html" aria-current="page">Journey of Man</a><a href="explorer.html">My Explorer</a><a href="index.html#trail">My Passport</a><a href="index.html#game">Mystery Match</a><a href="index.html#about">How It Works</a></nav></header><div class="gallery-navigation"><span class="eyebrow">Explore a place</span><nav aria-label="Galleries">'+GALLERIES.map(function(g){return '<a href="#'+g.id+'"'+(g.id===active?' aria-current="page"':'')+'>'+esc(g.name)+'</a>';}).join('')+'</nav></div>';
+return '<header><a class="brand" href="index.html">◈ OBJECT STORIES <small>THE SCHOOL MUSEUM</small></a><nav aria-label="Main"><a href="index.html">Collection</a><a href="journey.html" aria-current="page">Journey of Man</a><a href="explorer.html">My Explorer</a><a href="index.html#trail">My Passport</a><a href="index.html#game">Mystery Match</a><a href="index.html#about">How It Works</a><a href="https://central-regional-museum-trophy.speepo.chatgpt.site/teacher">Teacher Desk</a></nav></header><div class="gallery-navigation"><span class="eyebrow">Explore a place</span><nav aria-label="Galleries">'+GALLERIES.map(function(g){return '<a href="#'+g.id+'"'+(g.id===active?' aria-current="page"':'')+'>'+esc(g.name)+'</a>';}).join('')+'</nav></div>';
 }
 function footer(){
   return '<footer class="footer"><div class="wrap"><span>Journey of Man · a school museum</span>'+'<span>Scan a QR code at any display to read about it.</span>'+'</div></footer>';
@@ -569,4 +569,4 @@ render();
 })();
 </script>
 
-<script src="vault.js?v=games1"></script><script src="site-fun.js?v=notices2"></script><script src="journey-games.js?v=games1"></script><script src="progress-notices.js?v=notices2"></script><script src="brand.js?v=mark1"></script><script src="device-shortcut.js?v=1"></script></body></html>
+<script src="vault.js?v=games1"></script><script src="site-fun.js?v=notices2"></script><script src="journey-games.js?v=games1"></script><script src="progress-notices.js?v=backup3"></script><script src="brand.js?v=mark1"></script><script src="device-shortcut.js?v=1"></script></body></html>

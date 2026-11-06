@@ -10,7 +10,7 @@ let requestId;try{requestId=new URLSearchParams(location.search).get('exhibit')}
 const entry=requestId?(window.EXHIBITS||[]).find(e=>e.id===requestId&&e.published!==false):null;
 let photo='',imageState='none',currentSVG='',exporting=false,stored=true,shareFile=null,shareVersion=0,shareTimer;
 const museumTitle=window.MUSEUM_SETTINGS?.title||'School Museum';
-function remember(){try{localStorage.setItem(key,JSON.stringify(explorer));stored=true}catch{stored=false}$('memory-status').textContent=stored?'Your explorer is remembered in this browser.':'Browser storage is unavailable. Your explorer will last only in this open page.'}
+function remember(){window.MuseumVault?.checkpoint();window.MuseumVault?.recordExplorer(explorer);try{localStorage.setItem(key,JSON.stringify(explorer));stored=true}catch{stored=false}$('memory-status').textContent=stored?'Your explorer is remembered in this browser.':'Browser storage is unavailable. Your explorer will last only in this open page.'}
 // One shared front-facing head and attachment point for every hairstyle.
 function headSVG(layer='front'){const {hair,hairColor:h,skinColor:skin,glasses}=explorer,ink='#28303b';
  const shape=(d,color=h)=>`<path d="${d}" fill="${color}" stroke="${ink}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`;

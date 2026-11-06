@@ -4,7 +4,7 @@ const text=v=>typeof v==='string'&&v.trim().length>0;
 const localAsset=v=>typeof v==='string'&&/^assets\/[a-zA-Z0-9_./-]+$/.test(v)&&!v.split('/').includes('..');
 const https=v=>{try{return new URL(v).protocol==='https:'}catch{return false}};
 function validate(settings,items,{classroom=false}={}){
- const errors=[],warnings=[],ids=new Set();
+ const errors=[],warnings=[],ids=new Set(),museumIds=new Set();
  if(!settings||typeof settings!=='object')return{errors:['Missing museum settings.'],warnings};
  if(!Array.isArray(items))return{errors:['Exhibits must be a list.'],warnings};
  if(!/^[a-z0-9-]+$/.test(settings.collectionId||''))errors.push('Collection ID must use lower-case letters, numbers and hyphens.');
@@ -21,6 +21,7 @@ function validate(settings,items,{classroom=false}={}){
   if(ids.has(e.id))errors.push(p+'duplicate ID.');ids.add(e.id);
   if(e.photoPhrase!==undefined&&(typeof e.photoPhrase!=='string'||e.photoPhrase.length>140))errors.push(p+'character phrase must be text of at most 140 characters.');
   if(e.photoBoothEnabled!==undefined&&typeof e.photoBoothEnabled!=='boolean')errors.push(p+'photo booth setting must be true or false.');
+  if(e.inventoryId){if(!/^\d{4}$/.test(e.inventoryId))errors.push(p+'museum ID must have four digits.');if(museumIds.has(e.inventoryId))errors.push(p+'duplicate museum ID.');museumIds.add(e.inventoryId);}
   if(e.published===false)continue;
   for(const key of ['title','object','category','period','material','summary','story','look','connection','question','explanation','prompt'])if(!text(e[key]))errors.push(p+key+' is required.');
   if(!Array.isArray(e.choices)||e.choices.length!==3||!e.choices.every(text)||new Set(e.choices).size!==3)errors.push(p+'provide three different, nonempty answer choices.');

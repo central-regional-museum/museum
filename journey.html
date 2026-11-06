@@ -194,7 +194,7 @@ var GMAP = {}; GALLERIES.forEach(function(g,i){g.n=i+1;GMAP[g.id]=g;});
 
 var data;
 try{ data = JSON.parse(document.getElementById("jm-data").textContent); }catch(e){ data = {nextNo:1, items:[]}; }
-data.items = (window.EXHIBITS || []).filter(function(e){return e.gallery && e.published!==false;}).map(function(e){return {id:e.id,no:e.id,gallery:e.gallery,name:e.object,era:e.period,origin:e.origin||'See exhibit story',place:'',status:'display',description:e.story,fact:e.connection,question:e.look,photo:e.image||'',photoCropX:e.photoCropX,photoCropY:e.photoCropY,sample:e.demo};});
+data.items = (window.EXHIBITS || []).filter(function(e){return e.gallery && e.published!==false;}).map(function(e){return {id:e.id,no:e.inventoryId||e.id,gallery:e.gallery,name:e.object,era:e.period,origin:e.origin||'See exhibit story',place:e.caseId||'',status:'display',description:e.story,fact:e.connection,question:e.look,photo:e.image||'',photoCropX:e.photoCropX,photoCropY:e.photoCropY,sample:e.demo};});
 var art=null, dl=null, canEdit=false, readOnlyReason="";
 var staffTab="items", editing=null, confirmDel=null, statusMsg=null, photoWork=null;
 var flash=null; try{ flash=sessionStorage.getItem("jm-flash"); sessionStorage.removeItem("jm-flash"); }catch(e){}
@@ -368,7 +368,7 @@ function itemCard(it){
   return '<a class="icard" href="index.html#exhibit/'+encodeURIComponent(it.id)+'">'+photoOrTile(it,"thumb")+'<div class="body">'+pills(it)+'<h3>'+esc(it.name)+'</h3><div class="meta">'+esc(it.no)+(it.era?' · '+esc(it.era):'')+'</div></div></a>';
 }
 function nav(active){
-return '<header><a class="brand" href="index.html">◈ OBJECT STORIES <small>THE SCHOOL MUSEUM</small></a><nav aria-label="Main"><a href="index.html">Collection</a><a href="journey.html" aria-current="page">Journey of Man</a><a href="explorer.html">My Explorer</a><a href="index.html#trail">My Passport</a><a href="index.html#game">Mystery Match</a><a href="index.html#about">How It Works</a><a href="https://central-regional-museum-trophy.speepo.chatgpt.site/teacher">Teacher Desk</a></nav></header><div class="gallery-navigation"><span class="eyebrow">Explore a place</span><nav aria-label="Galleries">'+GALLERIES.map(function(g){return '<a href="#'+g.id+'"'+(g.id===active?' aria-current="page"':'')+'>'+esc(g.name)+'</a>';}).join('')+'</nav></div>';
+return '<header><a class="brand" href="index.html">◈ OBJECT STORIES <small>THE SCHOOL MUSEUM</small></a><nav aria-label="Main"><a href="index.html">Collection</a><a href="journey.html" aria-current="page">Journey of Man</a><a href="explorer.html">My Explorer</a><a href="index.html#trail">My Passport</a><a href="index.html#game">Mystery Match</a><a href="index.html#about">How It Works</a></nav></header><div class="gallery-navigation"><span class="eyebrow">Explore a place</span><nav aria-label="Galleries">'+GALLERIES.map(function(g){return '<a href="#'+g.id+'"'+(g.id===active?' aria-current="page"':'')+'>'+esc(g.name)+'</a>';}).join('')+'</nav></div>';
 }
 function footer(){
   return '<footer class="footer"><div class="wrap"><span>Journey of Man · a school museum</span>'+'<span>Scan a QR code at any display to read about it.</span>'+'</div></footer>';

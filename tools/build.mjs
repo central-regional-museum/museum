@@ -23,7 +23,7 @@ if(report.errors.length){console.error(report.errors.map(e=>'ERROR: '+e).join('\
  const dist=path.join(root,'dist');await fs.mkdir(dist,{recursive:true});
  // Only remove the known build destination, never the source project or user folders.
  for(const f of await fs.readdir(dist))await fs.rm(path.join(dist,f),{recursive:true,force:true});
- for(const file of ['wardrobe.js','museum-save.js','museum-mark.svg','museum-icon-192.png','museum-icon-512.png','device-shortcut.js','sw.js','offline.html','color-break.html','color-break.js','color-break.css','wiki-photos.js','trophy-client.js','brand.js','progress-notices.js','puzzle.html','puzzle.js','journey-games.js','journey-theme.css','site-fun.js','index.html','style.css','app.js','passport-rules.js','teacher-check.js','teacher-check.html','polish.js','vault.js','discoveries.js','stamp-system.js','stamp-designs.js','exchange.js','curiosity.js','boot.js','journey.html','collection-core.js','placards.html','placards.css','placards.js','explorer.html','explorer.css','explorer.js','explorer-options.js','CHARACTER_CREDITS.txt','.nojekyll'])await fs.copyFile(path.join(root,file),path.join(dist,file));
+ for(const file of ['flag-images-1.js','flag-images-2.js','flag-images-3.js','flag-images-4.js','install.html','flag-catalog.json','museum-labels.js','placards-png.js','wardrobe.js','museum-save.js','museum-mark.svg','museum-icon-192.png','museum-icon-512.png','device-shortcut.js','sw.js','offline.html','color-break.html','color-break.js','color-break.css','wiki-photos.js','trophy-client.js','brand.js','progress-notices.js','puzzle.html','puzzle.js','journey-games.js','journey-theme.css','site-fun.js','index.html','style.css','app.js','passport-rules.js','teacher-check.js','teacher-check.html','polish.js','vault.js','discoveries.js','stamp-system.js','stamp-designs.js','exchange.js','curiosity.js','boot.js','journey.html','collection-core.js','placards.html','placards.css','placards.js','explorer.html','explorer.css','explorer.js','explorer-options.js','CHARACTER_CREDITS.txt','.nojekyll'])await fs.copyFile(path.join(root,file),path.join(dist,file));
  const published=items.filter(e=>e.published!==false);
  const revision=createHash('sha256').update(JSON.stringify({settings,items:published,specials:11})).digest('hex').slice(0,20);
  settings={...settings,collectionRevision:revision};
@@ -38,6 +38,9 @@ if(report.errors.length){console.error(report.errors.map(e=>'ERROR: '+e).join('\
  await fs.writeFile(path.join(dist,'exhibits.js'),'window.EXHIBITS = '+serialize(items.filter(e=>e.published!==false))+';\n');
  await fs.mkdir(path.join(dist,'tools'),{recursive:true});
  await fs.copyFile(path.join(root,'tools/qrcode.min.js'),path.join(dist,'tools/qrcode.min.js'));
+ await fs.cp(path.join(root,'shortcuts'),path.join(dist,'shortcuts'),{recursive:true});
+ await fs.mkdir(path.join(dist,'assets/flags'),{recursive:true});
+ await fs.cp(path.join(root,'assets/flags'),path.join(dist,'assets/flags'),{recursive:true});
  // Copy only media referenced by published exhibits. Unused/draft assets stay out.
  for(const e of items.filter(e=>e.published!==false))for(const key of ['image','audio'])if(e[key]){const dest=path.join(dist,e[key]);await fs.mkdir(path.dirname(dest),{recursive:true});await fs.copyFile(path.join(root,e[key]),dest);}
  console.log('READY: '+items.filter(e=>e.published!==false).length+' published exhibits. Upload only the contents of dist/ to GitHub Pages.');

@@ -1,0 +1,1267 @@
+[
+  {
+    "name": "Afghanistan",
+    "flagKey": "af",
+    "gallery": "asia"
+  },
+  {
+    "name": "Aland Islands",
+    "flagKey": "ax",
+    "gallery": "europe"
+  },
+  {
+    "name": "Albania",
+    "flagKey": "al",
+    "gallery": "europe"
+  },
+  {
+    "name": "Algeria",
+    "flagKey": "dz",
+    "gallery": "africa"
+  },
+  {
+    "name": "American Samoa",
+    "flagKey": "as",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Andorra",
+    "flagKey": "ad",
+    "gallery": "europe"
+  },
+  {
+    "name": "Angola",
+    "flagKey": "ao",
+    "gallery": "africa"
+  },
+  {
+    "name": "Anguilla",
+    "flagKey": "ai",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Antarctica",
+    "flagKey": "aq",
+    "gallery": ""
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "flagKey": "ag",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Argentina",
+    "flagKey": "ar",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Armenia",
+    "flagKey": "am",
+    "gallery": "asia"
+  },
+  {
+    "name": "Aruba",
+    "flagKey": "aw",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Australia",
+    "flagKey": "au",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Austria",
+    "flagKey": "at",
+    "gallery": "europe"
+  },
+  {
+    "name": "Azerbaijan",
+    "flagKey": "az",
+    "gallery": "asia"
+  },
+  {
+    "name": "Bahamas",
+    "flagKey": "bs",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Bahrain",
+    "flagKey": "bh",
+    "gallery": "asia"
+  },
+  {
+    "name": "Bangladesh",
+    "flagKey": "bd",
+    "gallery": "asia"
+  },
+  {
+    "name": "Barbados",
+    "flagKey": "bb",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Belarus",
+    "flagKey": "by",
+    "gallery": "europe"
+  },
+  {
+    "name": "Belgium",
+    "flagKey": "be",
+    "gallery": "europe"
+  },
+  {
+    "name": "Belize",
+    "flagKey": "bz",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Benin",
+    "flagKey": "bj",
+    "gallery": "africa"
+  },
+  {
+    "name": "Bermuda",
+    "flagKey": "bm",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Bhutan",
+    "flagKey": "bt",
+    "gallery": "asia"
+  },
+  {
+    "name": "Bolivia",
+    "flagKey": "bo",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Bonaire, Sint Eustatius and Saba",
+    "flagKey": "bq",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "flagKey": "ba",
+    "gallery": "europe"
+  },
+  {
+    "name": "Botswana",
+    "flagKey": "bw",
+    "gallery": "africa"
+  },
+  {
+    "name": "Bouvet Island",
+    "flagKey": "bv",
+    "gallery": ""
+  },
+  {
+    "name": "Brazil",
+    "flagKey": "br",
+    "gallery": "south-america"
+  },
+  {
+    "name": "British Indian Ocean Territory",
+    "flagKey": "io",
+    "gallery": "asia"
+  },
+  {
+    "name": "Brunei Darussalam",
+    "flagKey": "bn",
+    "gallery": "asia"
+  },
+  {
+    "name": "Bulgaria",
+    "flagKey": "bg",
+    "gallery": "europe"
+  },
+  {
+    "name": "Burkina Faso",
+    "flagKey": "bf",
+    "gallery": "africa"
+  },
+  {
+    "name": "Burundi",
+    "flagKey": "bi",
+    "gallery": "africa"
+  },
+  {
+    "name": "Cabo Verde",
+    "flagKey": "cv",
+    "gallery": "africa"
+  },
+  {
+    "name": "Cambodia",
+    "flagKey": "kh",
+    "gallery": "asia"
+  },
+  {
+    "name": "Cameroon",
+    "flagKey": "cm",
+    "gallery": "africa"
+  },
+  {
+    "name": "Canada",
+    "flagKey": "ca",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Cayman Islands",
+    "flagKey": "ky",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Central African Republic",
+    "flagKey": "cf",
+    "gallery": "africa"
+  },
+  {
+    "name": "Chad",
+    "flagKey": "td",
+    "gallery": "africa"
+  },
+  {
+    "name": "Chile",
+    "flagKey": "cl",
+    "gallery": "south-america"
+  },
+  {
+    "name": "China",
+    "flagKey": "cn",
+    "gallery": "asia"
+  },
+  {
+    "name": "Christmas Island",
+    "flagKey": "cx",
+    "gallery": "asia"
+  },
+  {
+    "name": "Cocos (Keeling) Islands",
+    "flagKey": "cc",
+    "gallery": "asia"
+  },
+  {
+    "name": "Colombia",
+    "flagKey": "co",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Comoros",
+    "flagKey": "km",
+    "gallery": "africa"
+  },
+  {
+    "name": "Cook Islands",
+    "flagKey": "ck",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Costa Rica",
+    "flagKey": "cr",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Croatia",
+    "flagKey": "hr",
+    "gallery": "europe"
+  },
+  {
+    "name": "Cuba",
+    "flagKey": "cu",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Curaçao",
+    "flagKey": "cw",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Cyprus",
+    "flagKey": "cy",
+    "gallery": "europe"
+  },
+  {
+    "name": "Czech Republic",
+    "flagKey": "cz",
+    "gallery": "europe"
+  },
+  {
+    "name": "Côte d'Ivoire",
+    "flagKey": "ci",
+    "gallery": "africa"
+  },
+  {
+    "name": "Democratic Republic of the Congo",
+    "flagKey": "cd",
+    "gallery": "africa"
+  },
+  {
+    "name": "Denmark",
+    "flagKey": "dk",
+    "gallery": "europe"
+  },
+  {
+    "name": "Djibouti",
+    "flagKey": "dj",
+    "gallery": "africa"
+  },
+  {
+    "name": "Dominica",
+    "flagKey": "dm",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Dominican Republic",
+    "flagKey": "do",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Ecuador",
+    "flagKey": "ec",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Egypt",
+    "flagKey": "eg",
+    "gallery": "africa"
+  },
+  {
+    "name": "El Salvador",
+    "flagKey": "sv",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Equatorial Guinea",
+    "flagKey": "gq",
+    "gallery": "africa"
+  },
+  {
+    "name": "Eritrea",
+    "flagKey": "er",
+    "gallery": "africa"
+  },
+  {
+    "name": "Estonia",
+    "flagKey": "ee",
+    "gallery": "europe"
+  },
+  {
+    "name": "Eswatini",
+    "flagKey": "sz",
+    "gallery": "africa"
+  },
+  {
+    "name": "Ethiopia",
+    "flagKey": "et",
+    "gallery": "africa"
+  },
+  {
+    "name": "Falkland Islands",
+    "flagKey": "fk",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Faroe Islands",
+    "flagKey": "fo",
+    "gallery": "europe"
+  },
+  {
+    "name": "Federated States of Micronesia",
+    "flagKey": "fm",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Fiji",
+    "flagKey": "fj",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Finland",
+    "flagKey": "fi",
+    "gallery": "europe"
+  },
+  {
+    "name": "France",
+    "flagKey": "fr",
+    "gallery": "europe"
+  },
+  {
+    "name": "French Guiana",
+    "flagKey": "gf",
+    "gallery": "south-america"
+  },
+  {
+    "name": "French Polynesia",
+    "flagKey": "pf",
+    "gallery": "oceania"
+  },
+  {
+    "name": "French Southern Territories",
+    "flagKey": "tf",
+    "gallery": "africa"
+  },
+  {
+    "name": "Gabon",
+    "flagKey": "ga",
+    "gallery": "africa"
+  },
+  {
+    "name": "Gambia",
+    "flagKey": "gm",
+    "gallery": "africa"
+  },
+  {
+    "name": "Georgia",
+    "flagKey": "ge",
+    "gallery": "asia"
+  },
+  {
+    "name": "Germany",
+    "flagKey": "de",
+    "gallery": "europe"
+  },
+  {
+    "name": "Ghana",
+    "flagKey": "gh",
+    "gallery": "africa"
+  },
+  {
+    "name": "Gibraltar",
+    "flagKey": "gi",
+    "gallery": "europe"
+  },
+  {
+    "name": "Greece",
+    "flagKey": "gr",
+    "gallery": "europe"
+  },
+  {
+    "name": "Greenland",
+    "flagKey": "gl",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Grenada",
+    "flagKey": "gd",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Guadeloupe",
+    "flagKey": "gp",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Guam",
+    "flagKey": "gu",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Guatemala",
+    "flagKey": "gt",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Guernsey",
+    "flagKey": "gg",
+    "gallery": "europe"
+  },
+  {
+    "name": "Guinea",
+    "flagKey": "gn",
+    "gallery": "africa"
+  },
+  {
+    "name": "Guinea-Bissau",
+    "flagKey": "gw",
+    "gallery": "africa"
+  },
+  {
+    "name": "Guyana",
+    "flagKey": "gy",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Haiti",
+    "flagKey": "ht",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Heard Island and McDonald Islands",
+    "flagKey": "hm",
+    "gallery": ""
+  },
+  {
+    "name": "Holy See",
+    "flagKey": "va",
+    "gallery": "europe"
+  },
+  {
+    "name": "Honduras",
+    "flagKey": "hn",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Hong Kong",
+    "flagKey": "hk",
+    "gallery": "asia"
+  },
+  {
+    "name": "Hungary",
+    "flagKey": "hu",
+    "gallery": "europe"
+  },
+  {
+    "name": "Iceland",
+    "flagKey": "is",
+    "gallery": "europe"
+  },
+  {
+    "name": "India",
+    "flagKey": "in",
+    "gallery": "asia"
+  },
+  {
+    "name": "Indonesia",
+    "flagKey": "id",
+    "gallery": "asia"
+  },
+  {
+    "name": "Iran",
+    "flagKey": "ir",
+    "gallery": "asia"
+  },
+  {
+    "name": "Iraq",
+    "flagKey": "iq",
+    "gallery": "asia"
+  },
+  {
+    "name": "Ireland",
+    "flagKey": "ie",
+    "gallery": "europe"
+  },
+  {
+    "name": "Isle of Man",
+    "flagKey": "im",
+    "gallery": "europe"
+  },
+  {
+    "name": "Israel",
+    "flagKey": "il",
+    "gallery": "asia"
+  },
+  {
+    "name": "Italy",
+    "flagKey": "it",
+    "gallery": "europe"
+  },
+  {
+    "name": "Jamaica",
+    "flagKey": "jm",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Japan",
+    "flagKey": "jp",
+    "gallery": "asia"
+  },
+  {
+    "name": "Jersey",
+    "flagKey": "je",
+    "gallery": "europe"
+  },
+  {
+    "name": "Jordan",
+    "flagKey": "jo",
+    "gallery": "asia"
+  },
+  {
+    "name": "Kazakhstan",
+    "flagKey": "kz",
+    "gallery": "asia"
+  },
+  {
+    "name": "Kenya",
+    "flagKey": "ke",
+    "gallery": "africa"
+  },
+  {
+    "name": "Kiribati",
+    "flagKey": "ki",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Kuwait",
+    "flagKey": "kw",
+    "gallery": "asia"
+  },
+  {
+    "name": "Kyrgyzstan",
+    "flagKey": "kg",
+    "gallery": "asia"
+  },
+  {
+    "name": "Laos",
+    "flagKey": "la",
+    "gallery": "asia"
+  },
+  {
+    "name": "Latvia",
+    "flagKey": "lv",
+    "gallery": "europe"
+  },
+  {
+    "name": "Lebanon",
+    "flagKey": "lb",
+    "gallery": "asia"
+  },
+  {
+    "name": "Lesotho",
+    "flagKey": "ls",
+    "gallery": "africa"
+  },
+  {
+    "name": "Liberia",
+    "flagKey": "lr",
+    "gallery": "africa"
+  },
+  {
+    "name": "Libya",
+    "flagKey": "ly",
+    "gallery": "africa"
+  },
+  {
+    "name": "Liechtenstein",
+    "flagKey": "li",
+    "gallery": "europe"
+  },
+  {
+    "name": "Lithuania",
+    "flagKey": "lt",
+    "gallery": "europe"
+  },
+  {
+    "name": "Luxembourg",
+    "flagKey": "lu",
+    "gallery": "europe"
+  },
+  {
+    "name": "Macau",
+    "flagKey": "mo",
+    "gallery": "asia"
+  },
+  {
+    "name": "Madagascar",
+    "flagKey": "mg",
+    "gallery": "africa"
+  },
+  {
+    "name": "Malawi",
+    "flagKey": "mw",
+    "gallery": "africa"
+  },
+  {
+    "name": "Malaysia",
+    "flagKey": "my",
+    "gallery": "asia"
+  },
+  {
+    "name": "Maldives",
+    "flagKey": "mv",
+    "gallery": "asia"
+  },
+  {
+    "name": "Mali",
+    "flagKey": "ml",
+    "gallery": "africa"
+  },
+  {
+    "name": "Malta",
+    "flagKey": "mt",
+    "gallery": "europe"
+  },
+  {
+    "name": "Marshall Islands",
+    "flagKey": "mh",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Martinique",
+    "flagKey": "mq",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Mauritania",
+    "flagKey": "mr",
+    "gallery": "africa"
+  },
+  {
+    "name": "Mauritius",
+    "flagKey": "mu",
+    "gallery": "africa"
+  },
+  {
+    "name": "Mayotte",
+    "flagKey": "yt",
+    "gallery": "africa"
+  },
+  {
+    "name": "Mexico",
+    "flagKey": "mx",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Moldova",
+    "flagKey": "md",
+    "gallery": "europe"
+  },
+  {
+    "name": "Monaco",
+    "flagKey": "mc",
+    "gallery": "europe"
+  },
+  {
+    "name": "Mongolia",
+    "flagKey": "mn",
+    "gallery": "asia"
+  },
+  {
+    "name": "Montenegro",
+    "flagKey": "me",
+    "gallery": "europe"
+  },
+  {
+    "name": "Montserrat",
+    "flagKey": "ms",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Morocco",
+    "flagKey": "ma",
+    "gallery": "africa"
+  },
+  {
+    "name": "Mozambique",
+    "flagKey": "mz",
+    "gallery": "africa"
+  },
+  {
+    "name": "Myanmar",
+    "flagKey": "mm",
+    "gallery": "asia"
+  },
+  {
+    "name": "Namibia",
+    "flagKey": "na",
+    "gallery": "africa"
+  },
+  {
+    "name": "Nauru",
+    "flagKey": "nr",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Nepal",
+    "flagKey": "np",
+    "gallery": "asia"
+  },
+  {
+    "name": "Netherlands",
+    "flagKey": "nl",
+    "gallery": "europe"
+  },
+  {
+    "name": "New Caledonia",
+    "flagKey": "nc",
+    "gallery": "oceania"
+  },
+  {
+    "name": "New Zealand",
+    "flagKey": "nz",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Nicaragua",
+    "flagKey": "ni",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Niger",
+    "flagKey": "ne",
+    "gallery": "africa"
+  },
+  {
+    "name": "Nigeria",
+    "flagKey": "ng",
+    "gallery": "africa"
+  },
+  {
+    "name": "Niue",
+    "flagKey": "nu",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Norfolk Island",
+    "flagKey": "nf",
+    "gallery": "oceania"
+  },
+  {
+    "name": "North Korea",
+    "flagKey": "kp",
+    "gallery": "asia"
+  },
+  {
+    "name": "North Macedonia",
+    "flagKey": "mk",
+    "gallery": "europe"
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "flagKey": "mp",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Norway",
+    "flagKey": "no",
+    "gallery": "europe"
+  },
+  {
+    "name": "Oman",
+    "flagKey": "om",
+    "gallery": "asia"
+  },
+  {
+    "name": "Pakistan",
+    "flagKey": "pk",
+    "gallery": "asia"
+  },
+  {
+    "name": "Palau",
+    "flagKey": "pw",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Panama",
+    "flagKey": "pa",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Papua New Guinea",
+    "flagKey": "pg",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Paraguay",
+    "flagKey": "py",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Peru",
+    "flagKey": "pe",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Philippines",
+    "flagKey": "ph",
+    "gallery": "asia"
+  },
+  {
+    "name": "Pitcairn",
+    "flagKey": "pn",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Poland",
+    "flagKey": "pl",
+    "gallery": "europe"
+  },
+  {
+    "name": "Portugal",
+    "flagKey": "pt",
+    "gallery": "europe"
+  },
+  {
+    "name": "Puerto Rico",
+    "flagKey": "pr",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Qatar",
+    "flagKey": "qa",
+    "gallery": "asia"
+  },
+  {
+    "name": "Republic of the Congo",
+    "flagKey": "cg",
+    "gallery": "africa"
+  },
+  {
+    "name": "Romania",
+    "flagKey": "ro",
+    "gallery": "europe"
+  },
+  {
+    "name": "Russia",
+    "flagKey": "ru",
+    "gallery": "europe"
+  },
+  {
+    "name": "Rwanda",
+    "flagKey": "rw",
+    "gallery": "africa"
+  },
+  {
+    "name": "Réunion",
+    "flagKey": "re",
+    "gallery": "africa"
+  },
+  {
+    "name": "Saint Barthélemy",
+    "flagKey": "bl",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "flagKey": "sh",
+    "gallery": "africa"
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "flagKey": "kn",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Saint Lucia",
+    "flagKey": "lc",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Saint Martin",
+    "flagKey": "mf",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Saint Pierre and Miquelon",
+    "flagKey": "pm",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "flagKey": "vc",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Samoa",
+    "flagKey": "ws",
+    "gallery": "oceania"
+  },
+  {
+    "name": "San Marino",
+    "flagKey": "sm",
+    "gallery": "europe"
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "flagKey": "st",
+    "gallery": "africa"
+  },
+  {
+    "name": "Saudi Arabia",
+    "flagKey": "sa",
+    "gallery": "asia"
+  },
+  {
+    "name": "Senegal",
+    "flagKey": "sn",
+    "gallery": "africa"
+  },
+  {
+    "name": "Serbia",
+    "flagKey": "rs",
+    "gallery": "europe"
+  },
+  {
+    "name": "Seychelles",
+    "flagKey": "sc",
+    "gallery": "africa"
+  },
+  {
+    "name": "Sierra Leone",
+    "flagKey": "sl",
+    "gallery": "africa"
+  },
+  {
+    "name": "Singapore",
+    "flagKey": "sg",
+    "gallery": "asia"
+  },
+  {
+    "name": "Sint Maarten",
+    "flagKey": "sx",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Slovakia",
+    "flagKey": "sk",
+    "gallery": "europe"
+  },
+  {
+    "name": "Slovenia",
+    "flagKey": "si",
+    "gallery": "europe"
+  },
+  {
+    "name": "Solomon Islands",
+    "flagKey": "sb",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Somalia",
+    "flagKey": "so",
+    "gallery": "africa"
+  },
+  {
+    "name": "South Africa",
+    "flagKey": "za",
+    "gallery": "africa"
+  },
+  {
+    "name": "South Georgia and the South Sandwich Islands",
+    "flagKey": "gs",
+    "gallery": ""
+  },
+  {
+    "name": "South Korea",
+    "flagKey": "kr",
+    "gallery": "asia"
+  },
+  {
+    "name": "South Sudan",
+    "flagKey": "ss",
+    "gallery": "africa"
+  },
+  {
+    "name": "Spain",
+    "flagKey": "es",
+    "gallery": "europe"
+  },
+  {
+    "name": "Sri Lanka",
+    "flagKey": "lk",
+    "gallery": "asia"
+  },
+  {
+    "name": "State of Palestine",
+    "flagKey": "ps",
+    "gallery": "asia"
+  },
+  {
+    "name": "Sudan",
+    "flagKey": "sd",
+    "gallery": "africa"
+  },
+  {
+    "name": "Suriname",
+    "flagKey": "sr",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Svalbard and Jan Mayen",
+    "flagKey": "sj",
+    "gallery": "europe"
+  },
+  {
+    "name": "Sweden",
+    "flagKey": "se",
+    "gallery": "europe"
+  },
+  {
+    "name": "Switzerland",
+    "flagKey": "ch",
+    "gallery": "europe"
+  },
+  {
+    "name": "Syria",
+    "flagKey": "sy",
+    "gallery": "asia"
+  },
+  {
+    "name": "Taiwan",
+    "flagKey": "tw",
+    "gallery": "asia"
+  },
+  {
+    "name": "Tajikistan",
+    "flagKey": "tj",
+    "gallery": "asia"
+  },
+  {
+    "name": "Tanzania",
+    "flagKey": "tz",
+    "gallery": "africa"
+  },
+  {
+    "name": "Thailand",
+    "flagKey": "th",
+    "gallery": "asia"
+  },
+  {
+    "name": "Timor-Leste",
+    "flagKey": "tl",
+    "gallery": "asia"
+  },
+  {
+    "name": "Togo",
+    "flagKey": "tg",
+    "gallery": "africa"
+  },
+  {
+    "name": "Tokelau",
+    "flagKey": "tk",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Tonga",
+    "flagKey": "to",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "flagKey": "tt",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Tunisia",
+    "flagKey": "tn",
+    "gallery": "africa"
+  },
+  {
+    "name": "Turkmenistan",
+    "flagKey": "tm",
+    "gallery": "asia"
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "flagKey": "tc",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Tuvalu",
+    "flagKey": "tv",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Türkiye",
+    "flagKey": "tr",
+    "gallery": "asia"
+  },
+  {
+    "name": "Uganda",
+    "flagKey": "ug",
+    "gallery": "africa"
+  },
+  {
+    "name": "Ukraine",
+    "flagKey": "ua",
+    "gallery": "europe"
+  },
+  {
+    "name": "United Arab Emirates",
+    "flagKey": "ae",
+    "gallery": "asia"
+  },
+  {
+    "name": "United Kingdom",
+    "flagKey": "gb",
+    "gallery": "europe"
+  },
+  {
+    "name": "United States Minor Outlying Islands",
+    "flagKey": "um",
+    "gallery": "north-america"
+  },
+  {
+    "name": "United States of America",
+    "flagKey": "us",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Uruguay",
+    "flagKey": "uy",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Uzbekistan",
+    "flagKey": "uz",
+    "gallery": "asia"
+  },
+  {
+    "name": "Vanuatu",
+    "flagKey": "vu",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Venezuela",
+    "flagKey": "ve",
+    "gallery": "south-america"
+  },
+  {
+    "name": "Vietnam",
+    "flagKey": "vn",
+    "gallery": "asia"
+  },
+  {
+    "name": "Virgin Islands (British)",
+    "flagKey": "vg",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Virgin Islands (U.S.)",
+    "flagKey": "vi",
+    "gallery": "north-america"
+  },
+  {
+    "name": "Wallis and Futuna",
+    "flagKey": "wf",
+    "gallery": "oceania"
+  },
+  {
+    "name": "Western Sahara",
+    "flagKey": "eh",
+    "gallery": "africa"
+  },
+  {
+    "name": "Yemen",
+    "flagKey": "ye",
+    "gallery": "asia"
+  },
+  {
+    "name": "Zambia",
+    "flagKey": "zm",
+    "gallery": "africa"
+  },
+  {
+    "name": "Zimbabwe",
+    "flagKey": "zw",
+    "gallery": "africa"
+  },
+  {
+    "name": "Bali",
+    "flagKey": "bali",
+    "gallery": "asia"
+  },
+  {
+    "name": "England",
+    "flagKey": "england",
+    "gallery": "europe"
+  },
+  {
+    "name": "Hawaii",
+    "flagKey": "hawaii",
+    "gallery": "north-america"
+  },
+  {
+    "name": "New Jersey",
+    "flagKey": "new-jersey",
+    "gallery": "new-jersey"
+  }
+]

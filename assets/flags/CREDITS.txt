@@ -1,0 +1,6 @@
+Flag artwork for museum labels.
+China, England, Bali, Hawaii, New Jersey: Wikimedia Commons, File:Flag_of_[location].svg (China: Flag_of_the_People's_Republic_of_China.svg).
+Bali: AnonyLog, Gunkarta, Muffin Wizard; see https://commons.wikimedia.org/wiki/File:Flag_of_Bali.svg for source and licensing.
+Hawaii: https://commons.wikimedia.org/wiki/File:Flag_of_Hawaii.svg
+New Jersey: https://commons.wikimedia.org/wiki/File:Flag_of_New_Jersey.svg
+Peru and Puerto Rico: FlagCDN country SVGs (pe.svg, pr.svg).

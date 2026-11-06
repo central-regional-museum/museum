@@ -225,6 +225,31 @@ function renderHairChoices(){
   for(const button of grid.children)button.setAttribute('aria-pressed',String(button.dataset.style===explorer.hair));
 }
 hairBrowser.ontoggle=renderHairChoices;
+if(entry && entry.photoBoothEnabled!==false && new URLSearchParams(location.search).get('cover')==='1'){
+  const choose=document.createElement('button');choose.textContent='Use this pose on my passport';
+  $('save-photo').before(choose);
+  choose.onclick=async()=>{
+    if(imageState==='loading'){$('export-status').textContent='The photo is loading. Try again in a moment.';return}
+    choose.disabled=true;
+    try{
+      const blob=await photoBlob(currentSVG),url=URL.createObjectURL(blob);
+      let jpeg;
+      try{
+        const image=await imageFromURL(url),canvas=document.createElement('canvas');
+        canvas.width=480;canvas.height=336;
+        canvas.getContext('2d').drawImage(image,0,0,480,336);
+        jpeg=canvas.toDataURL('image/jpeg',.72);
+      }finally{URL.revokeObjectURL(url)}
+      if(jpeg.length>90000)throw Error('Image too large');
+      const id=MUSEUM_SETTINGS.collectionId,prefix=id==='object-stories-demo'?'museum:':'museum:'+id+':';
+      localStorage.setItem(prefix+'curator-photo-id',JSON.stringify(''));
+      localStorage.setItem(prefix+'curator-photo',JSON.stringify(jpeg));
+      localStorage.setItem(prefix+'curator-photo-id',JSON.stringify(entry.id));
+      localStorage.setItem(prefix+'curator-id',JSON.stringify(entry.id));
+      location.assign('index.html#trail');
+    }catch{$('export-status').textContent='Could not keep this cover photo. You can still save the passport with your caption.';choose.disabled=false}
+  };
+}
 setControls();draw();try{const testKey=key+':check';localStorage.setItem(testKey,'1');localStorage.removeItem(testKey);$('memory-status').textContent='Your explorer is remembered here when you make a choice.'}catch{$('memory-status').textContent='Browser storage is unavailable. Your explorer will last only in this open page.'}if(entry&&entry.photoBoothEnabled!==false)rasterPhoto();
 window.MuseumExplorer={normalize,avatarSVG,sceneSVG};
 })();

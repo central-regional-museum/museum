@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import vm from 'node:vm';
+import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const args=process.argv.slice(2),classroom=args.includes('--classroom');
@@ -22,7 +23,15 @@ if(report.errors.length){console.error(report.errors.map(e=>'ERROR: '+e).join('\
  const dist=path.join(root,'dist');await fs.mkdir(dist,{recursive:true});
  // Only remove the known build destination, never the source project or user folders.
  for(const f of await fs.readdir(dist))await fs.rm(path.join(dist,f),{recursive:true,force:true});
- for(const file of ['puzzle.html','puzzle.js','journey-games.js','journey-theme.css','site-fun.js','index.html','style.css','app.js','passport-rules.js','teacher-check.js','teacher-check.html','polish.js','vault.js','discoveries.js','stamp-system.js','stamp-designs.js','exchange.js','curiosity.js','boot.js','journey.html','collection-core.js','placards.html','placards.css','placards.js','explorer.html','explorer.css','explorer.js','explorer-options.js','CHARACTER_CREDITS.txt','.nojekyll'])await fs.copyFile(path.join(root,file),path.join(dist,file));
+ for(const file of ['progress-notices.js','puzzle.html','puzzle.js','journey-games.js','journey-theme.css','site-fun.js','index.html','style.css','app.js','passport-rules.js','teacher-check.js','teacher-check.html','polish.js','vault.js','discoveries.js','stamp-system.js','stamp-designs.js','exchange.js','curiosity.js','boot.js','journey.html','collection-core.js','placards.html','placards.css','placards.js','explorer.html','explorer.css','explorer.js','explorer-options.js','CHARACTER_CREDITS.txt','.nojekyll'])await fs.copyFile(path.join(root,file),path.join(dist,file));
+ const published=items.filter(e=>e.published!==false);
+ const revision=createHash('sha256').update(JSON.stringify({settings,items:published,specials:11})).digest('hex').slice(0,20);
+ settings={...settings,collectionRevision:revision};
+ await fs.writeFile(path.join(dist,'collection-status.json'),JSON.stringify({collectionId:settings.collectionId,revision,items:published.map(e=>({id:e.id,object:e.object})),availableStamps:published.length+11}));
+ for(const file of ['index.html','journey.html','explorer.html','teacher-check.html','puzzle.html','placards.html']){
+   const dest=path.join(dist,file);let html=await fs.readFile(dest,'utf8');
+   html=html.replace(/src="(settings|exhibits)\.js"/g,(_,name)=>'src="'+name+'.js?v='+revision+'"');await fs.writeFile(dest,html);
+ }
  const serialize=v=>JSON.stringify(v,null,2).replace(/</g,'\\u003c');
  await fs.writeFile(path.join(dist,'settings.js'),'window.MUSEUM_SETTINGS = '+serialize(settings)+';\n');
  await fs.writeFile(path.join(dist,'exhibits.js'),'window.EXHIBITS = '+serialize(items.filter(e=>e.published!==false))+';\n');

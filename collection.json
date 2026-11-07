@@ -147,7 +147,10 @@
         "checkedAt": "2026-11-06T23:58:01+00:00",
         "alt": "Reference image. An English tilt-top table shows the hinged top. Its painted finish imitates lacquer."
       },
-      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Tip-top_table"
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Tip-top_table",
+      "photoCropX": 80,
+      "photoCropY": 19,
+      "photoPhrase": ""
     },
     {
       "id": "2001",

@@ -500,7 +500,13 @@
         "checkedAt": "2026-11-06T23:58:01+00:00",
         "alt": "Reference image. A World War II RAF Type C leather flying helmet with goggles and oxygen mask, from Auckland Museum."
       },
-      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Flight_helmet"
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Flight_helmet",
+      "photoCropY": 21,
+      "photoCropX": 54,
+      "photoPhrase": "",
+      "image": "assets/3000-800fc6e517758508aa81.jpg",
+      "imageAlt": "Photograph of Leather Flight Helmet",
+      "imageCredit": "School museum photo"
     },
     {
       "id": "4000",

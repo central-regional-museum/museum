@@ -35,7 +35,7 @@
       hint.onclick=()=>{
         try{localStorage.setItem(key,JSON.stringify([...new Set([...owned(),find.id])]));}
         catch{result.textContent='Your browser could not keep this find. Allow browser storage and try again.';return}
-        window.MuseumVault?.checkpoint(true);reveal();
+        window.MuseumVault?.checkpoint(true);window.dispatchEvent(new Event('museum-find-changed'));reveal();
       };
       box.append(hint,result);host.append(box);if(owned().includes(find.id))reveal();
     }

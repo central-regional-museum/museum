@@ -313,7 +313,7 @@ function viewHome(){
 
    '<section style="display:grid;gap:10px"><div class="section-head" style="margin-bottom:0"><h2>The human journey on a world map</h2></div><div class="mapbox">'+mapSVG()+'</div>'+
    '<div class="map-caption"><span><i class="key-dot"></i>Dates are approximate · years ago</span><span><i class="key-line"></i>Selected migration routes · simplified</span><span>Tap a continent to open its gallery.</span></div></section>'+
-   '<details class="migration-fold"><summary>Unfold the human journey · illustrated timeline</summary><p class="muted">Our species begins in Africa. These selected routes show a broad introduction, rather than every migration.</p><section class="journey">'+journeySVG()+'</section></details>'+
+   '<section class="migration-fold" aria-labelledby="timeline-heading"><h2 id="timeline-heading">The human journey · illustrated timeline</h2><p class="muted">Our species begins in Africa. These selected routes show a broad introduction, rather than every migration.</p><section class="journey">'+journeySVG()+'</section></section>'+
    '<section><div class="section-head"><h2 id="gallery-list">The galleries</h2><span class="note">A broad introduction to human migration</span></div><div class="galleries">'+
    GALLERIES.map(function(g){var on=itemsIn(g.id,"display").length,soon=itemsIn(g.id,"coming").length;
      return '<a class="gcard'+(g.local?' local':'')+'" href="#'+g.id+'" style="--gc:var(--g-'+g.id+')"><span class="num">Gallery '+g.n+'</span><div style="display:grid;gap:6px;align-content:start"><h3>'+esc(g.title)+'</h3><span class="when">'+esc(g.when)+'</span></div><span class="counts">'+on+' on display'+(soon?' · '+soon+' coming soon':'')+'</span></a>';}).join("")+
@@ -499,4 +499,4 @@ render();
 })();
 </script>
 
-<script src="vault.js?v=games1"></script><script src="site-fun.js?v=notices2"></script><script src="journey-games.js?v=games1"></script><script src="progress-notices.js?v=backup3"></script><script src="brand.js?v=mark1"></script></body></html>
+<script src="vault.js?v=games1"></script><script src="backup-reminder.js"></script><script src="site-fun.js?v=notices2"></script><script src="journey-games.js?v=games1"></script><script src="progress-notices.js?v=backup3"></script><script src="brand.js?v=mark1"></script></body></html>

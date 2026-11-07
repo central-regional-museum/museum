@@ -2,6 +2,7 @@
 'use strict';
 const text=v=>typeof v==='string'&&v.trim().length>0;
 const localAsset=v=>typeof v==='string'&&/^assets\/[a-zA-Z0-9_./-]+$/.test(v)&&!v.split('/').includes('..');
+const hasWebPhoto=e=>localAsset(e.image)||(e.wikipediaImageAuto!==false&&(()=>{try{const u=new URL(e.referenceImage?.url);return u.protocol==='https:'&&['upload.wikimedia.org','thumb.wikimedia.org'].includes(u.hostname)&&text(e.referenceImage.author)&&text(e.referenceImage.license)}catch{return false}})());
 const https=v=>{try{return new URL(v).protocol==='https:'}catch{return false}};
 function validate(settings,items,{classroom=false}={}){
  const errors=[],warnings=[],ids=new Set(),museumIds=new Set();
@@ -23,6 +24,7 @@ function validate(settings,items,{classroom=false}={}){
   if(e.photoBoothEnabled!==undefined&&typeof e.photoBoothEnabled!=='boolean')errors.push(p+'photo booth setting must be true or false.');
   if(e.inventoryId){if(!/^\d{4}$/.test(e.inventoryId))errors.push(p+'museum ID must have four digits.');if(museumIds.has(e.inventoryId))errors.push(p+'duplicate museum ID.');museumIds.add(e.inventoryId);}
   if(e.published===false)continue;
+  if(!e.demo&&!hasWebPhoto(e))errors.push(p+'add a photo from Wikipedia or upload one before publishing.');
   for(const key of ['title','object','category','period','material','summary','story','look','connection','question','explanation','prompt'])if(!text(e[key]))errors.push(p+key+' is required.');
   if(!Array.isArray(e.choices)||e.choices.length!==3||!e.choices.every(text)||new Set(e.choices).size!==3)errors.push(p+'provide three different, nonempty answer choices.');
   if(!Number.isInteger(e.answer)||e.answer<0||e.answer>2)errors.push(p+'answer must be 0, 1 or 2.');
@@ -34,12 +36,12 @@ function validate(settings,items,{classroom=false}={}){
   if(!Array.isArray(e.sources))errors.push(p+'sources must be a list.');else for(const source of e.sources)if(!text(source.title)||!https(source.url))errors.push(p+'every source needs a title and HTTPS link.');
   if(!e.demo&&!e.sources?.length)(classroom?errors:warnings).push(p+'add a verified reference.');
   if(e.demo)(classroom?errors:warnings).push(p+'contains demonstration content.');
-  if(!e.image)warnings.push(p+'no real artifact photograph yet.');
+  if(!hasWebPhoto(e))warnings.push(p+'no real artifact photograph yet.');
   if(e.audio&&!text(e.transcript))warnings.push(p+'audio needs a transcript for accessibility.');
  }
  const required=settings.requiredExhibitIds||[];
  if(!Array.isArray(required))errors.push('Required exhibit IDs must be a list.');else {if(new Set(required).size!==required.length)errors.push('Required exhibit IDs contain duplicates.');for(const id of required)if(!published.some(e=>e.id===id))errors.push('Required exhibit '+id+' is missing or not published.');}
  return{errors,warnings};
 }
-root.MuseumCore={validate,localAsset,https};
+root.MuseumCore={validate,localAsset,https,hasWebPhoto};
 })(typeof window==='undefined'?globalThis:window);

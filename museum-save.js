@@ -1,10 +1,10 @@
 // Request a destination during the tap, before rendering a photo or issuing a passport.
-async function saveMuseumFile(name, makeBlob) {
+async function saveMuseumFile(name, makeBlob, {backup=false}={}) {
   const supported = typeof window.showSaveFilePicker === 'function';
   let handle;
   if (supported) {
     try {
-      handle = await window.showSaveFilePicker({id:'museum-files', suggestedName:name});
+      handle = await window.showSaveFilePicker({id:backup?'museum-backups':'museum-files', suggestedName:name});
     } catch (error) {
       if (error.name === 'AbortError') return false;
       if (error.name !== 'SecurityError' && error.name !== 'NotAllowedError') throw error;
@@ -28,9 +28,9 @@ async function saveMuseumFile(name, makeBlob) {
     dialog.setAttribute('aria-label','Save museum file');
     dialog.style.cssText = 'max-width:min(26rem,85vw);padding:1.5rem;border:2px solid #b69a69;border-radius:16px;color:#183f38';
     const heading = document.createElement('h2');
-    heading.textContent = 'Save your file';
+    heading.textContent = backup?'Where would you like to keep your backup?':'Save your file';
     const help = document.createElement('p');
-    help.textContent = name;
+    help.textContent = backup ? 'Pick a folder you can find again, like “Museum Backups.” If you download instead, look in your downloads and move the file there.' : name;
     dialog.append(heading, help);
     let completed = false;
     const addButton = (label, action) => {
@@ -41,7 +41,7 @@ async function saveMuseumFile(name, makeBlob) {
       dialog.append(button);
     };
     if (navigator.canShare?.({files:[file]})) {
-      addButton('Choose app or Save to Files', async () => {
+      addButton(backup?(/iPhone|iPad|iPod/.test(navigator.userAgent)||navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1?'Choose a folder in Save to Files':'Choose where to save'):'Choose app or Save to Files', async () => {
         try {
           await navigator.share({files:[file]});
           completed = true;
@@ -51,7 +51,7 @@ async function saveMuseumFile(name, makeBlob) {
         }
       });
     }
-    addButton('Use browser download folder', () => {
+    addButton(backup?'Save in my downloads':'Use browser download folder', () => {
       const a = document.createElement('a');
       const url = URL.createObjectURL(blob);
       a.href = url;

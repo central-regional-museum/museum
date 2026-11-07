@@ -1,10 +1,70 @@
-(()=>{'use strict';let promptEvent=null;const home=window.MUSEUM_SETTINGS?.publicBaseUrl||'https://central-regional-museum.github.io/museum/';const name=window.MUSEUM_SETTINGS?.title||'Object Stories';if(location.protocol==='https:'&&'serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();promptEvent=e});const launch=document.createElement('button');launch.className='device-shortcut-button secondary';launch.textContent='Add Museum to Your Device';launch.style.cssText='font-size:13px;padding:9px 14px;border-radius:22px';const bar=document.getElementById('shortcut-bar');
-if(bar){
- launch.textContent='Get the museum shortcut';
- const icon=document.createElement('img');
- icon.src=new URL('museum-icon-192.png',home).href;
- icon.alt='';icon.width=30;icon.height=30;
- launch.prepend(icon);
- launch.style.cssText='display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:6px 20px;border:1px solid #bf9651;border-radius:24px;background:#155b56;color:#fffaf2;font:650 15px/1.3 system-ui';
-}
-(bar||document.querySelector('footer')||document.querySelector('main')).append(launch);launch.onclick=()=>{location.href='install.html';return;const d=document.createElement('dialog');d.style.cssText='max-width:540px;width:calc(100% - 28px);border:2px solid #bf9651;border-radius:24px;padding:28px;background:#fbf5ec;color:#254742';d.innerHTML='<img alt="Museum icon" width="72" height="72"><h2 style="font:30px/1.3 Georgia">Keep the museum handy.</h2><p style="line-height:1.7">Install the museum as an app for a shortcut with its own icon, where your browser and school device allow it. No account needed.</p><button id="install-museum">Install museum app</button><p id="install-status" role="status"></p><details><summary>Install is not available?</summary><p>Chrome: open the three-dot menu → Cast, save, and share → Install page as app. If school settings block installs, bookmark the museum. Edge: look for the install option in the browser menu. iPhone / iPad Safari: Share → Add to Home Screen. Mac Safari: File → Add to Dock. School-managed devices may restrict installation.</p></details><button id="download-html-shortcut" class="secondary">Download HTML shortcut</button><p style="font-size:13px;line-height:1.65">The HTML file opens the live museum. Its browser tab uses our icon, but its desktop file icon is chosen by the device. It does not contain your passport progress and needs internet access.</p><button id="close-shortcut" class="secondary">Close</button>';d.querySelector('img').src=new URL('museum-icon-192.png',home).href;const install=d.querySelector('#install-museum');install.disabled=!promptEvent;d.querySelector('#install-status').textContent=promptEvent?'Your browser can install the museum with its icon.':'Use your browser’s menu instructions below for an app-style shortcut.';install.onclick=async()=>{try{await promptEvent.prompt();const choice=await promptEvent.userChoice;d.querySelector('#install-status').textContent=choice.outcome==='accepted'?'Installation started. Look for the museum icon on your device.':'No problem. You can install it later.';promptEvent=null;install.disabled=true}catch{d.querySelector('#install-status').textContent='Use your browser’s menu to install, or download the HTML shortcut.'}};d.querySelector('#download-html-shortcut').onclick=async()=>{const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const url=new URL(home);if(url.protocol!=='https:')return;const html='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+safe(name)+'</title><link rel="icon" href="'+safe(new URL('museum-icon-192.png',url).href)+'"><meta http-equiv="refresh" content="0;url='+safe(url.href)+'"><body style="font:18px/1.7 system-ui;padding:30px;background:#fbf5ec;color:#155b56"><img width="100" alt="Museum icon" src="'+safe(new URL('museum-icon-192.png',url).href)+'"><h1>'+safe(name)+'</h1><a href="'+safe(url.href)+'">Open the museum →</a><p>This shortcut opens the live website. Your passport stays in the browser where you collected it.</p></body></html>';try{if(await saveMuseumFile('Open-School-Museum.html',()=>new Blob([html],{type:'text/html'})))d.querySelector('#install-status').textContent='Shortcut file ready.'}catch{d.querySelector('#install-status').textContent='Could not save the shortcut. Try another location.'}};d.querySelector('#close-shortcut').onclick=()=>d.close();d.addEventListener('close',()=>{d.remove();launch.focus()});document.body.append(d);d.showModal()};})();
+/* Keep this small script on the app page that will be installed. */
+(() => {
+  'use strict';
+  const script=document.currentScript, teacher=script?.dataset.app==='teacher';
+  if(window.__museumHomeScreen) return;
+  window.__museumHomeScreen=true;
+  const root=new URL('.',script.src), title=teacher?'Teacher Desk':'School Museum';
+  const icon=new URL((teacher?'desk-app':'student-app')+'-192.png',root).href;
+  const home=new URL(teacher?'teacher':'index.html',root);
+  let offer=null, modal=null, requesting=false, added=false, invokingButton=null;
+  const installed=()=>added||navigator.standalone===true||window.matchMedia('(display-mode: standalone)').matches;
+  const ua=navigator.userAgent, ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1), android=/Android/i.test(ua);
+  const safari=/Safari/i.test(ua)&&!/CriOS|FxiOS|EdgiOS|Chrome|Chromium|Android/i.test(ua);
+  function refresh(){
+    for(const b of document.querySelectorAll('[data-home-install]')){
+      const label=b.querySelector('[data-install-label]');const text=installed()?'Added to Home Screen':'Add to Home Screen';
+      if(label && label.textContent!==text)label.textContent=text;
+      b.disabled=installed()||requesting;
+    }
+    if(modal){modal.querySelector('[data-native]').hidden=!offer||installed();modal.querySelector('.install-instructions').hidden=!!offer&&!installed();}
+  }
+  window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();offer=event;refresh()});
+  window.addEventListener('appinstalled',()=>{added=true;offer=null;modal?.close();refresh()});
+  if(window.isSecureContext && 'serviceWorker' in navigator) navigator.serviceWorker.register(new URL(teacher?'desk-install-worker.js':'sw.js',root),teacher?{scope:home.pathname}:{}).catch(()=>{});
+  function guide(){
+    if(modal?.open)return;
+    if(!teacher && ![root.pathname,home.pathname].includes(location.pathname) && !offer){
+      home.searchParams.set('install','1');location.assign(home.href);return;
+    }
+    const d=document.createElement('dialog'); modal=d;d.className='home-install-dialog';d.setAttribute('aria-labelledby','home-install-title');
+    const lead=ios?(safari?'In Safari:':'Open this page in Safari, then:'):android?'In Chrome on your phone:':/Edg\//.test(ua)?'In Microsoft Edge:':safari?'In Safari on your Mac:':/Chrome|Chromium/.test(ua)?'In Chrome on your computer:':'Open this page in Safari on iPhone, or Chrome on Android or computer.';
+    let steps=ios?['Tap Share (the square with an up arrow). If it’s hidden, tap the page menu, then Share.','Tap Add to Home Screen, then Add.']
+      :android?['Tap the three dots in Chrome.','Choose Add to Home screen or Install and create shortcut, then confirm.']
+      :safari?['Open File → Add to Dock.','Click Add.']
+      :/Edg\//.test(ua)?['Open the three-dot menu.','Choose Apps → Install this site as an app, then confirm.']
+      :/Chrome|Chromium/.test(ua)?['Open the three-dot menu.','Choose Cast, save, and share → Install page as app. Confirm Install.']:[];
+    d.innerHTML='<img class="install-icon" alt="" width="62" height="62"><p class="install-eyebrow">CENTRAL REGIONAL MUSEUM</p><h2 id="home-install-title">Add '+title+'</h2><div class="install-instructions"><p></p><ol></ol></div><button type="button" data-native hidden>Add to Home Screen</button><button type="button" data-close>Done</button>';
+    d.querySelector('img').src=icon;d.querySelector('.install-instructions p').textContent=lead;const ol=d.querySelector('ol');for(const text of steps){const li=document.createElement('li');li.textContent=text;ol.append(li)}
+    d.querySelector('[data-close]').onclick=()=>d.close();d.querySelector('[data-native]').onclick=native;
+    const describe=()=>{d.querySelector('.install-instructions').hidden=!!offer;};
+    d.addEventListener('close',()=>{d.remove();if(modal===d)modal=null;invokingButton?.focus({preventScroll:true});});
+    document.body.append(d);refresh();describe();d.showModal();
+  }
+  async function native(){
+    if(requesting||installed())return;
+    if(!offer){guide();return}
+    const event=offer;offer=null;requesting=true;
+    try{
+      // Call from the actual tap; even a timer can lose the browser's required user gesture.
+      await event.prompt();const choice=await event.userChoice;
+      if(choice?.outcome==='accepted')added=true;
+      if(modal?.open)modal.close();
+    }catch{if(!modal?.open)guide();else modal.querySelector('.install-instructions').hidden=false;}
+    finally{requesting=false;refresh()}
+  }
+  document.addEventListener('click',e=>{const b=e.target.closest?.('[data-home-install]');if(!b)return;e.preventDefault();invokingButton=b;native();});
+  function start(){
+    if(!teacher){
+      const b=document.createElement('button');b.type='button';b.className='home-install-button';b.dataset.homeInstall='';
+      b.innerHTML='<img width="30" height="30" alt=""><span data-install-label>Add to Home Screen</span>';b.querySelector('img').src=icon;
+      const bar=document.getElementById('shortcut-bar');
+      if(bar)bar.replaceChildren(b);else {const footer=document.createElement('div');footer.className='home-install-foot';footer.append(b);document.body.append(footer)}
+    }
+    refresh();const u=new URL(location.href);if(u.searchParams.get('install')==='1'){
+      u.searchParams.delete('install');history.replaceState(history.state,'',u.href);
+      if(!installed())guide();
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+})();

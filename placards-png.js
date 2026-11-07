@@ -24,7 +24,7 @@ async function card(e,{size='4x6',base,qr,settings,mime='image/png'}={}){
  if(e.wikipedia){ctx.font='8px Arial';ctx.fillText('Text adapted from Wikipedia · '+e.wikipedia.title+' · CC BY-SA 4.0 · source via QR',m,H-7)}
  const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('The picture could not be created. Please try again.')),mime,.96));
  if(mime==='image/jpeg'){
-   if(blob.type!==mime)throw Error('This browser could not create a JPG. Try the PNG option in paper and batch tools.');
+   if(blob.type!==mime)throw Error('This browser could not create a JPG. Choose “Print on paper or make several cards” to save a PNG instead.');
    // Make print density explicit even when the browser omits its JFIF header.
    const bytes=new Uint8Array(await blob.arrayBuffer());
    if(bytes[0]!==255||bytes[1]!==216)throw Error('The JPG could not be prepared.');

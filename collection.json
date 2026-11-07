@@ -741,7 +741,11 @@
         "checkedAt": "2026-11-06T23:58:01+00:00",
         "alt": "Reference image. Mature honey locust seed pods photographed in Georgia."
       },
-      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Honey_locust"
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Honey_locust",
+      "photoPhrase": "",
+      "image": "assets/7000-56fcdcdeffff3f619578.jpg",
+      "imageAlt": "Photograph of Honey Locust Tree Seed Pod",
+      "imageCredit": "School museum photo"
     },
     {
       "id": "7001",

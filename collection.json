@@ -153,7 +153,10 @@
       "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Tip-top_table",
       "photoCropX": 80,
       "photoCropY": 19,
-      "photoPhrase": ""
+      "photoPhrase": "",
+      "image": "assets/2000-7daa4299d76214c20e31.jpg",
+      "imageAlt": "Photograph of Palace Furniture – Oriental Export Style",
+      "imageCredit": "School museum photo"
     },
     {
       "id": "2001",

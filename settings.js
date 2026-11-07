@@ -1,6 +1,6 @@
 // Edit here or use the local Teacher Setup form. No account or student data goes here.
 window.MUSEUM_SETTINGS = {
-  title: 'Object Stories',
+  title: 'Hidden Histories',
   schoolName: 'Central Regional High School',
   collectionId: 'object-stories-demo',
   demoMode: true,

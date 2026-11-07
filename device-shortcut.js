@@ -4,7 +4,7 @@
   const script=document.currentScript, teacher=script?.dataset.app==='teacher';
   if(window.__museumHomeScreen) return;
   window.__museumHomeScreen=true;
-  const root=new URL('.',script.src), title=teacher?'Teacher Desk':'School Museum';
+  const root=new URL('.',script.src), title=teacher?'Teacher Desk':'Hidden Histories';
   const icon=new URL((teacher?'desk-app':'student-app')+'-192.png',root).href;
   const home=new URL(teacher?'teacher':'index.html',root);
   let offer=null, modal=null, requesting=false, added=false, invokingButton=null;

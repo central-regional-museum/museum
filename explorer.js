@@ -11,7 +11,7 @@ let explorer={...base};try{explorer=normalize(JSON.parse(localStorage.getItem(ke
 let requestId;try{requestId=new URLSearchParams(location.search).get('exhibit')}catch{}
 const entry=requestId?(window.EXHIBITS||[]).find(e=>e.id===requestId&&e.published!==false):null;
 let photo='',imageState='none',currentSVG='',exporting=false,stored=true,shareFile=null,shareVersion=0,shareTimer;
-const museumTitle=window.MUSEUM_SETTINGS?.title||'School Museum';
+const museumTitle=window.MUSEUM_SETTINGS?.title||'Hidden Histories';
 function remember(){window.MuseumVault?.checkpoint();window.MuseumVault?.recordExplorer(explorer);try{localStorage.setItem(key,JSON.stringify(explorer));stored=true}catch{stored=false}$('memory-status').textContent=stored?'Your explorer is remembered in this browser.':'Browser storage is unavailable. Your explorer will last only in this open page.'}
 // One shared front-facing head and attachment point for every hairstyle.
 function headSVG(layer='front',model=explorer){const {hair,hairColor:h,skinColor:skin,glasses}=model,ink='#28303b';

@@ -38,7 +38,7 @@ if(report.errors.length){console.error(report.errors.map(e=>'ERROR: '+e).join('\
    }
    html=html.replace(/src="(settings|exhibits)\.js"/g,(_,name)=>'src="'+name+'.js?v='+revision+'"');await fs.writeFile(dest,html);
  }
- await fs.writeFile(path.join(dist,'manifest.webmanifest'),JSON.stringify({name:'Central Regional School Museum',short_name:'School Museum',id:'./',start_url:'./index.html?source=installed',scope:'./',display:'standalone',background_color:'#fbf5ec',theme_color:'#155b56',icons:[{src:'student-app-192.png',sizes:'192x192',type:'image/png',purpose:'any'},{src:'student-app-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}]}));
+ await fs.writeFile(path.join(dist,'manifest.webmanifest'),JSON.stringify({name:'Hidden Histories · Central Regional Museum',short_name:'Hidden Histories',id:'./',start_url:'./index.html?source=installed',scope:'./',display:'standalone',background_color:'#fbf5ec',theme_color:'#155b56',icons:[{src:'student-app-192.png',sizes:'192x192',type:'image/png',purpose:'any'},{src:'student-app-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}]}));
  const serialize=v=>JSON.stringify(v,null,2).replace(/</g,'\\u003c');
  await fs.writeFile(path.join(dist,'settings.js'),'window.MUSEUM_SETTINGS = '+serialize(settings)+';\n');
  await fs.writeFile(path.join(dist,'exhibits.js'),'window.EXHIBITS = '+serialize(items.filter(e=>e.published!==false))+';\n');

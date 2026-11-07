@@ -88,3 +88,35 @@ input[type=file]{max-width:100%;width:100%;font-size:14px}label{overflow-wrap:br
 @media screen {
   header :is(a,button):focus-visible {outline:3px solid var(--hh-brass);outline-offset:3px}
 }
+
+.phone-menu-toggle {display:none}
+@media screen and (max-width:760px), screen and (max-width:940px) and (hover:none) and (pointer:coarse) {
+  header.has-phone-menu {
+    display:grid;grid-template-columns:minmax(0,1fr) auto!important;gap:10px!important;
+    padding:12px max(16px,env(safe-area-inset-right)) 12px max(16px,env(safe-area-inset-left));
+  }
+  header.has-phone-menu .brand {max-width:100%}
+  header.has-phone-menu .brand-words {font-size:clamp(19px,5.3vw,24px)}
+  header.has-phone-menu .brand-school {max-width:none}
+  header .phone-menu-toggle {
+    grid-column:2;grid-row:1;justify-self:end;display:inline-flex;gap:8px;align-items:center;justify-content:center;
+    min-height:44px;padding:8px 12px;border:1px solid #829e90;border-radius:12px;
+    background:var(--hh-paper);color:var(--hh-teal);font:650 14px/1.2 system-ui;white-space:nowrap;
+  }
+  header .phone-menu-toggle[aria-expanded=true] {background:var(--hh-teal);border-color:var(--hh-teal);color:white}
+  header .menu-glyph {width:14px;height:10px;position:relative;border-block:1.6px solid currentColor}
+  header .menu-glyph::before,header .menu-glyph::after {content:"";position:absolute;inset:50% 0 auto;height:1.6px;background:currentColor;transform:translateY(-50%)}
+  header .phone-menu-toggle[aria-expanded=true] .menu-glyph {border:0}
+  header .phone-menu-toggle[aria-expanded=true] .menu-glyph::before {transform:translateY(-50%) rotate(45deg)}
+  header .phone-menu-toggle[aria-expanded=true] .menu-glyph::after {transform:translateY(-50%) rotate(-45deg)}
+  header.has-phone-menu:not(.menu-open) > :is(nav,.color-break-launch,.museum-sound) {display:none}
+  header.has-phone-menu.menu-open > nav {
+    grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:1fr;gap:3px;
+    margin:0;padding:5px;border-radius:14px;background:var(--hh-paper);border:1px solid var(--hh-hairline);
+  }
+  header.has-phone-menu > nav a {min-height:44px;display:flex;justify-content:space-between;padding:9px 13px;border-radius:9px;font:650 15px/1.3 system-ui;text-align:left}
+  header.has-phone-menu > nav a::after {content:"";width:7px;height:7px;border-right:1.6px solid currentColor;border-top:1.6px solid currentColor;transform:rotate(45deg);margin-right:3px}
+  header.has-phone-menu > nav a[aria-current=page]::after {width:6px;height:10px;border:solid currentColor;border-width:0 1.8px 1.8px 0}
+  header.has-phone-menu.menu-open > .color-break-launch {grid-column:1;grid-row:3;justify-self:start;min-height:44px;padding:7px 10px;gap:7px}
+  header.has-phone-menu.menu-open > .museum-sound {grid-column:2;grid-row:3;justify-self:end;min-height:44px}
+}

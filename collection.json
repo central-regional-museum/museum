@@ -679,9 +679,10 @@
       },
       "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Tumi",
       "photoPhrase": "",
-      "image": "assets/6001-3d42aa3df9b463f459f8.jpg",
+      "image": "assets/6001-0c32e3dc262f83204862.jpg",
       "imageAlt": "Photograph of Ceremonial Tool",
-      "imageCredit": "School museum photo"
+      "imageCredit": "School museum photo",
+      "photoCropY": 16
     },
     {
       "id": "7000",

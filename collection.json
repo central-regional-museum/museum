@@ -759,6 +759,68 @@
         "alt": "Reference image. A woolly mammoth molar found in Munich-Perlach, Germany. The ridges run across its chewing surface."
       },
       "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Woolly_mammoth"
+    },
+    {
+      "id": "ART-001",
+      "published": true,
+      "demo": false,
+      "object": "Chinese New Year Decor",
+      "story": "Chinese New Year, also known as the Spring Festival, marks the beginning of a new year on the traditional lunisolar Chinese calendar.  Decor is used to represent good fortune.",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · Chinese New Year · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/Chinese_New_Year"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "China",
+      "flagKey": "cn",
+      "gallery": "asia",
+      "caseId": "Asia",
+      "inventoryId": "2007",
+      "donor": "The Meister Family",
+      "subtitle": "Chinese New year Decor",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Chinese_New_Year",
+      "printText": "Chinese New Year, also known as the Spring Festival, marks the beginning of a new year on the traditional lunisolar Chinese calendar. It is one of the most important holidays in Chinese culture. ",
+      "wikipedia": {
+        "title": "Chinese New Year",
+        "url": "https://en.wikipedia.org/wiki/Chinese_New_Year",
+        "revision": 1383043667,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-07T02:14:58.183Z"
+      },
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Kung_Hei_Fat_Choi%21_%286834861529%29.jpg/1280px-Kung_Hei_Fat_Choi%21_%286834861529%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Chinese_New_Year",
+        "title": "Chinese New Year",
+        "file": "Kung_Hei_Fat_Choi!_(6834861529).jpg",
+        "author": "Michael Elleray from England, United Kingdom",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kung_Hei_Fat_Choi!_(6834861529).jpg",
+        "checkedAt": "2026-11-07T02:14:58.183Z",
+        "alt": "Wikipedia reference image for Chinese New Year; not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "photoPhrase": "What do dragons eat at Chinese New Year?  Firecrackers",
+      "title": "Chinese New Year Decor",
+      "category": "Museum collection",
+      "period": "Date not recorded",
+      "material": "Material not recorded",
+      "summary": "Chinese New Year, also known as the Spring Festival, marks the beginning of a new year on the traditional lunisolar Chinese calendar.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Chinese New Year Decor",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Chinese New Year Decor.",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

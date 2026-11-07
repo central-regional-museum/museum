@@ -22,7 +22,7 @@
   $('device').value = platform();
   function updateSelection() {
     const e = selected();
-    $('cvs').disabled = $('ig').disabled = busy || !e;
+    $('walgreens').disabled = $('ig').disabled = busy || !e;
     $('identity').hidden = !e;
     if (e) {
       const flag = MuseumLabels.flagURL(e); $('flag').hidden = !flag;
@@ -49,17 +49,17 @@
     $('how-title').textContent = device === 'ios' ? 'Save to Photos' : device === 'android' ? 'Save to your phone' : 'Save to your computer';
     const lines = device === 'ios' ? (share ? ['Tap Save to Photos below.','In the menu, tap Save Image. Scroll down if you don’t see it.','Open Photos to find your new card.']
       : ['Touch and hold the card picture on this page.','Tap Save to Photos or Save Image in the menu.','Open Photos to find your new card.'])
-      : device === 'android' ? ['Tap Download to my phone. If Chrome asks, tap Download.','Open Files → Downloads to find your card.']
-      : ['Click Download picture.','Look in Downloads, or the folder you choose.'];
+      : device === 'android' ? ['Tap Download to my phone. If Chrome asks, tap Download.','Open Files or My Files, then Downloads to find your card.']
+      : ['Click Download picture.',/Mac/.test(navigator.platform)?'Open Finder, then Downloads, or the folder you chose.':'Open your Downloads folder, or the folder you chose.'];
     $('steps').replaceChildren(...lines.map(s => {const li=document.createElement('li');li.textContent=s;return li;}));
-    $('fallback').textContent = device === 'ios' ? 'If the save option is missing, open this page in Safari and touch and hold the picture. Or download a copy to Files below; open the file, tap Share, then Save Image.'
+    $('fallback').textContent = device === 'ios' ? 'If the save option is missing, open this page in Safari and touch and hold the picture. Or tap Download to Files below. In Files, look in Downloads, open the picture, tap Share, then Save Image.'
       : device === 'android' ? 'You can also touch and hold the picture and choose Download image. Look in Files → Downloads.'
       : 'To save directly to a phone, open Print or save a card in your phone’s browser and choose the same artifact.';
     $('file-backup').hidden = device !== 'ios'; $('file-backup').href = current.url; $('file-backup').download = file.name;
     const format = current.size;
     $('next-use').textContent = format === 'instagram'
       ? 'Open Instagram, start a new post and choose this card. Keep the full portrait so the flag and QR code stay in view.'
-      : 'In CVS Photo, choose Photo Prints and upload the saved card. Select '+sizes[format][0]+' inches and check that all four edges are in the print preview.';
+      : 'In Walgreens Photo, choose Photo Prints and upload the saved card. Select '+sizes[format][0]+' inches and check that all four edges are in the print preview.';
     $('save-message').textContent = '';
   }
   async function prepare(format) {
@@ -80,16 +80,16 @@
       const ig=format==='instagram', mime=ig?'image/png':'image/jpeg';
       const blob=await MuseumPNG.card(e,{size:format,base:base.href,qr:box.querySelector('canvas'),settings,mime});
       if (run !== ticket) return;
-      const name=(e.inventoryId||e.id)+'-'+e.object.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'')+'-'+(ig?'Instagram.png':'CVS-'+format+'.jpg');
+      const name=(e.inventoryId||e.id)+'-'+e.object.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'')+'-'+(ig?'Instagram.png':'Walgreens-'+format+'.jpg');
       const file=new File([blob],name,{type:mime});
       const url=URL.createObjectURL(blob);
       clearResult(); current={file,url,size:format};
-      $('picture').src=url; $('picture').alt='Finished '+(ig?'Instagram':'CVS')+' card for '+e.object+', museum number '+(e.inventoryId||e.id);
+      $('picture').src=url; $('picture').alt='Finished '+(ig?'Instagram':'Walgreens')+' card for '+e.object+', museum number '+(e.inventoryId||e.id);
       $('result-item').textContent=e.object+' · No. '+(e.inventoryId||e.id);
-      $('destination').textContent=ig?'Instagram post':'CVS photo print';
+      $('destination').textContent=ig?'Instagram post':'Walgreens photo print';
       $('preview-title').textContent=ig?'Instagram portrait':sizes[format][0]+' inch photo print';
       $('dimensions').textContent=sizes[format][1]+' × '+sizes[format][2]+' pixels · '+(ig?'PNG':'JPG');
-      $('cvs-link').hidden=ig; $('size-options').hidden=ig;
+      $('walgreens-link').hidden=ig; $('size-options').hidden=ig;
       if (!ig) $('photo-size').value=format;
       guide(); $('choose').hidden=true; $('result').hidden=false; $('choice-message').textContent='';
       if (!fromResult) {$('result-title').focus({preventScroll:true}); window.scrollTo(0,0);}
@@ -115,7 +115,7 @@
       $('save-message').textContent=err.name==='AbortError'?'The menu closed. Tap Save to Photos to try again.':'Touch and hold the picture, then tap Save to Photos or Save Image.';
     }
   };
-  $('download').onclick=() => {if(!busy) $('save-message').textContent='Look for '+current.file.name+' in your downloads.';};
+  $('download').onclick=() => {if(!busy) $('save-message').textContent=($('device').value==='android'?'Open Files or My Files, then Downloads. ': /Mac/.test(navigator.platform)?'Open Finder, then Downloads. ':'Open Downloads. ')+'Look for '+current.file.name;};
   $('change').onclick=()=>{
     ticket++;busy=false;clearResult();$('result').hidden=true;$('choose').hidden=false;
     $('artifact').disabled=false;$('photo-size').disabled=false;$('save-actions').inert=false;$('file-backup').inert=false;
@@ -125,7 +125,7 @@
   $('device').onchange=guide;
   $('artifact').onchange=()=>{$('choice-message').textContent='';updateSelection();};
   $('photo-size').onchange=()=>prepare($('photo-size').value);
-  $('cvs').onclick=()=>prepare('4x6');
+  $('walgreens').onclick=()=>prepare('4x6');
   $('ig').onclick=()=>prepare('instagram');
   for (const e of items) $('artifact').append(new Option((e.inventoryId||e.id)+' · '+e.object,e.id));
   const wanted=params.get('item');

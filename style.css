@@ -79,11 +79,7 @@ input[type=file]{max-width:100%;width:100%;font-size:14px}label{overflow-wrap:br
 .compass-dialog .dial-feedback{color:#315e55;font-size:14px;line-height:1.4;margin:10px 0}
 .dial-lesson.aligned .dial-feedback{color:#105c4f;font-weight:700}
 
-/* The complete dial fits between the museum name and the header controls. */
 @media screen {
   header:has(> .brand) {background-color:#f8f5ea;background-image:linear-gradient(110deg,#f7f5e8,#ecf5ee 67%,#faf5e9)}
   header:has(> .brand)::after {content:none}
-}
-@media screen and (min-width:940px) {
-  header:has(> .brand) {background-image:url("header-bearings.svg?v=full-dial"),linear-gradient(110deg,#f7f5e8,#ecf5ee 67%,#faf5e9);background-size:230px 72px,cover;background-position:51% 13px,center;background-repeat:no-repeat}
 }

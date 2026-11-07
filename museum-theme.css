@@ -1,0 +1,13 @@
+/* Hidden Histories screen colors, shared by the museum and Teacher Desk. */
+:root {
+  --hh-teal: #155b56;
+  --hh-band: #277e76;
+  --hh-seaglass: #e0eee5;
+  --hh-ink: #254742;
+  --hh-caption: #385d56;
+  --hh-paper: #fffaf2;
+  --hh-brass: #a06e30;
+  --hh-hairline: #becfc3;
+  --hh-header: linear-gradient(110deg, #f8f5e9, #eaf3ed 64%, #f6f3e7);
+  --hh-title-font: Georgia, serif;
+}

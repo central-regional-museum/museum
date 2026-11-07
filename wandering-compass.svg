@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 310" role="img" aria-labelledby="title desc">
+<title id="title">The wandering compass</title><desc id="desc">A brass pocket compass with a teal enamel dial, an ivory compass rose and a vermilion needle pointing north.</desc>
+<defs>
+  <linearGradient id="rim" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#855125"/><stop offset=".18" stop-color="#fff0b0"/><stop offset=".39" stop-color="#d6993b"/><stop offset=".56" stop-color="#ffe5a0"/><stop offset=".77" stop-color="#a66d32"/><stop offset="1" stop-color="#ebbf63"/></linearGradient>
+  <radialGradient id="enamel" cx=".3" cy=".22" r=".92"><stop stop-color="#419b90"/><stop offset=".53" stop-color="#176e69"/><stop offset="1" stop-color="#134b4b"/></radialGradient>
+  <radialGradient id="vellum" cx=".37" cy=".28" r=".85"><stop stop-color="#fffdf0"/><stop offset=".7" stop-color="#fff2cf"/><stop offset="1" stop-color="#e9cc99"/></radialGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2=".68" y2=".9"><stop stop-color="#fff" stop-opacity=".33"/><stop offset=".77" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <radialGradient id="shadow"><stop stop-color="#3d5652" stop-opacity=".28"/><stop offset="1" stop-color="#3d5652" stop-opacity="0"/></radialGradient>
+  <g id="leaf"><path d="M160 105 Q152 121 160 133 Q168 121 160 105Z" fill="#c59a57"/><path d="M160 109v20" stroke="#fff3d0" stroke-width="1.2"/></g>
+</defs>
+<ellipse cx="160" cy="290" rx="112" ry="11" fill="url(#shadow)"/>
+<!-- Lanyard bow and knurled crown, behind the case. -->
+<circle cx="160" cy="26" r="16" fill="none" stroke="#80552e" stroke-width="7"/>
+<circle cx="160" cy="25" r="16" fill="none" stroke="url(#rim)" stroke-width="4"/>
+<rect x="151" y="39" width="18" height="18" rx="5" fill="url(#rim)" stroke="#7d572c"/>
+<path d="M155 41v9m5-9v9m5-9v9" stroke="#93672d" stroke-width="1.3"/>
+<circle cx="160" cy="169" r="122" fill="#815a32"/>
+<circle cx="160" cy="165" r="122" fill="url(#rim)" stroke="#76522e" stroke-width="1.6"/>
+<circle cx="160" cy="165" r="117.5" fill="none" stroke="#fff2c6" stroke-width="2.1"/>
+<circle cx="160" cy="165" r="114" fill="url(#enamel)" stroke="#805a32" stroke-width="2"/>
+<g data-turn-dial="">
+<g stroke-linecap="round"><path d="M160.00 65.00 L160.00 56.00" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M169.06 61.40 L169.50 56.41" stroke="#addecd" stroke-width="1.05"/>
+<path d="M178.06 62.58 L178.93 57.66" stroke="#addecd" stroke-width="1.05"/>
+<path d="M186.92 64.54 L188.21 59.71" stroke="#addecd" stroke-width="1.05"/>
+<path d="M195.57 67.27 L197.28 62.57" stroke="#addecd" stroke-width="1.05"/>
+<path d="M203.95 70.74 L206.07 66.21" stroke="#addecd" stroke-width="1.05"/>
+<path d="M210.00 78.40 L214.50 70.60" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M219.65 79.81 L222.52 75.71" stroke="#addecd" stroke-width="1.05"/>
+<path d="M226.85 85.33 L230.06 81.50" stroke="#addecd" stroke-width="1.05"/>
+<path d="M233.54 91.46 L237.07 87.93" stroke="#addecd" stroke-width="1.05"/>
+<path d="M239.67 98.15 L243.50 94.94" stroke="#addecd" stroke-width="1.05"/>
+<path d="M245.19 105.35 L249.29 102.48" stroke="#addecd" stroke-width="1.05"/>
+<path d="M246.60 115.00 L254.40 110.50" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M254.26 121.05 L258.79 118.93" stroke="#addecd" stroke-width="1.05"/>
+<path d="M257.73 129.43 L262.43 127.72" stroke="#addecd" stroke-width="1.05"/>
+<path d="M260.46 138.08 L265.29 136.79" stroke="#addecd" stroke-width="1.05"/>
+<path d="M262.42 146.94 L267.34 146.07" stroke="#addecd" stroke-width="1.05"/>
+<path d="M263.60 155.94 L268.59 155.50" stroke="#addecd" stroke-width="1.05"/>
+<path d="M260.00 165.00 L269.00 165.00" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M263.60 174.06 L268.59 174.50" stroke="#addecd" stroke-width="1.05"/>
+<path d="M262.42 183.06 L267.34 183.93" stroke="#addecd" stroke-width="1.05"/>
+<path d="M260.46 191.92 L265.29 193.21" stroke="#addecd" stroke-width="1.05"/>
+<path d="M257.73 200.57 L262.43 202.28" stroke="#addecd" stroke-width="1.05"/>
+<path d="M254.26 208.95 L258.79 211.07" stroke="#addecd" stroke-width="1.05"/>
+<path d="M246.60 215.00 L254.40 219.50" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M245.19 224.65 L249.29 227.52" stroke="#addecd" stroke-width="1.05"/>
+<path d="M239.67 231.85 L243.50 235.06" stroke="#addecd" stroke-width="1.05"/>
+<path d="M233.54 238.54 L237.07 242.07" stroke="#addecd" stroke-width="1.05"/>
+<path d="M226.85 244.67 L230.06 248.50" stroke="#addecd" stroke-width="1.05"/>
+<path d="M219.65 250.19 L222.52 254.29" stroke="#addecd" stroke-width="1.05"/>
+<path d="M210.00 251.60 L214.50 259.40" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M203.95 259.26 L206.07 263.79" stroke="#addecd" stroke-width="1.05"/>
+<path d="M195.57 262.73 L197.28 267.43" stroke="#addecd" stroke-width="1.05"/>
+<path d="M186.92 265.46 L188.21 270.29" stroke="#addecd" stroke-width="1.05"/>
+<path d="M178.06 267.42 L178.93 272.34" stroke="#addecd" stroke-width="1.05"/>
+<path d="M169.06 268.60 L169.50 273.59" stroke="#addecd" stroke-width="1.05"/>
+<path d="M160.00 265.00 L160.00 274.00" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M150.94 268.60 L150.50 273.59" stroke="#addecd" stroke-width="1.05"/>
+<path d="M141.94 267.42 L141.07 272.34" stroke="#addecd" stroke-width="1.05"/>
+<path d="M133.08 265.46 L131.79 270.29" stroke="#addecd" stroke-width="1.05"/>
+<path d="M124.43 262.73 L122.72 267.43" stroke="#addecd" stroke-width="1.05"/>
+<path d="M116.05 259.26 L113.93 263.79" stroke="#addecd" stroke-width="1.05"/>
+<path d="M110.00 251.60 L105.50 259.40" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M100.35 250.19 L97.48 254.29" stroke="#addecd" stroke-width="1.05"/>
+<path d="M93.15 244.67 L89.94 248.50" stroke="#addecd" stroke-width="1.05"/>
+<path d="M86.46 238.54 L82.93 242.07" stroke="#addecd" stroke-width="1.05"/>
+<path d="M80.33 231.85 L76.50 235.06" stroke="#addecd" stroke-width="1.05"/>
+<path d="M74.81 224.65 L70.71 227.52" stroke="#addecd" stroke-width="1.05"/>
+<path d="M73.40 215.00 L65.60 219.50" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M65.74 208.95 L61.21 211.07" stroke="#addecd" stroke-width="1.05"/>
+<path d="M62.27 200.57 L57.57 202.28" stroke="#addecd" stroke-width="1.05"/>
+<path d="M59.54 191.92 L54.71 193.21" stroke="#addecd" stroke-width="1.05"/>
+<path d="M57.58 183.06 L52.66 183.93" stroke="#addecd" stroke-width="1.05"/>
+<path d="M56.40 174.06 L51.41 174.50" stroke="#addecd" stroke-width="1.05"/>
+<path d="M60.00 165.00 L51.00 165.00" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M56.40 155.94 L51.41 155.50" stroke="#addecd" stroke-width="1.05"/>
+<path d="M57.58 146.94 L52.66 146.07" stroke="#addecd" stroke-width="1.05"/>
+<path d="M59.54 138.08 L54.71 136.79" stroke="#addecd" stroke-width="1.05"/>
+<path d="M62.27 129.43 L57.57 127.72" stroke="#addecd" stroke-width="1.05"/>
+<path d="M65.74 121.05 L61.21 118.93" stroke="#addecd" stroke-width="1.05"/>
+<path d="M73.40 115.00 L65.60 110.50" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M74.81 105.35 L70.71 102.48" stroke="#addecd" stroke-width="1.05"/>
+<path d="M80.33 98.15 L76.50 94.94" stroke="#addecd" stroke-width="1.05"/>
+<path d="M86.46 91.46 L82.93 87.93" stroke="#addecd" stroke-width="1.05"/>
+<path d="M93.15 85.33 L89.94 81.50" stroke="#addecd" stroke-width="1.05"/>
+<path d="M100.35 79.81 L97.48 75.71" stroke="#addecd" stroke-width="1.05"/>
+<path d="M110.00 78.40 L105.50 70.60" stroke="#ffe7a7" stroke-width="2.4"/>
+<path d="M116.05 70.74 L113.93 66.21" stroke="#addecd" stroke-width="1.05"/>
+<path d="M124.43 67.27 L122.72 62.57" stroke="#addecd" stroke-width="1.05"/>
+<path d="M133.08 64.54 L131.79 59.71" stroke="#addecd" stroke-width="1.05"/>
+<path d="M141.94 62.58 L141.07 57.66" stroke="#addecd" stroke-width="1.05"/>
+<path d="M150.94 61.40 L150.50 56.41" stroke="#addecd" stroke-width="1.05"/></g>
+<circle cx="160" cy="165" r="96" fill="url(#rim)" stroke="#214f48" stroke-width="1.6"/>
+<circle cx="160" cy="165" r="92" fill="url(#vellum)" stroke="#a77c3e" stroke-width="1.2"/>
+<circle cx="160" cy="165" r="65" fill="none" stroke="#c8ab73" stroke-dasharray="1 5" stroke-width="1.4"/>
+<g fill="none" stroke="#c8ad74" stroke-width="1"><path d="M160 101v128m-64-64h128m-110-46 92 92m0-92-92 92"/><circle cx="160" cy="165" r="49"/></g>
+<g><use href="#leaf" transform="rotate(45 160 165)"/><use href="#leaf" transform="rotate(135 160 165)"/><use href="#leaf" transform="rotate(225 160 165)"/><use href="#leaf" transform="rotate(315 160 165)"/></g>
+<!-- Engraved east and west points of the compass rose. -->
+<path d="M103 165l57-12 57 12-57 12z" fill="#ae8c62"/><path d="M103 165l57-12v12zm57 0h57l-57 12z" fill="#efcf89"/>
+<g font-family="Georgia,serif" font-weight="bold" text-anchor="middle">
+  <text x="160" y="97" font-size="22" fill="#994324">N</text><g fill="#275e58" font-size="17"><text x="236" y="171">E</text><text x="160" y="250">S</text><text x="84" y="171">W</text></g>
+</g>
+</g>
+<path d="M164 106 178 168 164 230 150 168Z" fill="#55422b" opacity=".2"/>
+<path d="M160 102l15 63-15 63-15-63z" fill="#197f75" stroke="#654b37" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M160 102l-15 63h15z" fill="#fa8450"/><path d="M160 102l15 63h-15z" fill="#b33f32"/>
+<path d="M145 165h15v63z" fill="#54b7a6"/><path d="M175 165h-15v63z" fill="#176861"/>
+<path d="M160 106v53" stroke="#ffe1a8" stroke-width="1.5"/>
+<circle cx="160" cy="165" r="12" fill="url(#rim)" stroke="#7b552f" stroke-width="1.4"/><circle cx="160" cy="165" r="6.5" fill="#713e63" stroke="#fff1b7" stroke-width="1.2"/><circle cx="158" cy="163" r="1.8" fill="#ffe0b5"/>
+<path d="M76 127a91 91 0 0 1 89-53q-49 12-76 69Z" fill="url(#glass)"/>
+<path d="M54 117a115 115 0 0 1 51-54" fill="none" stroke="#fff2bb" stroke-width="3.2" stroke-linecap="round"/>
+</svg>

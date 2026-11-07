@@ -380,7 +380,11 @@
         "checkedAt": "2026-11-06T23:58:01+00:00",
         "alt": "Reference image. A bird-and-flower panel inlaid with mother-of-pearl from the Los Angeles County Museum of Art."
       },
-      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Chinoiserie"
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Chinoiserie",
+      "photoPhrase": "",
+      "image": "assets/2005-8ea61aceb4757b16eab5.jpg",
+      "imageAlt": "Photograph of Wall Art Panels",
+      "imageCredit": "School museum photo"
     },
     {
       "id": "2006",

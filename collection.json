@@ -89,7 +89,9 @@
       "caseId": "Asia",
       "donor": "The Vadeika Family",
       "flagKey": "china",
-      "labelProvenance": "Transcribed from owner-supplied printed museum label photos, 2026-11-06."
+      "labelProvenance": "Transcribed from owner-supplied printed museum label photos, 2026-11-06.",
+      "photoCropX": 50,
+      "photoPhrase": ""
     },
     {
       "id": "2000",

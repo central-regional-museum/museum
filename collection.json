@@ -54,16 +54,17 @@
         "imported": "2026-11-06T22:00:46.746Z"
       },
       "referenceImage": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Abacus_6.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Abacus_6.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "localPath": "assets/references/2002-8b1ece26fd.webp",
         "article": "https://en.wikipedia.org/wiki/Suanpan",
-        "title": "Suanpan",
-        "file": "Abacus_6.png",
+        "title": "An illustrated Chinese counting frame from the Encyclopædia Britannica.",
+        "file": "Abacus 6.png",
         "author": "Encyclopædia Britannica",
         "license": "Public domain",
         "licenseUrl": "",
         "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Abacus_6.png",
-        "checkedAt": "2026-11-06T22:00:46.746Z",
-        "alt": "Wikipedia reference image for Suanpan; not the school’s actual artifact."
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. An illustrated Chinese counting frame from the Encyclopædia Britannica."
       },
       "title": "Abacus / Suanpan",
       "category": "Museum collection",
@@ -96,7 +97,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Tip-top table (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Tip-top_table"
+        }
+      ],
       "inventoryId": "2000",
       "object": "Palace Furniture – Oriental Export Style",
       "title": "Palace Furniture – Oriental Export Style",
@@ -124,7 +130,21 @@
       "answer": 0,
       "explanation": "The label identifies the tilt-top mechanism as a European-style addition.",
       "prompt": "Describe one detail you noticed about Palace Furniture – Oriental Export Style and one question you would ask its donor.",
-      "mysteryClue": "Dark lacquer, decorative inlay, and a tabletop that tilts: which object am I?"
+      "mysteryClue": "Dark lacquer, decorative inlay, and a tabletop that tilts: which object am I?",
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/English_tilt-top_table%2C_late_18th_century%2C_Japanned_wood_%28imitation_black_and_gold_lacquer%29%2C_HAA.JPG/960px-English_tilt-top_table%2C_late_18th_century%2C_Japanned_wood_%28imitation_black_and_gold_lacquer%29%2C_HAA.JPG",
+        "localPath": "assets/references/2000-0eb4f7feae.webp",
+        "article": "https://en.wikipedia.org/wiki/Tip-top_table",
+        "title": "An English tilt-top table shows the hinged top. Its painted finish imitates lacquer.",
+        "file": "English tilt-top table, late 18th century, Japanned wood (imitation black and gold lacquer), HAA.JPG",
+        "author": "Hiart",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:English_tilt-top_table,_late_18th_century,_Japanned_wood_(imitation_black_and_gold_lacquer),_HAA.JPG",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. An English tilt-top table shows the hinged top. Its painted finish imitates lacquer."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Tip-top_table"
     },
     {
       "id": "2001",
@@ -132,7 +152,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Chinese guardian lions (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Chinese_guardian_lions"
+        }
+      ],
       "inventoryId": "2001",
       "object": "Foo Dogs",
       "title": "Foo Dogs",
@@ -160,7 +185,21 @@
       "answer": 1,
       "explanation": "Despite their English name, Foo Dogs traditionally depict stylized lions.",
       "prompt": "Describe one detail you noticed about Foo Dogs and one question you would ask its donor.",
-      "mysteryClue": "My name says dog, but I look like a lion and stand guard."
+      "mysteryClue": "My name says dog, but I look like a lion and stand guard.",
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Forbidden_City_Imperial_Guardian_Lions.jpg/960px-Forbidden_City_Imperial_Guardian_Lions.jpg",
+        "localPath": "assets/references/2001-c3ffcb4c65.webp",
+        "article": "https://en.wikipedia.org/wiki/Chinese_guardian_lions",
+        "title": "A guardian lion at the Forbidden City in Beijing.",
+        "file": "Forbidden City Imperial Guardian Lions.jpg",
+        "author": "Allen Timothy Chang",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Forbidden_City_Imperial_Guardian_Lions.jpg",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. A guardian lion at the Forbidden City in Beijing."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Chinese_guardian_lions"
     },
     {
       "id": "2003",
@@ -168,7 +207,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Asian conical hat (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Asian_conical_hat"
+        }
+      ],
       "inventoryId": "2003",
       "object": "Rattan Rickshaw Hat",
       "title": "Rattan Rickshaw Hat",
@@ -196,7 +240,21 @@
       "answer": 0,
       "explanation": "The broad conical hat shades its wearer from sun and heat.",
       "prompt": "Describe one detail you noticed about Rattan Rickshaw Hat and one question you would ask its donor.",
-      "mysteryClue": "Woven plant fibers make my broad cone a portable patch of shade."
+      "mysteryClue": "Woven plant fibers make my broad cone a portable patch of shade.",
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Hat_%28AM_2634-1%29.jpg/960px-Hat_%28AM_2634-1%29.jpg",
+        "localPath": "assets/references/2003-27a9ea5f97.webp",
+        "article": "https://en.wikipedia.org/wiki/Asian_conical_hat",
+        "title": "A Chinese conical sun hat made with woven bamboo, from the Auckland Museum collection.",
+        "file": "Hat (AM 2634-1).jpg",
+        "author": "Auckland Museum",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Hat_(AM_2634-1).jpg",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. A Chinese conical sun hat made with woven bamboo, from the Auckland Museum collection."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Asian_conical_hat"
     },
     {
       "id": "2004",
@@ -204,7 +262,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Chinese New Year (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Chinese_New_Year"
+        }
+      ],
       "inventoryId": "2004",
       "object": "Chinese Decor",
       "title": "Chinese Decor",
@@ -232,7 +295,21 @@
       "answer": 1,
       "explanation": "The label associates cranes with longevity, wisdom, peace, and high status.",
       "prompt": "Describe one detail you noticed about Chinese Decor and one question you would ask its donor.",
-      "mysteryClue": "Cranes and deer help me carry wishes for abundance at the Lunar New Year."
+      "mysteryClue": "Cranes and deer help me carry wishes for abundance at the Lunar New Year.",
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Covered_Vase_Decorated_with_Female_Figure_Holding_Lingzhi_Fungus_and_Peony_Branch%2C_Accompanied_by_a_Boy%2C_a_Crane%2C_and_a_Deer%2C_China%2C_Qing_dynasty%2C_18th_century%2C_coral_-_Worcester_Art_Museum_-_IMG_7546.JPG/960px-thumbnail.jpg",
+        "localPath": "assets/references/2004-28c11748de.webp",
+        "article": "https://en.wikipedia.org/wiki/Chinese_New_Year",
+        "title": "A Chinese coral vase at the Worcester Art Museum shows the crane and deer motifs also described on the school label.",
+        "file": "Covered Vase Decorated with Female Figure Holding Lingzhi Fungus and Peony Branch, Accompanied by a Boy, a Crane, and a Deer, China, Qing dynasty, 18th century, coral - Worcester Art Museum - IMG 7546.JPG",
+        "author": "Daderot",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Covered_Vase_Decorated_with_Female_Figure_Holding_Lingzhi_Fungus_and_Peony_Branch,_Accompanied_by_a_Boy,_a_Crane,_and_a_Deer,_China,_Qing_dynasty,_18th_century,_coral_-_Worcester_Art_Museum_-_IMG_7546.JPG",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. A Chinese coral vase at the Worcester Art Museum shows the crane and deer motifs also described on the school label."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Chinese_New_Year"
     },
     {
       "id": "2005",
@@ -240,7 +317,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Chinoiserie (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Chinoiserie"
+        }
+      ],
       "inventoryId": "2005",
       "object": "Wall Art Panels",
       "title": "Wall Art Panels",
@@ -268,7 +350,21 @@
       "answer": 2,
       "explanation": "The panels feature raised mother-of-pearl inlay, also called Luodian.",
       "prompt": "Describe one detail you noticed about Wall Art Panels and one question you would ask its donor.",
-      "mysteryClue": "Birds and blossoms shine in pale inlay against my dark lacquer."
+      "mysteryClue": "Birds and blossoms shine in pale inlay against my dark lacquer.",
+      "referenceImage": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Pair_of_Panels_with_Rose_Mallow_and_Kingfishers%2C_Camellia_and_Birds_LACMA_M.88.130a-b_%281_of_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "localPath": "assets/references/2005-35a326a7d5.webp",
+        "article": "https://en.wikipedia.org/wiki/Chinoiserie",
+        "title": "A bird-and-flower panel inlaid with mother-of-pearl from the Los Angeles County Museum of Art.",
+        "file": "Pair of Panels with Rose Mallow and Kingfishers, Camellia and Birds LACMA M.88.130a-b (1 of 2).jpg",
+        "author": "Los Angeles County Museum of Art",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Pair_of_Panels_with_Rose_Mallow_and_Kingfishers,_Camellia_and_Birds_LACMA_M.88.130a-b_(1_of_2).jpg",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. A bird-and-flower panel inlaid with mother-of-pearl from the Los Angeles County Museum of Art."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Chinoiserie"
     },
     {
       "id": "2006",
@@ -276,7 +372,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Balinese art (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Balinese_art"
+        }
+      ],
       "inventoryId": "2006",
       "object": "Balinese Wood Carving",
       "title": "Balinese Wood Carving",
@@ -304,7 +405,21 @@
       "answer": 0,
       "explanation": "The label identifies the carving as a woman of Bali.",
       "prompt": "Describe one detail you noticed about Balinese Wood Carving and one question you would ask its donor.",
-      "mysteryClue": "A woman’s clothing and headdress take shape in carved wood from Bali."
+      "mysteryClue": "A woman’s clothing and headdress take shape in carved wood from Bali.",
+      "referenceImage": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/COLLECTIE_TROPENMUSEUM_Houten_beeld_van_een_Balinese_vrouw_van_stand_TMnr_261-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "localPath": "assets/references/2006-001a5ca92c.webp",
+        "article": "https://en.wikipedia.org/wiki/Balinese_art",
+        "title": "A carved wooden figure of a Balinese woman in the Wereldmuseum collection.",
+        "file": "COLLECTIE TROPENMUSEUM Houten beeld van een Balinese vrouw van stand TMnr 261-2.jpg",
+        "author": "Ktoet Kandel (sculpture) / Collectie Wereldmuseum (v/h Tropenmuseum), part of the National Museum of World Cultures",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Houten_beeld_van_een_Balinese_vrouw_van_stand_TMnr_261-2.jpg",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. A carved wooden figure of a Balinese woman in the Wereldmuseum collection."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Balinese_art"
     },
     {
       "id": "3000",
@@ -312,7 +427,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Flight helmet (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Flight_helmet"
+        }
+      ],
       "inventoryId": "3000",
       "object": "Leather Flight Helmet",
       "title": "Leather Flight Helmet",
@@ -340,7 +460,21 @@
       "answer": 1,
       "explanation": "The museum label identifies it as a Royal Air Force flight helmet.",
       "prompt": "Describe one detail you noticed about Leather Flight Helmet and one question you would ask its donor.",
-      "mysteryClue": "Made of leather, I protected an aircrew member rather than a cyclist."
+      "mysteryClue": "Made of leather, I protected an aircrew member rather than a cyclist.",
+      "referenceImage": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Helmet%2C_flying_%28AM_2013.50.1-2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "localPath": "assets/references/3000-c8fdff9954.webp",
+        "article": "https://en.wikipedia.org/wiki/Flight_helmet",
+        "title": "A World War II RAF Type C leather flying helmet with goggles and oxygen mask, from Auckland Museum.",
+        "file": "Helmet, flying (AM 2013.50.1-2).jpg",
+        "author": "Auckland Museum",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Helmet,_flying_(AM_2013.50.1-2).jpg",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. A World War II RAF Type C leather flying helmet with goggles and oxygen mask, from Auckland Museum."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Flight_helmet"
     },
     {
       "id": "4000",
@@ -348,7 +482,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Maraca (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Maraca"
+        }
+      ],
       "inventoryId": "4000",
       "object": "Vintage Hand Carved Wood Maraca",
       "title": "Vintage Hand Carved Wood Maraca",
@@ -376,7 +515,21 @@
       "answer": 2,
       "explanation": "Early maracas were made from gourds containing small stones or seeds.",
       "prompt": "Describe one detail you noticed about Vintage Hand Carved Wood Maraca and one question you would ask its donor.",
-      "mysteryClue": "Shake me to hear a rhythm from a Caribbean musical tradition."
+      "mysteryClue": "Shake me to hear a rhythm from a Caribbean musical tradition.",
+      "referenceImage": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Maracas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "localPath": "assets/references/4000-b1dc46aa6e.webp",
+        "article": "https://en.wikipedia.org/wiki/Maraca",
+        "title": "A pair of maracas shows the hollow rattles and their handles.",
+        "file": "Maracas.jpg",
+        "author": "Axel Heymann",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Maracas.jpg",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. A pair of maracas shows the hollow rattles and their handles."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Maraca"
     },
     {
       "id": "4001",
@@ -384,7 +537,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Lei (garland) (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Lei_(garland)"
+        }
+      ],
       "inventoryId": "4001",
       "object": "Necklace",
       "title": "Necklace",
@@ -412,7 +570,21 @@
       "answer": 0,
       "explanation": "The label describes the Lei Hua necklace as being made from natural seeds.",
       "prompt": "Describe one detail you noticed about Necklace and one question you would ask its donor.",
-      "mysteryClue": "Seeds become a Hawaiian necklace associated with affection and aloha."
+      "mysteryClue": "Seeds become a Hawaiian necklace associated with affection and aloha.",
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Kukui_nut_lei.jpg/960px-Kukui_nut_lei.jpg",
+        "localPath": "assets/references/4001-7f03f7d4d3.webp",
+        "article": "https://en.wikipedia.org/wiki/Lei_(garland)",
+        "title": "Hula dancers wearing kukui nut lei. Kukui is one example of a seed used for lei.",
+        "file": "Kukui nut lei.jpg",
+        "author": "Sanba38",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kukui_nut_lei.jpg",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. Hula dancers wearing kukui nut lei. Kukui is one example of a seed used for lei."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Lei_(garland)"
     },
     {
       "id": "6001",
@@ -420,7 +592,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Tumi (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Tumi"
+        }
+      ],
       "inventoryId": "6001",
       "object": "Ceremonial Tool",
       "title": "Ceremonial Tool",
@@ -448,7 +625,21 @@
       "answer": 1,
       "explanation": "The label identifies the ornate face as Naylamp.",
       "prompt": "Describe one detail you noticed about Ceremonial Tool and one question you would ask its donor.",
-      "mysteryClue": "My ornate face recalls Naylamp in a ceremonial object from Peru."
+      "mysteryClue": "My ornate face recalls Naylamp in a ceremonial object from Peru.",
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Ceremonial_Knife_%28Tumi%29_MET_DP215693.jpg/960px-Ceremonial_Knife_%28Tumi%29_MET_DP215693.jpg",
+        "localPath": "assets/references/6001-5fa28ebabe.webp",
+        "article": "https://en.wikipedia.org/wiki/Tumi",
+        "title": "A Peruvian ceremonial knife in the Metropolitan Museum of Art collection.",
+        "file": "Ceremonial Knife (Tumi) MET DP215693.jpg",
+        "author": "The Metropolitan Museum of Art",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ceremonial_Knife_(Tumi)_MET_DP215693.jpg",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. A Peruvian ceremonial knife in the Metropolitan Museum of Art collection."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Tumi"
     },
     {
       "id": "7000",
@@ -456,7 +647,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Honey locust (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Honey_locust"
+        }
+      ],
       "inventoryId": "7000",
       "object": "Honey Locust Tree Seed Pod",
       "title": "Honey Locust Tree Seed Pod",
@@ -484,7 +680,21 @@
       "answer": 2,
       "explanation": "The label identifies the pod as coming from a honey locust tree, Gleditsia triacanthos.",
       "prompt": "Describe one detail you noticed about Honey Locust Tree Seed Pod and one question you would ask its donor.",
-      "mysteryClue": "An oversized pod links a living tree with the story of woolly mammoths."
+      "mysteryClue": "An oversized pod links a living tree with the story of woolly mammoths.",
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Honeylocust_fruits.jpg/960px-Honeylocust_fruits.jpg",
+        "localPath": "assets/references/7000-aa51d51c2c.webp",
+        "article": "https://en.wikipedia.org/wiki/Honey_locust",
+        "title": "Mature honey locust seed pods photographed in Georgia.",
+        "file": "Honeylocust fruits.jpg",
+        "author": "FUchesco",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Honeylocust_fruits.jpg",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. Mature honey locust seed pods photographed in Georgia."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Honey_locust"
     },
     {
       "id": "7001",
@@ -492,7 +702,12 @@
       "demo": false,
       "shape": "generic",
       "color": "#d9e5da",
-      "sources": [],
+      "sources": [
+        {
+          "title": "Background reading · Woolly mammoth (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Woolly_mammoth"
+        }
+      ],
       "inventoryId": "7001",
       "object": "Woolly Mammoth Tooth",
       "title": "Woolly Mammoth Tooth",
@@ -520,7 +735,21 @@
       "answer": 0,
       "explanation": "The label says the tooth was found in fishing nets off Point Pleasant in the 1980s.",
       "prompt": "Describe one detail you noticed about Woolly Mammoth Tooth and one question you would ask its donor.",
-      "mysteryClue": "A mammoth’s molar, recovered offshore, carries a piece of New Jersey’s Ice Age story."
+      "mysteryClue": "A mammoth’s molar, recovered offshore, carries a piece of New Jersey’s Ice Age story.",
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Mammuthus_primigenius_-_molar.png/960px-Mammuthus_primigenius_-_molar.png",
+        "localPath": "assets/references/7001-7ddc485d02.webp",
+        "article": "https://en.wikipedia.org/wiki/Woolly_mammoth",
+        "title": "A woolly mammoth molar found in Munich-Perlach, Germany. The ridges run across its chewing surface.",
+        "file": "Mammuthus primigenius - molar.png",
+        "author": "Tiia Monto",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Mammuthus_primigenius_-_molar.png",
+        "checkedAt": "2026-11-06T23:58:01+00:00",
+        "alt": "Reference image. A woolly mammoth molar found in Munich-Perlach, Germany. The ridges run across its chewing surface."
+      },
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Woolly_mammoth"
     }
   ]
 }

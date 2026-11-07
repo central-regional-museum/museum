@@ -1,0 +1,26 @@
+/* The same map opens each case on the student landing page and in Journey. */
+.home-map { --land:#d7ddc9; --land-hi:#acc5ad; --sea:#e9eee7; --wall:#fbf5ec; --ink:#254742; --ochre:#155b56; }
+.home-map .mapbox { overflow:hidden; margin:1rem 0; border:1px solid #c9cdbb; border-radius:1rem; background:var(--sea); }
+.home-map svg { display:block; width:100%; height:auto; }
+.home-map .map-land { fill:var(--land); stroke:var(--wall); stroke-width:1; }
+.home-map .map-link:hover .map-land, .home-map .map-link:focus .map-land { fill:var(--land-hi); }
+.home-map .route { fill:none; stroke:var(--ochre); stroke-width:2.6; stroke-linecap:round; stroke-dasharray:1 7; }
+.home-map .traveler { fill:var(--ochre); }
+.home-map .site { fill:var(--wall); stroke:var(--ochre); stroke-width:2.2; }
+.home-map .mlabel { font:13px ui-monospace,monospace; fill:var(--ink); paint-order:stroke; stroke:var(--sea); stroke-width:4px; stroke-linejoin:round; }
+.home-map .mlabel.place { font:17px Georgia,serif; }
+.museum-map-svg .route, .museum-map-svg .traveler, .museum-map-svg .site, .museum-map-svg > .mlabel { pointer-events:none; }
+.home-map .map-places { display:flex; flex-wrap:wrap; gap:.42rem; margin:0 0 1rem; }
+.home-map .map-places a { display:inline-flex; align-items:center; min-height:44px; padding:.38rem .75rem; background:#fffaf2; border:1px solid #cbb99b; border-radius:.6rem; color:#184e47; font-size:.88rem; }
+.home-map .map-link:focus .map-land { stroke:#62416b; stroke-width:3; }
+.art.reference-frame .artifact-photo, .journey-photo-frame.reference-frame img { object-fit:contain; }
+@media (max-width:600px) {
+  .home-map .mlabel:not(.place), .home-map .site { display:none; }
+  .home-map .mlabel.place { font-size:23px; }
+  .home-map .map-places { gap:.3rem; }
+}
+@media (max-width:760px) {
+  .mapbox > .museum-map-svg { min-width:0; width:100%; height:auto; }
+  .mapbox > .museum-map-svg .mlabel:not(.place) { display:none; }
+  .mapbox > .museum-map-svg .mlabel.place { font-size:23px; }
+}

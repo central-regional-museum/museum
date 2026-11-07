@@ -1,0 +1,29 @@
+/* Keep touch controls and their focus rings apart when a row wraps. */
+@media screen {
+  header nav, .gallery-navigation nav, .actions, .pose-options, .map-caption, .toolbar {
+    display:flex; flex-wrap:wrap; align-items:center; gap:12px;
+  }
+  header nav a, .gallery-navigation nav a {display:inline-flex;align-items:center;min-height:44px;padding:.5rem .7rem}
+  header nav {padding-block:.3rem}
+  .actions, .toolbar, .game-options, .answers, .print-action-row {margin-block:1rem}
+  .game-options,.answers,.hair-grid,.swatch-group .skin-swatches {gap:12px}
+  .actions>*, .toolbar>*, .game-options>*, .pose-options>*, .print-action-row>* {min-width:0;max-width:100%;white-space:normal}
+  .actions :is(button,.button),.game-options button,.pose-options button,.toolbar button,.print-action-row button {min-height:44px}
+  .print-action-row {display:flex;align-items:stretch;flex-wrap:wrap;gap:12px}
+  .panel details>summary,.explorer-controls details>summary {min-height:44px;padding-block:.65rem}
+  .panel details[open]>summary,.explorer-controls details[open]>summary{margin-bottom:.65rem}
+  :is(.panel,.museum-find,.recovery-panel,.explorer-controls) > :is(button,.button)+:is(button,.button) {margin-inline-start:.35rem;margin-block-start:.5rem}
+  .passport-actions,.cabinet-drawers,.galleries,.items,.grid{gap:clamp(16px,2.5vw,28px)}
+  .gallery-navigation nav,.pose-options,.swatch-group{margin-block:.65rem}
+  main .museum-find {margin-block:clamp(22px,3vw,36px)}
+  main .panel :is(button,.button):focus-visible,header a:focus-visible {outline-offset:3px}
+  @media(max-width:600px){
+    header nav {gap:8px 10px}
+    header nav a,.gallery-navigation nav a {padding:.5rem .6rem}
+    .print-action-row{display:grid;grid-template-columns:minmax(0,1fr)}
+    .actions {align-items:stretch}
+    .toolbar input,.toolbar select {min-width:0;max-width:100%}
+    .explorer-controls fieldset {min-width:0;padding-inline:12px}
+    .panel,.icard .body,.card-body {overflow-wrap:break-word}
+  }
+}

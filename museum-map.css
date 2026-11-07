@@ -24,3 +24,10 @@
   .mapbox > .museum-map-svg .mlabel:not(.place) { display:none; }
   .mapbox > .museum-map-svg .mlabel.place { font-size:23px; }
 }
+
+/* Small enamel-like accents on the moving routes and the local stop. */
+@media screen {
+  .museum-map-svg .traveler { fill:#efb535; stroke:#573857; stroke-width:1.5; }
+  .museum-map-svg .map-link[href$="#new-jersey"] circle:first-of-type { fill:#ad4f32; }
+  .museum-map-svg .map-link[href$="#new-jersey"] circle:last-of-type { fill:#ffd36a; }
+}

@@ -73,7 +73,7 @@ function mapSVG(opts){
   SITES.forEach(function(s){var p=proj(s.at); out.push('<circle class="site" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="6"/>');
     if(!opts.small) out.push('<text class="mlabel" x="'+(p[0]+s.dx).toFixed(0)+'" y="'+(p[1]+s.dy).toFixed(0)+'" text-anchor="'+s.anchor+'">'+s.name+'</text>');});
   var nj=proj([-74.4,40.1]);
-  out.push('<a class="map-link" href="'+target+'#new-jersey" aria-label="New Jersey gallery"><circle cx="'+nj[0].toFixed(1)+'" cy="'+nj[1].toFixed(1)+'" r="9" fill="var(--ink)"/><circle cx="'+nj[0].toFixed(1)+'" cy="'+nj[1].toFixed(1)+'" r="3.5" fill="var(--sea)"/>'+(opts.small?'':'<text class="mlabel" x="'+(nj[0]+14).toFixed(0)+'" y="'+(nj[1]+5).toFixed(0)+'" style="font-weight:500">New Jersey · our wing</text>')+'</a>');
+  out.push('<a class="map-link" href="'+target+'#new-jersey" aria-label="New Jersey gallery"><circle cx="'+nj[0].toFixed(1)+'" cy="'+nj[1].toFixed(1)+'" r="9" fill="var(--ink)"/><circle cx="'+nj[0].toFixed(1)+'" cy="'+nj[1].toFixed(1)+'" r="3.5" fill="var(--sea)"/>'+(opts.small?'':'<text class="mlabel" x="'+(nj[0]+14).toFixed(0)+'" y="'+(nj[1]+5).toFixed(0)+'" style="font-weight:500">New Jersey</text>')+'</a>');
   out.push('</svg>');
   return out.join("");
 }

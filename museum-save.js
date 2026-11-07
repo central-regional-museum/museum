@@ -32,7 +32,7 @@ async function saveMuseumFile(name, makeBlob, {backup=false, skipFolder=false, s
   return new Promise(resolve => {
     const dialog = document.createElement('dialog');
     dialog.setAttribute('aria-label', 'Save museum file');
-    dialog.style.cssText = 'width:min(29rem,calc(100% - 32px));max-height:85dvh;overflow:auto;box-sizing:border-box;padding:24px;border:1px solid #b69a69;border-radius:18px;color:#183f38;background:#fffaf2;font:16px/1.55 system-ui';
+    dialog.style.cssText = 'position:fixed;inset:0;margin:auto;height:fit-content;width:min(29rem,calc(100% - 32px));max-height:85dvh;overflow:auto;box-sizing:border-box;padding:24px;border:1px solid #b69a69;border-radius:18px;color:#183f38;background:#fffaf2;font:16px/1.55 system-ui';
     const heading = document.createElement('h2');
     heading.style.marginTop = '0';
     heading.textContent = backup ? 'Save your backup' : picture ? 'Save your picture' : 'Save your file';

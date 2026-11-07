@@ -1,7 +1,8 @@
 // Store only the folder the user explicitly chooses. Each backup gets a new filename.
 (() => {
   'use strict';
-  const supported = typeof window.showDirectoryPicker === 'function';
+  const mobile = /Android|iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const supported = !mobile && typeof window.showDirectoryPicker === 'function';
   if (!supported) return;
 
   let folder = null;
@@ -71,7 +72,7 @@
     return new Promise(resolve => {
       const dialog = document.createElement('dialog');
       dialog.setAttribute('aria-labelledby', 'backup-folder-title');
-      dialog.style.cssText = 'width:min(28rem,calc(100% - 32px));max-height:85dvh;overflow:auto;box-sizing:border-box;padding:24px;border:1px solid #b69a69;border-radius:18px;background:#fffaf2;color:#183f38;font:16px/1.55 system-ui';
+      dialog.style.cssText = 'position:fixed;inset:0;margin:auto;height:fit-content;width:min(28rem,calc(100% - 32px));max-height:85dvh;overflow:auto;box-sizing:border-box;padding:24px;border:1px solid #b69a69;border-radius:18px;background:#fffaf2;color:#183f38;font:16px/1.55 system-ui';
       dialog.innerHTML = '<h2 id="backup-folder-title" style="margin-top:0">Choose a backup folder</h2><p>Choose or create a folder named Museum Backups. Select it, then allow saving if Chrome asks.</p><p>The museum will remember your choice for the next backup. Use this on your own computer.</p><p role="status"></p><div></div>';
       const status = dialog.querySelector('[role=status]');
       status.textContent = initialMessage;

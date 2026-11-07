@@ -1,20 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 76" fill="none">
-  <!-- An open segment of the instrument's graduated brass ring. -->
-  <g stroke="#ab854a" stroke-linecap="round">
-    <path d="M33 74a123 123 0 0 1 214 0" opacity=".55"/>
-    <path d="M42 74a115 115 0 0 1 196 0" opacity=".4"/>
-    <path d="M47 73a111 111 0 0 1 186 0" opacity=".32"/>
-    <g transform="translate(140 135)" opacity=".8">
-      <path id="major" d="M0-122v9"/>
-      <use href="#major" transform="rotate(-50)"/><use href="#major" transform="rotate(-40)"/>
-      <use href="#major" transform="rotate(-30)"/><use href="#major" transform="rotate(-20)"/>
-      <use href="#major" transform="rotate(-10)"/><use href="#major" transform="rotate(10)"/>
-      <use href="#major" transform="rotate(20)"/><use href="#major" transform="rotate(30)"/>
-      <use href="#major" transform="rotate(40)"/><use href="#major" transform="rotate(50)"/>
-      <path d="M0-121v4" id="minor" transform="rotate(-55)"/>
-      <g><path id="short" d="M0-121v4"/><use href="#short" transform="rotate(-45)"/><use href="#short" transform="rotate(-35)"/><use href="#short" transform="rotate(-25)"/><use href="#short" transform="rotate(-15)"/><use href="#short" transform="rotate(-5)"/><use href="#short" transform="rotate(5)"/><use href="#short" transform="rotate(15)"/><use href="#short" transform="rotate(25)"/><use href="#short" transform="rotate(35)"/><use href="#short" transform="rotate(45)"/><use href="#short" transform="rotate(55)"/></g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" fill="none">
+  <defs>
+    <linearGradient id="brass" x2=".85" y2="1">
+      <stop stop-color="#986b32"/><stop offset=".29" stop-color="#f5d897"/>
+      <stop offset=".62" stop-color="#b78545"/><stop offset="1" stop-color="#ead099"/>
+    </linearGradient>
+    <path id="quarter" d="M0-28v4m0 48v4M-28 0h4m48 0h4"/>
+    <path id="tick" d="M0-28v2.3m0 51.4v2.3M-28 0h2.3m51.4 0H28"/>
+  </defs>
+  <!-- Fine rules lead in to a complete dial with clearance above and below. -->
+  <g stroke="#b69356" stroke-linecap="round" opacity=".68">
+    <path d="M27 40h62m82 0h62M72 37h13m90 0h13"/>
+    <path d="m18 40 3-2 3 2-3 2zm218 0 3-2 3 2-3 2z" fill="#bd9b65"/>
   </g>
-  <text x="140" y="36" fill="#785c38" font-family="Georgia,serif" text-anchor="middle" font-size="11" font-weight="bold">N</text>
-  <path d="m140 43-5.5 27 5.5-3.6z" fill="#dc8960"/><path d="m140 43 5.5 27-5.5-3.6z" fill="#b45745"/>
+  <g transform="translate(130 40)">
+    <circle r="32" fill="url(#brass)" stroke="#93703d" stroke-width=".9"/>
+    <circle r="30" fill="#276b63" stroke="#ffedbd" stroke-width=".8"/>
+    <g stroke="#f2dba2" stroke-width="1.2" stroke-linecap="round">
+      <use href="#quarter"/><use href="#quarter" transform="rotate(45)"/>
+      <use href="#tick" transform="rotate(15)"/><use href="#tick" transform="rotate(30)"/>
+      <use href="#tick" transform="rotate(60)"/><use href="#tick" transform="rotate(75)"/>
+    </g>
+    <circle r="23.2" fill="#fff5d9" stroke="#d2ad6e"/>
+    <circle r="17.2" stroke="#cfb680" stroke-width=".65" stroke-dasharray="1 3"/>
+    <text x="0" y="-12.4" text-anchor="middle" fill="#814932" font-family="Georgia,serif" font-size="8" font-weight="bold">N</text>
+    <path d="m-19 0 19-3.4L19 0 0 3.4z" fill="#c5a373"/>
+    <path d="M0-11-4.4 0H0z" fill="#ef9061"/><path d="M0-11 4.4 0H0z" fill="#af4335"/>
+    <path d="M0 17-4.4 0H0z" fill="#64a598"/><path d="M0 17 4.4 0H0z" fill="#28665e"/>
+    <circle r="2.7" fill="#b58b50" stroke="#77522e" stroke-width=".7"/><circle r="1" fill="#fff0c3"/>
+  </g>
 </svg>

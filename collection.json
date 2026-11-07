@@ -91,7 +91,8 @@
       "flagKey": "china",
       "labelProvenance": "Transcribed from owner-supplied printed museum label photos, 2026-11-06.",
       "photoCropX": 50,
-      "photoPhrase": ""
+      "photoPhrase": "",
+      "photoCropY": 91
     },
     {
       "id": "2000",

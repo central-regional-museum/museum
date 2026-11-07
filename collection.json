@@ -419,7 +419,13 @@
         "checkedAt": "2026-11-06T23:58:01+00:00",
         "alt": "Reference image. A carved wooden figure of a Balinese woman in the Wereldmuseum collection."
       },
-      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Balinese_art"
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Balinese_art",
+      "photoCropX": 27,
+      "photoCropY": 17,
+      "photoPhrase": "",
+      "image": "assets/2006-770e7be4cb852f93304e.jpg",
+      "imageAlt": "Photograph of Balinese Wood Carving",
+      "imageCredit": "School museum photo"
     },
     {
       "id": "3000",

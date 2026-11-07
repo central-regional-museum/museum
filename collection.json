@@ -321,7 +321,11 @@
         "checkedAt": "2026-11-06T23:58:01+00:00",
         "alt": "Reference image. A Chinese coral vase at the Worcester Art Museum shows the crane and deer motifs also described on the school label."
       },
-      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Chinese_New_Year"
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Chinese_New_Year",
+      "photoPhrase": "",
+      "image": "assets/2004-7d9e1f081f2958f3a69d.jpg",
+      "imageAlt": "Photograph of Chinese Decor",
+      "imageCredit": "School museum photo"
     },
     {
       "id": "2005",

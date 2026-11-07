@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72">
+  <defs>
+    <linearGradient id="brass" x2=".8" y2="1"><stop stop-color="#8f612d"/><stop offset=".3" stop-color="#ffe6a0"/><stop offset=".6" stop-color="#bc853c"/><stop offset="1" stop-color="#efd08a"/></linearGradient>
+    <linearGradient id="enamel" x2=".75" y2="1"><stop stop-color="#40998d"/><stop offset="1" stop-color="#105953"/></linearGradient>
+  </defs>
+  <path d="M4 31a28 28 0 0 1 56 0v30q-28 17-56 0z" fill="url(#brass)" stroke="#876237" stroke-width="1.2"/>
+  <path d="M7 31a25 25 0 0 1 50 0v28q-25 16-50 0z" fill="url(#enamel)" stroke="#fff2c3" stroke-width="1.1"/>
+  <circle cx="32" cy="28" r="21" fill="#104e4c" stroke="#eac88a"/>
+  <circle cx="32" cy="28" r="18.8" fill="none" stroke="#f5dca0" stroke-width="2.7" stroke-dasharray="1 3.92"/>
+  <circle cx="32" cy="28" r="16" fill="#fff4d5" stroke="#b3894a"/>
+  <path d="m18 28 14-3.6L46 28l-14 3.6z" fill="#ba9055"/>
+  <path d="m32 13 4.6 15H32z" fill="#b64132"/><path d="m32 13-4.6 15H32z" fill="#f68851"/>
+  <path d="m32 43 4.6-15H32z" fill="#185b57"/><path d="m32 43-4.6-15H32z" fill="#4caa98"/>
+  <circle cx="32" cy="28" r="3" fill="#c59b58" stroke="#825636"/><circle cx="32" cy="28" r="1" fill="#fff3cb"/>
+  <path d="M11 48q10-4 21 1 11-5 21-1v13q-11-3-21 2-11-5-21-2z" fill="#fff2d4" stroke="#d0ac6b" stroke-width="1.2"/>
+  <path d="M32 49v13m-17-9q7-1 13 2m-13 2q7-1 13 2m8-4q6-3 13-2m-13 6q6-3 13-2" stroke="#306762" fill="none" stroke-width="1.4" stroke-linecap="round"/>
+</svg>

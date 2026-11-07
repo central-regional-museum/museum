@@ -1,5 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 310" role="img" aria-labelledby="title desc">
 <title id="title">The wandering compass</title><desc id="desc">A brass pocket compass with a teal enamel dial, an ivory compass rose and a vermilion needle pointing north.</desc>
+<!-- The Journey page uses this view of the same instrument with plum enamel. -->
+<view id="journey" viewBox="0 0 320 310"/>
+<style>
+  #journey:target ~ defs #enamel stop:nth-child(1) {stop-color:#ba82ae}
+  #journey:target ~ defs #enamel stop:nth-child(2) {stop-color:#845678}
+  #journey:target ~ defs #enamel stop:nth-child(3) {stop-color:#50364f}
+  #journey:target ~ [data-turn-dial] [stroke="#addecd"] {stroke:#eed8e6}
+  #journey:target ~ [data-turn-dial] [fill="#275e58"] {fill:#624463}
+  #journey:target ~ [fill="#54b7a6"] {fill:#ba8cab}
+  #journey:target ~ [fill="#176861"] {fill:#614468}
+</style>
 <defs>
   <linearGradient id="rim" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#855125"/><stop offset=".18" stop-color="#fff0b0"/><stop offset=".39" stop-color="#d6993b"/><stop offset=".56" stop-color="#ffe5a0"/><stop offset=".77" stop-color="#a66d32"/><stop offset="1" stop-color="#ebbf63"/></linearGradient>
   <radialGradient id="enamel" cx=".3" cy=".22" r=".92"><stop stop-color="#419b90"/><stop offset=".53" stop-color="#176e69"/><stop offset="1" stop-color="#134b4b"/></radialGradient>

@@ -677,7 +677,11 @@
         "checkedAt": "2026-11-06T23:58:01+00:00",
         "alt": "Reference image. A Peruvian ceremonial knife in the Metropolitan Museum of Art collection."
       },
-      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Tumi"
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Tumi",
+      "photoPhrase": "",
+      "image": "assets/6001-3d42aa3df9b463f459f8.jpg",
+      "imageAlt": "Photograph of Ceremonial Tool",
+      "imageCredit": "School museum photo"
     },
     {
       "id": "7000",

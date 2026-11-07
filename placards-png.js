@@ -7,7 +7,7 @@ function concat(...parts){const out=new Uint8Array(parts.reduce((n,a)=>n+a.lengt
 async function dpi(blob){const b=new Uint8Array(await blob.arrayBuffer()),body=new Uint8Array(9),v=new DataView(body.buffer);v.setUint32(0,11811);v.setUint32(4,11811);body[8]=1;const chunk=concat(enc.encode('pHYs'),body);return new Blob([b.slice(0,33),u32(9),chunk,u32(crc(chunk)),b.slice(33)],{type:'image/png'})}
 function lines(ctx,text,width){const result=[];for(const para of String(text||'').split('\n')){let line='';for(const word of para.split(/\s+/)){if(ctx.measureText(word).width>width)throw Error('A word or link is too long for this card. Shorten the card text.');if(line&&ctx.measureText(line+' '+word).width>width){result.push(line);line=word}else line+=(line?' ':'')+word}result.push(line)}return result}
 async function loadFlag(e){const url=MuseumLabels.flagURL(e);if(!url)throw Error(e.object+': select a location flag before exporting.');const response=await fetch(url);if(!response.ok)throw Error('The flag for '+e.origin+' could not load. Try again when connected.');const blob=await response.blob(),src=URL.createObjectURL(blob),img=new Image();img.src=src;try{await img.decode();return img}finally{URL.revokeObjectURL(src)}}
-async function card(e,{size='4x6',base,qr,settings}={}){
+async function card(e,{size='4x6',base,qr,settings,mime='image/png'}={}){
  const [w,h]=({'4x6':[1800,1200],'5x7':[2100,1500],'8x10':[3000,2400],'instagram':[1080,1350]})[size]||[1800,1200];
  const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;const ctx=canvas.getContext('2d'),scale=w/900,H=h/scale;ctx.scale(scale,scale);const m=45,bodyWidth=810;ctx.fillStyle='#fbf5ec';ctx.fillRect(0,0,900,H);ctx.strokeStyle='#b58a43';ctx.lineWidth=2;ctx.strokeRect(10,10,880,H-20);
  ctx.fillStyle='#623f65';ctx.font='bold 13px Arial';ctx.fillText('CENTRAL REGIONAL  /  OBJECT STORIES',m,35);
@@ -22,7 +22,18 @@ async function card(e,{size='4x6',base,qr,settings}={}){
  if(!qr)throw Error('Generate a QR preview first.');ctx.fillStyle='white';ctx.fillRect(730,fy-11,125,125);ctx.imageSmoothingEnabled=false;ctx.drawImage(qr,741,fy,103,103);ctx.imageSmoothingEnabled=true;ctx.font='bold 9px Arial';ctx.fillStyle='#155b56';ctx.fillText('SCAN TO DISCOVER',735,H-13);
  ctx.font='9px Arial';ctx.fillStyle='#623f65';ctx.fillText('Central Regional High School Museum',m,H-19);
  if(e.wikipedia){ctx.font='8px Arial';ctx.fillText('Text adapted from Wikipedia · '+e.wikipedia.title+' · CC BY-SA 4.0 · source via QR',m,H-7)}
- const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('PNG could not be created.')),'image/png'));return dpi(blob);
+ const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('The picture could not be created. Please try again.')),mime,.96));
+ if(mime==='image/jpeg'){
+   if(blob.type!==mime)throw Error('This browser could not create a JPG. Try the PNG option in paper and batch tools.');
+   // Make print density explicit even when the browser omits its JFIF header.
+   const bytes=new Uint8Array(await blob.arrayBuffer());
+   if(bytes[0]!==255||bytes[1]!==216)throw Error('The JPG could not be prepared.');
+   if(bytes[2]===255&&bytes[3]===224&&String.fromCharCode(...bytes.slice(6,11))==='JFIF\0'){
+     bytes.set([1,1,44,1,44],13);return new Blob([bytes],{type:mime});
+   }
+   return new Blob([bytes.slice(0,2),Uint8Array.of(255,224,0,16,74,70,73,70,0,1,1,1,1,44,1,44,0,0),bytes.slice(2)],{type:mime});
+ }
+ return dpi(blob);
 }
 async function zip(files){const locals=[],central=[];let offset=0;for(const file of files){const name=enc.encode(file.name),bytes=new Uint8Array(await file.blob.arrayBuffer()),c=crc(bytes),local=new Uint8Array(30),v=new DataView(local.buffer);v.setUint32(0,0x04034b50,true);v.setUint16(4,20,true);v.setUint16(6,0x800,true);v.setUint32(14,c,true);v.setUint32(18,bytes.length,true);v.setUint32(22,bytes.length,true);v.setUint16(26,name.length,true);locals.push(local,name,bytes);const cd=new Uint8Array(46),d=new DataView(cd.buffer);d.setUint32(0,0x02014b50,true);d.setUint16(4,20,true);d.setUint16(6,20,true);d.setUint16(8,0x800,true);d.setUint32(16,c,true);d.setUint32(20,bytes.length,true);d.setUint32(24,bytes.length,true);d.setUint16(28,name.length,true);d.setUint32(42,offset,true);central.push(cd,name);offset+=30+name.length+bytes.length}const size=central.reduce((n,a)=>n+a.length,0),end=new Uint8Array(22),v=new DataView(end.buffer);v.setUint32(0,0x06054b50,true);v.setUint16(8,files.length,true);v.setUint16(10,files.length,true);v.setUint32(12,size,true);v.setUint32(16,offset,true);return new Blob([...locals,...central,end],{type:'application/zip'})}
 root.MuseumPNG={card,zip};

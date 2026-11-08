@@ -183,8 +183,8 @@
       "labelProvenance": "Transcribed from owner-supplied printed museum label photos, 2026-11-06.",
       "story": "Foo dogs originated in China as mythical guardian figures. They are traditionally depicted as stylized lions rather than actual dogs and usually come in male and female pairs. The statues symbolize protection, prosperity, and success. They were designed to keep negative energy or spirits from entering a house or building, similar to gargoyles in Europe.",
       "summary": "Foo dogs originated in China as mythical guardian figures.",
-      "period": "Date not recorded",
-      "material": "Material not recorded",
+      "period": "",
+      "material": "",
       "category": "Museum collection",
       "look": "Look at these guardian figures: do they resemble the animal in their English name?",
       "connection": "What figures or symbols do people place near entrances today?",
@@ -212,10 +212,10 @@
         "alt": "Reference image. A guardian lion at the Forbidden City in Beijing."
       },
       "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Chinese_guardian_lions",
-      "photoCropX": 45,
+      "photoCropX": 50,
       "photoCropY": 80,
       "photoPhrase": "",
-      "image": "assets/2001-db637513e3cd79cd34a0.jpg",
+      "image": "assets/2001-730829b249f04a75aab7.jpg",
       "imageAlt": "Photograph of Foo Dogs",
       "imageCredit": "School museum photo"
     },

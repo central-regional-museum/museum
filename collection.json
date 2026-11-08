@@ -604,8 +604,8 @@
       "labelProvenance": "Transcribed from owner-supplied printed museum label photos, 2026-11-06.",
       "story": "This necklace from Hawaii is called a Lei Hua and is made from natural seeds. The necklace serves as symbols of wealth, affection, and social rank. When given it is an offering of affection, good will and aloha. Aloha is a philosophy that represents living in harmony, and having deep connection with others and the environment.",
       "summary": "This necklace from Hawaii is called a Lei Hua and is made from natural seeds.",
-      "period": "Date not recorded",
-      "material": "Material not recorded",
+      "period": "",
+      "material": "",
       "category": "Museum collection",
       "look": "Look at the repeated natural shapes that form this necklace.",
       "connection": "What meanings can a gift of jewelry carry?",
@@ -634,9 +634,11 @@
       },
       "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Lei_(garland)",
       "photoPhrase": "",
-      "image": "assets/4001-f61528a37aca738a59eb.jpg",
+      "image": "assets/4001-2429753feef5e9c07237.jpg",
       "imageAlt": "Photograph of Necklace",
-      "imageCredit": "School museum photo"
+      "imageCredit": "School museum photo",
+      "photoCropX": 44,
+      "photoCropY": 48
     },
     {
       "id": "6001",

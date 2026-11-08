@@ -3,6 +3,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
+import {blankPassportDocx} from './build-passport.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const args=process.argv.slice(2),classroom=args.includes('--classroom');
 const context={window:{},URL};vm.createContext(context);
@@ -23,6 +24,9 @@ if(report.errors.length){console.error(report.errors.map(e=>'ERROR: '+e).join('\
  const dist=path.join(root,'dist');await fs.mkdir(dist,{recursive:true});
  // Only remove the known build destination, never the source project or user folders.
  for(const f of await fs.readdir(dist))await fs.rm(path.join(dist,f),{recursive:true,force:true});
+ await fs.writeFile(path.join(dist,'blank-museum-passport-google-docs.docx'),blankPassportDocx(settings,items));
+ for(const file of ['passport-help.html','student-help.js','student-help.css'])await fs.copyFile(path.join(root,file),path.join(dist,file));
+ await fs.cp(path.join(root,'assets/guides'),path.join(dist,'assets/guides'),{recursive:true});
  for(const file of ['museum-theme.css','museum-map.css','museum-map.js','student-spacing.css','flag-images-1.js','flag-images-2.js','flag-images-3.js','flag-images-4.js','install.html','flag-catalog.json','museum-labels.js','placards-png.js','wardrobe.js','museum-save.js','backup-folder.js','backup-reminder.js','museum-mark.svg','wandering-compass.svg','header-compass-mark.svg','header-bearings.svg','journey-route.js','museum-icon-192.png','museum-icon-512.png','device-shortcut.js','home-screen.css','student-app.svg','student-app-180.png','student-app-192.png','student-app-512.png','sw.js','offline.html','color-break.html','color-break.js','color-break.css','wiki-photos.js','trophy-client.js','brand.js','progress-notices.js','puzzle.html','puzzle.js','journey-games.js','journey-theme.css','site-fun.js','index.html','style.css','app.js','passport-rules.js','teacher-check.js','teacher-check.html','polish.js','vault.js','discoveries.js','compass-dial.js','stamp-system.js','stamp-designs.js','exchange.js','curiosity.js','boot.js','journey.html','collection-core.js','placards.html','placards-tools.html','photo-card.js','photo-card.css','placards.css','placards.js','explorer.html','explorer.css','explorer.js','explorer-options.js','CHARACTER_CREDITS.txt','.nojekyll'])await fs.copyFile(path.join(root,file),path.join(dist,file));
  const published=items.filter(e=>e.published!==false);
  const revision=createHash('sha256').update(JSON.stringify({settings,items:published,specials:11})).digest('hex').slice(0,20);
@@ -30,7 +34,7 @@ if(report.errors.length){console.error(report.errors.map(e=>'ERROR: '+e).join('\
  await fs.writeFile(path.join(dist,'collection-status.json'),JSON.stringify({collectionId:settings.collectionId,revision,items:published.map(e=>({id:e.id,object:e.object,fingerprint:createHash('sha256').update(JSON.stringify(e)).digest('hex')})),availableStamps:published.length+11,requiredExhibitIds:(settings.requiredExhibitIds||[]).filter(id=>published.some(e=>e.id===id))}));
  const changes=new Map();
  async function revisionFor(file){if(!changes.has(file))changes.set(file,createHash('sha256').update(await fs.readFile(path.join(root,file))).digest('hex').slice(0,10));return changes.get(file)}
- for(const file of ['color-break.html','index.html','journey.html','explorer.html','teacher-check.html','puzzle.html','placards.html','placards-tools.html']){
+ for(const file of ['color-break.html','index.html','journey.html','explorer.html','teacher-check.html','puzzle.html','placards.html','placards-tools.html','passport-help.html']){
    const dest=path.join(dist,file);let html=await fs.readFile(dest,'utf8');
    for(const match of [...html.matchAll(/(?:src|href)="([a-z0-9-]+\.(?:js|css))(?:\?[^"]*)?"/g)]){
      if(['settings.js','exhibits.js'].includes(match[1]))continue;

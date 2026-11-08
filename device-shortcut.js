@@ -13,15 +13,18 @@
   const safari=/Safari/i.test(ua)&&!/CriOS|FxiOS|EdgiOS|Chrome|Chromium|Android/i.test(ua);
   const desktopSafari=safari&&!ios&&/Mac/i.test(ua);
   const edge=/Edg\//.test(ua), chrome=/Chrome|Chromium/.test(ua)&&!edge&&!/OPR|SamsungBrowser/.test(ua);
-  const guideForDevice=()=>{
-    if(ios && (safari||/CriOS/.test(ua))) return {label:'Add to Home Screen',where:/CriOS/.test(ua)?'Chrome on iPhone or iPad':'Safari on iPhone or iPad',steps:[
-      /CriOS/.test(ua)?'Tap <strong>Share</strong> (the square with an up arrow) beside the address.':'Tap <strong>Share</strong> (the square with an up arrow). If it’s hidden, open the page menu, then tap <strong>Share</strong>.',
-      'Scroll down and tap <strong>Add to Home Screen</strong>.','If you see <strong>Open as Web App</strong>, leave it on. Tap <strong>Add</strong>.']};
-    if(android && chrome) return {label:'Add to Home Screen',where:'Chrome on Android',steps:['Tap the <strong>three dots ⋮</strong> at the top right.','Tap <strong>Install and create shortcut</strong>. Some phones call it <strong>Add to Home screen</strong>.','Tap <strong>Install</strong> or <strong>Add</strong> to finish.']};
-    if(desktopSafari) return {label:'Add to Dock',where:'Safari on Mac',steps:['Click <strong>Share</strong> (the square with an up arrow) in the Safari toolbar.','Click <strong>Add to Dock</strong>.','Click <strong>Add</strong>. Look for the icon in your Dock.'],tip:'You can also click File at the top of your screen, then Add to Dock. This option needs macOS Sonoma 14 or later.'};
-    if(!ios&&!android&&chrome) return {label:'Install on this computer',where:'Chrome on your computer',steps:['Click the <strong>three dots ⋮</strong> at the top right of Chrome.','Open <strong>Cast, save, and share</strong>. Click <strong>Install page as app…</strong>.','Click <strong>Install</strong> in the little window that opens.'],tip:'Look at the right end of the address bar. If there’s an Install icon, you can click it, then Install.'};
-    if(!ios&&!android&&edge) return {label:'Install on this computer',where:'Microsoft Edge on your computer',steps:['Click the <strong>three dots …</strong> at the top right.','Open <strong>More tools</strong>, then <strong>Apps</strong>. If Apps is already in the menu, click it there.','Click <strong>Install this site as an app</strong>, then <strong>Install</strong>.']};
-    return {label:ios||android?'Add to Home Screen':'Add an app shortcut',where:'Use a browser that can add this icon',steps:[ios?'Open this page in <strong>Safari</strong>.':android?'Open this page in <strong>Chrome</strong>.':'Open this page in <strong>Chrome</strong> or, on a Mac, <strong>Safari</strong>.','Click or tap the museum’s shortcut button there to see the steps.']};
+  const deviceChoices={ios:'iPhone / iPad · Safari',android:'Android · Chrome',chrome:'Chromebook / computer · Chrome',mac:'Mac · Safari',edge:'Computer · Microsoft Edge',fallback:'Another browser'};
+  const defaultDevice=ios?'ios':android&&chrome?'android':desktopSafari?'mac':!android&&chrome?'chrome':!android&&edge?'edge':'fallback';
+  let selectedDevice=defaultDevice;
+  const guideForDevice=(choice=defaultDevice)=>{
+    if(choice==='ios')return {label:'Add to Home Screen',where:'Safari on iPhone or iPad',image:'shortcut-ios.svg',source:'https://support.apple.com/guide/iphone/bookmark-a-website-iph42ab2f3a7/ios',steps:[
+      'Open the museum in <strong>Safari</strong>. Tap <strong>Share</strong> (the square with an up arrow). If it’s hidden, tap <strong>More (…)</strong> or the page menu, then <strong>Share</strong>.',
+      'Scroll down and tap <strong>Add to Home Screen</strong>.','If you see <strong>Open as Web App</strong>, leave it on. Tap <strong>Add</strong>.'],tip:'If Add to Home Screen is missing, scroll to Edit Actions in the Share menu. Your school may also limit installation. You can keep using the website or QR cards.'};
+    if(choice==='android')return {label:'Add to Home Screen',where:'Chrome on Android',image:'shortcut-android.svg',source:'https://support.google.com/chrome/answer/9658361?co=GENIE.Platform%3DAndroid',steps:['Tap the <strong>three dots ⋮</strong> beside the address bar.','Tap <strong>Install and create shortcut</strong>, then <strong>Install</strong>. Some phones show <strong>Add to Home screen</strong> instead.','Follow the next window: tap <strong>Install</strong> or <strong>Add</strong>.'],tip:'If a school device blocks installation, use the museum link or scan its QR card instead.'};
+    if(choice==='mac')return {label:'Add to Dock',where:'Safari on Mac',image:'shortcut-mac.svg',source:'https://support.apple.com/104996',steps:['Click <strong>File</strong> in the menu bar, or <strong>Share</strong> in Safari.','Click <strong>Add to Dock</strong>.','Click <strong>Add</strong>. Look for the icon in your Dock.'],tip:'Add to Dock requires macOS Sonoma 14 or later. On an older Mac, bookmark the museum instead.'};
+    if(choice==='chrome')return {label:'Install on this computer',where:'Chrome on a Chromebook or computer',image:'shortcut-chrome.svg',source:'https://support.google.com/chrome/answer/9658361',steps:['Click the <strong>three dots ⋮</strong> at the top right of Chrome.','Open <strong>Cast, save, and share</strong>. Click <strong>Install page as app…</strong>.','Click <strong>Install</strong> in the window that opens.'],tip:'You can also use the Install icon at the right end of the address bar, if shown. School Chromebooks may block installation; the museum still works as a website.'};
+    if(choice==='edge')return {label:'Install on this computer',where:'Microsoft Edge on a computer',image:'shortcut-edge.svg',source:'https://support.microsoft.com/en-us/edge/install-manage-or-uninstall-apps-in-microsoft-edge',steps:['Click the <strong>three dots …</strong> at the top right.','Open <strong>More tools → Apps</strong>. If Apps is already in the menu, click it there.','Click <strong>Install this site as an app</strong>, then <strong>Install</strong>.']};
+    return {label:ios||android?'Add to Home Screen':'Add an app shortcut',where:'Choose a browser that can add the museum icon',image:'shortcut-fallback.svg',steps:['On an iPhone or iPad, open the museum in <strong>Safari</strong>. On Android, use <strong>Chrome</strong>.','On a Chromebook or computer, use <strong>Chrome</strong>, <strong>Edge</strong>, or <strong>Safari on a Mac</strong>.','Choose your browser in the menu above to see its picture directions.']};
   };
   const instructions=guideForDevice();
   function refresh(){
@@ -30,7 +33,7 @@
       if(label && label.textContent!==text)label.textContent=text;
       b.disabled=installed()||requesting;
     }
-    if(modal){modal.querySelector('[data-native]').hidden=!offer||installed();modal.querySelector('.install-instructions').hidden=!!offer&&!installed();modal.querySelector('[data-ready]').hidden=!offer||installed();}
+    if(modal){modal.querySelector('[data-native]').hidden=!offer||installed()||selectedDevice!==defaultDevice;modal.querySelector('[data-ready]').hidden=!offer||installed()||selectedDevice!==defaultDevice;}
   }
   window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();offer=event;refresh()});
   window.addEventListener('appinstalled',()=>{added=true;offer=null;modal?.close();refresh()});
@@ -41,7 +44,11 @@
       home.searchParams.set('install','1');location.assign(home.href);return;
     }
     const d=document.createElement('dialog'); modal=d;d.className='home-install-dialog';d.setAttribute('aria-labelledby','home-install-title');
-    d.innerHTML='<img class="install-icon" alt="" width="62" height="62"><p class="install-eyebrow">CENTRAL REGIONAL MUSEUM</p><h2 id="home-install-title">'+title+' shortcut</h2><div class="install-instructions"><p><strong>'+instructions.where+'</strong></p><ol>'+instructions.steps.map(step=>'<li>'+step+'</li>').join('')+'</ol>'+(instructions.tip?'<details><summary>My menu looks different</summary><p>'+instructions.tip+'</p></details>':'')+'</div><p data-ready hidden>Your browser can add this icon. Choose Install in the next window.</p><button type="button" data-native hidden>Install '+title+'</button><button type="button" data-close>Close directions</button>';
+    selectedDevice=defaultDevice;
+    d.innerHTML='<img class="install-icon" alt="" width="62" height="62"><p class="install-eyebrow">CENTRAL REGIONAL MUSEUM</p><h2 id="home-install-title">'+title+' shortcut</h2><label for="shortcut-device">Choose your device and browser</label><select id="shortcut-device">'+Object.entries(deviceChoices).map(([value,label])=>'<option value="'+value+'">'+label+'</option>').join('')+'</select><div class="install-instructions" aria-live="polite"></div><p data-ready hidden>Want to add it now? Use the Install button below, then confirm in your browser.</p><button type="button" data-native hidden>Install '+title+'</button><button type="button" data-close>Close directions</button>';
+    const picker=d.querySelector('#shortcut-device');picker.value=defaultDevice;
+    function draw(){const info=guideForDevice(selectedDevice);d.querySelector('.install-instructions').innerHTML='<p><strong>'+info.where+'</strong></p><img class="install-picture" src="'+new URL('assets/guides/'+info.image,root).href+'" alt="Illustration: '+info.steps.join(' ').replace(/<[^>]+>/g,'')+'" width="560" height="546"><p class="guide-caption">Illustrated steps. Your menu may look a little different.</p><ol>'+info.steps.map(step=>'<li>'+step+'</li>').join('')+'</ol>'+(info.tip?'<details><summary>My menu looks different</summary><p>'+info.tip+'</p></details>':'')+(info.source?'<p><a href="'+info.source+'" target="_blank" rel="noopener">Official browser help ↗</a></p>':'');refresh()}
+    picker.onchange=()=>{selectedDevice=picker.value;draw()};draw();
     d.querySelector('img').src=icon;
     d.querySelector('[data-close]').onclick=()=>d.close();d.querySelector('[data-native]').onclick=native;
     d.addEventListener('close',()=>{d.remove();if(modal===d)modal=null;invokingButton?.focus({preventScroll:true});});
@@ -59,7 +66,7 @@
     }catch{if(!modal?.open)guide();else modal.querySelector('.install-instructions').hidden=false;}
     finally{requesting=false;refresh()}
   }
-  document.addEventListener('click',e=>{const b=e.target.closest?.('[data-home-install]');if(!b)return;e.preventDefault();invokingButton=b;native();});
+  document.addEventListener('click',e=>{const b=e.target.closest?.('[data-home-install]');if(!b)return;e.preventDefault();invokingButton=b;guide();});
   function start(){
     if(!teacher){
       const b=document.createElement('button');b.type='button';b.className='home-install-button';b.dataset.homeInstall='';

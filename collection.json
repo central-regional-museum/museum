@@ -244,8 +244,8 @@
       "labelProvenance": "Transcribed from owner-supplied printed museum label photos, 2026-11-06.",
       "story": "This style of hat was invented in China to protect against intense sun and heat. The term “rickshaw” was coined in Japan in the 1860s and spread across much of Asia. The hats are made of split bamboo or rattan woven with palm leaves for ventilation. Today they are rarely used but are celebrated for their intricate craftsmanship.",
       "summary": "This style of hat was invented in China to protect against intense sun and heat.",
-      "period": "Date not recorded",
-      "material": "Material not recorded",
+      "period": "",
+      "material": "",
       "category": "Museum collection",
       "look": "Look at the broad cone shape and the woven material.",
       "connection": "How do materials and local weather influence clothing?",
@@ -272,7 +272,11 @@
         "checkedAt": "2026-11-06T23:58:01+00:00",
         "alt": "Reference image. A Chinese conical sun hat made with woven bamboo, from the Auckland Museum collection."
       },
-      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Asian_conical_hat"
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Asian_conical_hat",
+      "photoPhrase": "",
+      "image": "assets/2003-858cea69d0169e17e907.jpg",
+      "imageAlt": "Photograph of Rattan Rickshaw Hat",
+      "imageCredit": "School museum photo"
     },
     {
       "id": "2004",

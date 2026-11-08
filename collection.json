@@ -863,8 +863,8 @@
       "photoPhrase": "What do dragons eat at Chinese New Year?  Firecrackers",
       "title": "Chinese New Year Decor",
       "category": "Museum collection",
-      "period": "Date not recorded",
-      "material": "Material not recorded",
+      "period": "",
+      "material": "",
       "summary": "Chinese New Year, also known as the Spring Festival, marks the beginning of a new year on the traditional lunisolar Chinese calendar.",
       "look": "Notice a detail that helps explain how this object was used.",
       "connection": "What object today serves a similar purpose?",
@@ -877,7 +877,10 @@
       "answer": 0,
       "explanation": "The label and story identify this object as Chinese New Year Decor.",
       "prompt": "Describe one detail you noticed and one question you still have.",
-      "mysteryClue": ""
+      "mysteryClue": "",
+      "image": "assets/ART-001-3361f7417559e8331bfe.jpg",
+      "imageAlt": "Photograph of New Year Decor",
+      "imageCredit": "School museum photo"
     }
   ]
 }

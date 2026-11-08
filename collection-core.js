@@ -25,7 +25,8 @@ function validate(settings,items,{classroom=false}={}){
   if(e.inventoryId){if(!/^\d{4}$/.test(e.inventoryId))errors.push(p+'museum ID must have four digits.');if(museumIds.has(e.inventoryId))errors.push(p+'duplicate museum ID.');museumIds.add(e.inventoryId);}
   if(e.published===false)continue;
   if(!e.demo&&!hasWebPhoto(e))errors.push(p+'add a photo from Wikipedia or upload one before publishing.');
-  for(const key of ['title','object','category','period','material','summary','story','look','connection','question','explanation','prompt'])if(!text(e[key]))errors.push(p+key+' is required.');
+  for(const key of ['title','object','category','summary','story','look','connection','question','explanation','prompt'])if(!text(e[key]))errors.push(p+key+' is required.');
+  for(const key of ['period','material'])if(e[key]!=null&&typeof e[key]!=='string')errors.push(p+key+' must be text when provided.');
   if(!Array.isArray(e.choices)||e.choices.length!==3||!e.choices.every(text)||new Set(e.choices).size!==3)errors.push(p+'provide three different, nonempty answer choices.');
   if(!Number.isInteger(e.answer)||e.answer<0||e.answer>2)errors.push(p+'answer must be 0, 1 or 2.');
   if(!/^#[0-9a-fA-F]{6}$/.test(e.color||''))errors.push(p+'color must be a six-digit hex color.');

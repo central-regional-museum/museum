@@ -49,6 +49,9 @@
 @media screen {
   #gallery-scope-note {margin-block:24px 12px;padding:18px 20px;border-left:3px solid #bf9651;background:#f3eadc;border-radius:0 12px 12px 0;}
   .migration-fold .journey {display:block;min-width:0;max-width:100%;overflow-x:auto;}
+  @media(min-width:761px) {
+    .migration-fold .journey > svg {margin-inline:auto;}
+  }
   .mapbox + .map-caption {margin-block-start:18px;}
   :is(.panel,.museum-find,.recovery-panel,.passport-choice,.passport-current,.notice) > p + :is(button,.button,a.button) {margin-block-start:12px;}
   :is(.panel,.museum-find,.recovery-panel,.notice) > :is(button,.button) + :is(p,details,.panel) {margin-block-start:20px;}

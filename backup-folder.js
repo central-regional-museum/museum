@@ -54,7 +54,9 @@
     if (permission !== 'granted') throw new Error('Folder permission is needed. Choose the folder again or save a download.');
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
     const suffix = crypto.randomUUID().slice(0, 8);
-    const filename = name.replace(/\.json$/i, '') + '-' + timestamp + '-' + suffix + '.json';
+    const ending = name.match(/\.(?:json|txt)$/i)?.[0] || '.json';
+    const stem = name.toLowerCase().endsWith(ending.toLowerCase()) ? name.slice(0, -ending.length) : name;
+    const filename = stem + '-' + timestamp + '-' + suffix + ending.toLowerCase();
     const blob = await makeBlob();
     const file = await destination.getFileHandle(filename, {create:true});
     const stream = await file.createWritable();

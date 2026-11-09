@@ -317,7 +317,7 @@ function viewHome(){
    '<section><div class="section-head"><h2 id="gallery-list">The galleries</h2><span class="note">A broad introduction to human migration</span></div><div class="galleries">'+
    GALLERIES.map(function(g){var on=itemsIn(g.id,"display").length,soon=itemsIn(g.id,"coming").length;
      return '<a class="gcard'+(g.local?' local':'')+'" href="#'+g.id+'" style="--gc:var(--g-'+g.id+')"><span class="num">Gallery '+g.n+'</span><div style="display:grid;gap:6px;align-content:start"><h3>'+esc(g.title)+'</h3><span class="when">'+esc(g.when)+'</span></div><span class="counts">'+on+' on display'+(soon?' · '+soon+' coming soon':'')+'</span></a>';}).join("")+
-   '</div></section>'+
+   '</div><p class="note" id="gallery-scope-note">Antarctica is omitted because artifacts from there are unlikely in our collection. New Jersey is included instead to bring the worldwide journey home through local history.</p></section>'+
    (recent.length?'<section><div class="section-head"><h2>New in the museum</h2></div><div class="items">'+recent.map(itemCard).join("")+'</div></section>':'')+
   '</main>'+footer();
 }

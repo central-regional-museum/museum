@@ -13,3 +13,5 @@ Country and territory flag PNGs are stored in the self-contained `flag-images-*.
 Passport downloads use two clearly labeled blank choices, Google Docs and web browser. The current-progress export is labeled “Save passport with my stamps.” Students choose one blank format; the guide explains how each is edited and saved, including Drive storage versus browser editing.
 
 The browser passport editor includes artifact and special PNG stamps in one saved dataset; blank exports contain no carried-over activity notes. Restoring an edited saved passport maps special notes back to their challenge fields. Date and material metadata are optional. The trophy guide distinguishes the issued HTML download from Google Docs/PDF classroom records.
+
+Student recovery downloads use plain-text `.txt` files containing the existing recovery data. Restore still accepts older JSON backups and stamped HTML passports. Folder saves preserve the chosen TXT or JSON extension. How It Works gives the school-hours Chromebook requirement, and the Journey gallery list explains the Antarctica/New Jersey curatorial choice.

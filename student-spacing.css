@@ -44,3 +44,25 @@
 .cover-picks button[aria-pressed=true]{border-color:#155b56;background:#e5efe9}.cover-picks svg{width:100%;height:auto}.cover-picks small{font-size:.78rem}
 
 .backup-saved-note{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:60;max-width:min(32rem,calc(100% - 32px));width:max-content;box-sizing:border-box;margin:0;padding:14px 20px;border:1px solid #a8c4b5;border-radius:12px;background:#155b56;color:white;box-shadow:0 4px 20px #183f3840;font:600 15px/1.5 system-ui;overflow-wrap:anywhere}
+
+/* Breathing room between copy, cards and controls, including wrapped mobile rows. */
+@media screen {
+  #gallery-scope-note {margin-block:24px 12px;padding:18px 20px;border-left:3px solid #bf9651;background:#f3eadc;border-radius:0 12px 12px 0;}
+  .migration-fold .journey {display:block;min-width:0;max-width:100%;overflow-x:auto;}
+  .mapbox + .map-caption {margin-block-start:18px;}
+  :is(.panel,.museum-find,.recovery-panel,.passport-choice,.passport-current,.notice) > p + :is(button,.button,a.button) {margin-block-start:12px;}
+  :is(.panel,.museum-find,.recovery-panel,.notice) > :is(button,.button) + :is(p,details,.panel) {margin-block-start:20px;}
+  :is(.panel,.recovery-panel,.notice) > p + :is(.panel,.recovery-panel,.notice) {margin-block-start:24px;}
+  .passport-choice .actions,.passport-current .actions {gap:14px;}
+  .school-device-note {margin-block:18px 26px;}
+  @media(max-width:600px) {
+    .actions,.toolbar,.print-action-row {gap:14px;}
+    :is(.panel,.museum-find,.recovery-panel,.passport-choice,.passport-current,.notice) > :is(button,.button) {display:block;width:100%;box-sizing:border-box;margin-inline:0;}
+    :is(.panel,.museum-find,.recovery-panel,.passport-choice,.passport-current,.notice) > :is(button,.button) + :is(button,.button) {margin-block-start:14px;margin-inline-start:0;}
+    .backup-reminder {gap:14px;padding:18px;}
+    .backup-reminder span {flex-basis:100%;}
+    .backup-reminder button {flex:1 1 100%;width:100%;margin:0;}
+    #gallery-scope-note {margin-block:26px 14px;padding:18px;}
+    .visual-guide > p + :is(ol,.panel),.guide-heading + section {margin-block-start:24px;}
+  }
+}

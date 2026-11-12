@@ -1,3 +1,5 @@
+.exhibit-donor {font:italic 1.1rem/1.4 Georgia,serif;color:#254742;overflow-wrap:anywhere}
+
 /* Keep touch controls and their focus rings apart when a row wraps. */
 @media screen {
   header nav, .gallery-navigation nav, .actions, .pose-options, .map-caption, .toolbar {

@@ -883,6 +883,67 @@
       "image": "assets/ART-001-3361f7417559e8331bfe.jpg",
       "imageAlt": "Photograph of New Year Decor",
       "imageCredit": "School museum photo"
+    },
+    {
+      "id": "ART-003",
+      "published": true,
+      "demo": false,
+      "object": "African Ankara Print Holding Hand Fan",
+      "story": "African wax prints, Dutch wax prints, or Ankara are a type of common material for clothing in West Africa. They were introduced to West Africans by Dutch merchants during the 19th century, who took inspiration from native Indonesian batik designs. They began to adapt their designs and colours to suit the tastes of the African market. They are industrially produced colourful cotton cloths with batik-inspired printing. \nOne feature of these materials is the lack of difference in the colour intensity of the front and back sides. The wax fabric can be sorted into categories of quality due to the processes of manufacturing. The term \"Ankara\" originates from the Hausa name for Accra, the capital of what is now Ghana. Initially used by Nigerian Hausa tradesmen, it was meant to refer to \"Accra,\" which served as a hub for African prints in the 19th century. It goes by other local names including \"Abada\" by the Igbo people of Nigeria.\nNormally, the fabrics are sold in lengths of 12 yards (11 m) as \"full piece\" or 6 yards (5.5 m) as \"half piece\". The colours comply with local preferences of the customers. Typically, clothing for celebrations is made from this fabric.\nWax prints are a type of nonverbal communication among African women, and thereby carry their messages out into the world. Some wax prints are named after personalities, cities, buildings, sayings, or occasions. The producer, name of the product, and registration number of the design is printed on the selvage, thus protecting the design and attesting to the quality of the fabric. Wax fabrics constitute capital goods for African women. They are therefore often retained based on their perceived market value.\nIn Sub-Saharan Africa these textiles had an annual sales volume in 2016 of 2.1 billion yards, with an average production cost of $2.6 billion and retail value of $4 billion.\nGhana has an annual consumption of textiles of about 130 million yards (120 million metres). The three largest local manufacturers, Akosombo Textiles Limited (ATL), Ghana Textiles Print (GTP), and Printex, produce 30 million yards, while 100 million yards come from inexpensive smuggled Asian imports.\nThe Vlisco Group, owner of the Vlisco, Uniwax, Woodin, and GTP brands, produced 58.8 million yards (53.8 million meters) of fabric in 2011. Net sales were €225 million, or $291.65 million. In 2014, Vlisco's 70 million yards of fabric (about 64 million meters) were produced in the Netherlands, yielding a turnover of €300 million.",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · African wax prints · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/African_wax_prints"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "Nigeria",
+      "flagKey": "ng",
+      "gallery": "africa",
+      "caseId": "Africa",
+      "inventoryId": "1000",
+      "donor": "The Warren Family",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/African_wax_prints",
+      "printText": "African wax prints, Dutch wax prints, or Ankara are a type of common material for clothing in West Africa. They were introduced to West Africans by Dutch merchants during the 19th century, who took inspiration from native Indonesian batik designs. They began to adapt their designs and colours to suit the tastes of the African market. They are industrially produced colourful cotton cloths with batik-inspired printing. This fan is from Nigeria.",
+      "wikipedia": {
+        "title": "African wax prints",
+        "url": "https://en.wikipedia.org/wiki/African_wax_prints",
+        "revision": 1380619305,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-14T18:46:32.995Z"
+      },
+      "referenceImage": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/African_Waxprints%2C_West_Africa.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "article": "https://en.wikipedia.org/wiki/African_wax_prints",
+        "title": "African wax prints",
+        "file": "African_Waxprints,_West_Africa.jpg",
+        "author": "Alexander Sarlay",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:African_Waxprints,_West_Africa.jpg",
+        "checkedAt": "2026-11-14T18:46:32.995Z",
+        "alt": "Wikipedia reference image for African wax prints; not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "photoPhrase": "",
+      "title": "African Ankara Print Holding Hand Fan",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "African wax prints, Dutch wax prints, or Ankara are a type of common material for clothing in West Africa.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "African Ankara Print Holding Hand Fan",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as African Ankara Print Holding Hand Fan.",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

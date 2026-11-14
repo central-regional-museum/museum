@@ -948,6 +948,71 @@
       "image": "assets/ART-003-05cd7c88fa6f21b8f6de.jpg",
       "imageAlt": "Photograph of African Ankara Print Holding Hand Fan",
       "imageCredit": "School museum photo"
+    },
+    {
+      "id": "ART-004",
+      "published": true,
+      "demo": false,
+      "object": "Uchiwa",
+      "story": "Uchiwa-e (団扇絵) are a genre of Japanese ukiyo-e woodblock print, which appear on rigid, paddle-shaped hand fans known as uchiwa (団扇). Ovoid images matching the outline of uchiwa were printed on rectangular sheets of washi rice paper, then cut along the margins and pasted onto a skeletal bamboo frame.",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · Uchiwa-e · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/Uchiwa-e"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "Japan",
+      "flagKey": "jp",
+      "gallery": "asia",
+      "caseId": "Asia",
+      "inventoryId": "2008",
+      "donor": "The Silva Family",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Uchiwa-e",
+      "printText": "Uchiwa-e (団扇絵) are a genre of Japanese ukiyo-e woodblock print, which appear on rigid, paddle-shaped hand fans known as uchiwa (団扇). Ovoid images matching the outline of uchiwa were printed on rectangular sheets of washi rice paper, then cut along the margins and pasted onto a skeletal bamboo frame.  This fan is from Japan.",
+      "wikipedia": {
+        "title": "Uchiwa-e",
+        "url": "https://en.wikipedia.org/wiki/Uchiwa-e",
+        "revision": 1357304144,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-14T18:58:47.864Z"
+      },
+      "referenceImage": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Fan_Print_with_two_Bugaku_Dancers_%28Utagawa_Kunisada%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "article": "https://en.wikipedia.org/wiki/Uchiwa-e",
+        "title": "Uchiwa-e",
+        "file": "Fan_Print_with_two_Bugaku_Dancers_(Utagawa_Kunisada).jpg",
+        "author": "Sianljones",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Fan_Print_with_two_Bugaku_Dancers_(Utagawa_Kunisada).jpg",
+        "checkedAt": "2026-11-14T18:58:47.863Z",
+        "alt": "Wikipedia reference image for Uchiwa-e; not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "photoCropY": 8,
+      "photoPhrase": "",
+      "image": "assets/ART-004-95ea1cfe6b19c445e920.jpg",
+      "imageAlt": "Photograph of Uchiwa",
+      "imageCredit": "School museum photo",
+      "title": "Uchiwa",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "Uchiwa-e (団扇絵) are a genre of Japanese ukiyo-e woodblock print, which appear on rigid, paddle-shaped hand fans known as uchiwa (団扇).",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Uchiwa",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Uchiwa.",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

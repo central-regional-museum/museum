@@ -1013,6 +1013,43 @@
       "explanation": "The label and story identify this object as Uchiwa.",
       "prompt": "Describe one detail you noticed and one question you still have.",
       "mysteryClue": ""
+    },
+    {
+      "id": "ART-005",
+      "published": false,
+      "demo": false,
+      "object": "Guatamalean Folk Dolls",
+      "story": "",
+      "sources": [],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "Guatemala",
+      "flagKey": "gt",
+      "gallery": "south-america",
+      "caseId": "South America",
+      "inventoryId": "6002",
+      "printText": "These dolls are vintage handcrafted Guatemalan folk art, made out of traditional indigenous textile clothing.  They are associated with Mayan villages and market scenes depicting local vendors or farmers.",
+      "photoPhrase": "",
+      "image": "assets/ART-005-1c60c878b11b5ca112e4.jpg",
+      "imageAlt": "Photograph of Guatamalean Folk Dolls",
+      "imageCredit": "School museum photo",
+      "title": "Guatamalean Folk Dolls",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "Explore the story of Guatamalean Folk Dolls.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Guatamalean Folk Dolls",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Guatamalean Folk Dolls.",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

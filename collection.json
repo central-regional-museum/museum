@@ -943,7 +943,11 @@
       "answer": 0,
       "explanation": "The label and story identify this object as African Ankara Print Holding Hand Fan.",
       "prompt": "Describe one detail you noticed and one question you still have.",
-      "mysteryClue": ""
+      "mysteryClue": "",
+      "photoCropX": 54,
+      "image": "assets/ART-003-05cd7c88fa6f21b8f6de.jpg",
+      "imageAlt": "Photograph of African Ankara Print Holding Hand Fan",
+      "imageCredit": "School museum photo"
     }
   ]
 }

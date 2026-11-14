@@ -1181,6 +1181,70 @@
       "explanation": "The label and story identify this object as Muñeca Doll.",
       "prompt": "Describe one detail you noticed and one question you still have.",
       "mysteryClue": ""
+    },
+    {
+      "id": "ART-008",
+      "published": true,
+      "demo": false,
+      "object": "Famille Rose Chinese Porcelain",
+      "story": "Famille rose (French for \"pink family\") is a style of decoration in Chinese porcelain introduced in the 18th century and defined by pink overglaze enamel as the dominant colour.  It is a Western classification for Qing dynasty porcelain known in Chinese by various terms: fencai, ruancai, yangcai, and falangcai. The colour palette is thought to have been brought to China during the reign of Kangxi (1654–1722) by Western Jesuits who worked at the palace, but perfected only in the Yongzheng era when the finest pieces were made, and famille rose ware reached the peak of its technical excellence during the Qianlong period.\nAlthough famille rose is named after its pink-coloured enamel, the colour may actually range from pale pink to deep ruby. Apart from pink, a range of other soft colour palettes are also used in famille rose. The gradation of colours was produced by mixing coloured enamels with 'glassy white' (玻璃白, boli bai), an opaque white enamel (lead arsenate). Its range of colour was further extended by mixing different colours.\nFamille rose was popular in the 18th and 19th century, and it continued to be made in the 20th century. Large quantities of famille rose porcelain were exported to Europe, United States and other countries, and many of these export wares were Jingdezhen porcelain decorated in Canton, and are known as \"Canton famille rose\". Porcelains with famille rose palette were also produced in European factories.\n\n",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · Famille rose · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/Famille_rose"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "China",
+      "flagKey": "cn",
+      "gallery": "asia",
+      "caseId": "Asia",
+      "inventoryId": "2009",
+      "donor": "The Meister Family",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Famille_rose",
+      "printText": "Famille rose (French for \"pink family\") is a style of decoration in Chinese porcelain introduced in the 18th century and defined by pink overglaze enamel as the dominant colour. It is a Western classification for Qing dynasty porcelain known in Chinese by various terms: fencai, ruancai, yangcai, and falangcai. The colour palette is thought to have been brought to China during the reign of Kangxi (1654–1722) by Western Jesuits who worked at the palace, but perfected only in the Yongzheng era when the finest pieces",
+      "wikipedia": {
+        "title": "Famille rose",
+        "url": "https://en.wikipedia.org/wiki/Famille_rose",
+        "revision": 1333597800,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-14T21:15:53.607Z"
+      },
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/%E6%B8%85%E4%B8%AD%E6%9C%9F_%E6%99%AF%E5%BE%B7%E9%8E%AE%E7%AA%AF%E7%B2%89%E5%BD%A9%E5%AD%90%E6%AF%8D%E9%9B%9E%E7%9B%A4-Dish_with_Rooster%2C_Hen%2C_and_Chickens_MET_LC-79_2_577_001.jpg/1280px-%E6%B8%85%E4%B8%AD%E6%9C%9F_%E6%99%AF%E5%BE%B7%E9%8E%AE%E7%AA%AF%E7%B2%89%E5%BD%A9%E5%AD%90%E6%AF%8D%E9%9B%9E%E7%9B%A4-Dish_with_Rooster%2C_Hen%2C_and_Chickens_MET_LC-79_2_577_001.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Famille_rose",
+        "title": "Famille rose",
+        "file": "清中期_景德鎮窯粉彩子母雞盤-Dish_with_Rooster,_Hen,_and_Chickens_MET_LC-79_2_577_001.jpg",
+        "author": "This file was donated to Wikimedia Commons as part of a project by the Metropolitan Museum of Art. See the Image and Data Resources Open Access Policy",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%E6%B8%85%E4%B8%AD%E6%9C%9F_%E6%99%AF%E5%BE%B7%E9%8E%AE%E7%AA%AF%E7%B2%89%E5%BD%A9%E5%AD%90%E6%AF%8D%E9%9B%9E%E7%9B%A4-Dish_with_Rooster,_Hen,_and_Chickens_MET_LC-79_2_577_001.jpg",
+        "checkedAt": "2026-11-14T21:15:53.606Z",
+        "alt": "Wikipedia reference image for Famille rose; not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "photoPhrase": "",
+      "image": "assets/ART-008-64bfa6c6479993e79159.jpg",
+      "imageAlt": "Photograph of Famille Rose Chinese Porcelain",
+      "imageCredit": "School museum photo",
+      "title": "Famille Rose Chinese Porcelain",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "Famille rose (French for \"pink family\") is a style of decoration in Chinese porcelain introduced in the 18th century and defined by pink overglaze enamel as the dominant colour.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Famille Rose Chinese Porcelain",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Famille Rose Chinese Porcelain.",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

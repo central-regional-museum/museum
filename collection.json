@@ -1116,6 +1116,71 @@
       "prompt": "Describe one detail you noticed and one question you still have.",
       "mysteryClue": "",
       "donor": "Ramirez-Castro Family"
+    },
+    {
+      "id": "ART-007",
+      "published": true,
+      "demo": false,
+      "object": "Muñeca Doll",
+      "story": "The best known Mexican rag dolls are those whose origins can be traced back to México City with the creation of a workshop \"Centro de Capacitación Mazahua\", with the intentions to enhance income opportunities for the Mazahua-Otomí people after their migration to the larger cities, in search for a better future. In Queretaro, they have been called \"Marias\" and they have registered a patent for the doll as an attempt to increase tourism. This action has been criticized by some people because it could be perceived as an attempt to culturally appropriate a craft that belongs to the Mazahua-Otomí people. \nThroughout the country people  call them \"rag dolls\" (muñecas de trapo). Mexico has a long history of making rag dolls, but the ones known popularly from their appearance nationally, especially in tourist venues may date back only to the 1970s, during the time the workshop was running. Although Amealco is strongly connected to these dolls, their making is not limited and has spread into various states, with some variations in dress and appearance, but always keeping with wide faces and hair generously braided with ribbons.",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · Mexican rag doll · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/Mexican_rag_doll"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "Mexico",
+      "flagKey": "mx",
+      "gallery": "north-america",
+      "caseId": "North America",
+      "inventoryId": "4003",
+      "donor": "The Ramirez-Castro Family",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Mexican_rag_doll",
+      "printText": "The best known Mexican rag dolls are those whose origins can be traced back to México City with the creation of a workshop \"Centro de Capacitación Mazahua\", with the intentions to enhance income opportunities for the Mazahua-Otomí people after their migration to the larger cities, in search for a better future. In Queretaro, they have been called \"Marias\" and they have registered a patent for the doll as an attempt to increase tourism. ",
+      "wikipedia": {
+        "title": "Mexican rag doll",
+        "url": "https://en.wikipedia.org/wiki/Mexican_rag_doll",
+        "revision": 1287733580,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-14T21:08:59.432Z"
+      },
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Artesan%C3%ADas_de_San_%C3%81ngel%2C_Ciudad_de_M%C3%A9xico._12.JPG/1280px-Artesan%C3%ADas_de_San_%C3%81ngel%2C_Ciudad_de_M%C3%A9xico._12.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Mexican_rag_doll",
+        "title": "Mexican rag doll",
+        "file": "Artesanías_de_San_Ángel,_Ciudad_de_México._12.JPG",
+        "author": "Inakiherrasti",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Artesan%C3%ADas_de_San_%C3%81ngel,_Ciudad_de_M%C3%A9xico._12.JPG",
+        "checkedAt": "2026-11-14T21:08:59.432Z",
+        "alt": "Wikipedia reference image for Mexican rag doll; not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "photoCropY": 23,
+      "photoPhrase": "",
+      "image": "assets/ART-007-9b84f58c9f2eb5deba00.jpg",
+      "imageAlt": "Photograph of Muñeca Doll",
+      "imageCredit": "School museum photo",
+      "title": "Muñeca Doll",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "The best known Mexican rag dolls are those whose origins can be traced back to México City with the creation of a workshop \"Centro de Capacitación Mazahua\", with the intentions to enhance income opportunities for the Mazahua-Otomí people after their migration to the larger cities, in search for a better future.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Muñeca Doll",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Muñeca Doll.",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

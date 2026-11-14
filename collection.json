@@ -1050,6 +1050,71 @@
       "explanation": "The label and story identify this object as Guatamalean Folk Dolls.",
       "prompt": "Describe one detail you noticed and one question you still have.",
       "mysteryClue": ""
+    },
+    {
+      "id": "ART-006",
+      "published": true,
+      "demo": false,
+      "object": "Aztec Calendar (Popocatépetl and Iztaccíhuatl Mythology)",
+      "story": "Popocatépetl and Iztaccíhuatl refers to the volcanoes Popocatépetl (\"the Smoking Mountain\") and Iztaccíhuatl (\"White (like salt) woman\" in Nahuatl, sometimes called the Mujer Dormida \"sleeping woman\" in Spanish) in Iztaccíhuatl–Popocatépetl National Park, which overlook the Valley of Mexico and the various myths explaining their existence. The most common variety relates the Nahua romance of the princess Iztaccíhuatl and the warrior Popocatépetl. This tale is recorded in several different versions.\nA summary based on one version as recounted at a September 2006 \"Myth, Mortals and Immortality: Works from the Museo Soumaya de México\" exhibition at the Smithsonian Institution.",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · Popocatépetl and Iztaccíhuatl · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/Popocat%C3%A9petl_and_Iztacc%C3%ADhuatl"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "Mexico",
+      "flagKey": "mx",
+      "gallery": "north-america",
+      "caseId": "North America",
+      "inventoryId": "4002",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Popocat%C3%A9petl_and_Iztacc%C3%ADhuatl",
+      "printText": "Aztec calender with Popocatépetl and Iztaccíhuatl, which refers to the volcanoes Popocatépetl (\"the Smoking Mountain\") and Iztaccíhuatl (\"White (like salt) woman\" in Nahuatl, sometimes called the Mujer Dormida \"sleeping woman\" in Spanish) in Iztaccíhuatl–Popocatépetl National Park, which overlook the Valley of Mexico and the various myths explaining their existence. The most common variety relates the Nahua romance of the princess Iztaccíhuatl and the warrior Popocatépetl. This tale is recorded in several different versions. ",
+      "wikipedia": {
+        "title": "Popocatépetl and Iztaccíhuatl",
+        "url": "https://en.wikipedia.org/wiki/Popocat%C3%A9petl_and_Iztacc%C3%ADhuatl",
+        "revision": 1374204757,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-14T20:58:48.391Z"
+      },
+      "referenceImage": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/The_volcanoes_Popocat%C3%A9petl_and_Iztacc%C3%ADhuatl_in_Mexico_%281906%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "article": "https://en.wikipedia.org/wiki/Popocat%C3%A9petl_and_Iztacc%C3%ADhuatl",
+        "title": "Popocatépetl and Iztaccíhuatl",
+        "file": "The_volcanoes_Popocatépetl_and_Iztaccíhuatl_in_Mexico_(1906).jpg",
+        "author": "Unknown authorUnknown author",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:The_volcanoes_Popocat%C3%A9petl_and_Iztacc%C3%ADhuatl_in_Mexico_(1906).jpg",
+        "checkedAt": "2026-11-14T20:58:48.391Z",
+        "alt": "Wikipedia reference image for Popocatépetl and Iztaccíhuatl; not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "photoCropY": 38,
+      "photoCropX": 46,
+      "photoPhrase": "",
+      "image": "assets/ART-006-e1faf3193c331157fd08.jpg",
+      "imageAlt": "Photograph of Aztec Calendar (Popocatépetl and Iztaccíhuatl Mythology)",
+      "imageCredit": "School museum photo",
+      "title": "Aztec Calendar (Popocatépetl and Iztaccíhuatl Mythology)",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "Popocatépetl and Iztaccíhuatl refers to the volcanoes Popocatépetl (\"the Smoking Mountain\") and Iztaccíhuatl (\"White (like salt) woman\" in Nahuatl, sometimes called the Mujer Dormida \"sleeping woman\" in Spanish) in Iztaccíhuatl–Popocatépetl National Park, which overlook the Valley of Mexico and the various myths explaining their existence.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Aztec Calendar (Popocatépetl and Iztaccíhuatl Mythology)",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Aztec Calendar (Popocatépetl and Iztaccíhuatl Mythology).",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

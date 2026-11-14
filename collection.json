@@ -1114,7 +1114,8 @@
       "answer": 0,
       "explanation": "The label and story identify this object as Aztec Calendar (Popocatépetl and Iztaccíhuatl Mythology).",
       "prompt": "Describe one detail you noticed and one question you still have.",
-      "mysteryClue": ""
+      "mysteryClue": "",
+      "donor": "Ramirez-Castro Family"
     }
   ]
 }

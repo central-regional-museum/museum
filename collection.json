@@ -469,7 +469,7 @@
           "url": "https://en.wikipedia.org/wiki/Flight_helmet"
         }
       ],
-      "inventoryId": "3000",
+      "inventoryId": "4000",
       "object": "Leather Flight Helmet",
       "title": "Leather Flight Helmet",
       "subtitle": "English Royal Air Force Flight Helmet",
@@ -530,7 +530,7 @@
           "url": "https://en.wikipedia.org/wiki/Maraca"
         }
       ],
-      "inventoryId": "4000",
+      "inventoryId": "5000",
       "object": "Vintage Hand Carved Wood Maraca",
       "title": "Vintage Hand Carved Wood Maraca",
       "subtitle": "Maraca (Ceremonial Music)",
@@ -591,7 +591,7 @@
           "url": "https://en.wikipedia.org/wiki/Lei_(garland)"
         }
       ],
-      "inventoryId": "4001",
+      "inventoryId": "5001",
       "object": "Necklace",
       "title": "Necklace",
       "subtitle": "Lei Hua Necklace",
@@ -1069,7 +1069,7 @@
       "flagKey": "mx",
       "gallery": "north-america",
       "caseId": "North America",
-      "inventoryId": "4002",
+      "inventoryId": "5002",
       "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Popocat%C3%A9petl_and_Iztacc%C3%ADhuatl",
       "printText": "Aztec calender with Popocatépetl and Iztaccíhuatl, which refers to the volcanoes Popocatépetl (\"the Smoking Mountain\") and Iztaccíhuatl (\"White (like salt) woman\" in Nahuatl, sometimes called the Mujer Dormida \"sleeping woman\" in Spanish) in Iztaccíhuatl–Popocatépetl National Park, which overlook the Valley of Mexico and the various myths explaining their existence. The most common variety relates the Nahua romance of the princess Iztaccíhuatl and the warrior Popocatépetl. This tale is recorded in several different versions. ",
       "wikipedia": {
@@ -1135,7 +1135,7 @@
       "flagKey": "mx",
       "gallery": "north-america",
       "caseId": "North America",
-      "inventoryId": "4003",
+      "inventoryId": "5003",
       "donor": "The Ramirez-Castro Family",
       "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Mexican_rag_doll",
       "printText": "The best known Mexican rag dolls are those whose origins can be traced back to México City with the creation of a workshop \"Centro de Capacitación Mazahua\", with the intentions to enhance income opportunities for the Mazahua-Otomí people after their migration to the larger cities, in search for a better future. In Queretaro, they have been called \"Marias\" and they have registered a patent for the doll as an attempt to increase tourism. ",

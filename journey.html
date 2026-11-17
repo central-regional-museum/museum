@@ -225,19 +225,19 @@ function silhouette(gid,cx,cy,maxW,maxH){
     return '<path d="'+d+'Z"/>';}).join("");
   return '<g class="sil" transform="translate('+tx.toFixed(1)+' '+ty.toFixed(1)+') scale('+s.toFixed(4)+')">'+paths+'</g>';
 }
-var JW=700, JH=975;
+var JW=1000, JH=975;
 var JNODES={
- "africa":{x:350,y:102,w:280,h:196,date:"300,000 years ago",how:"Where it all began"},
- "asia":{x:350,y:345,w:212,h:176,date:"70,000–60,000 yrs ago",how:"on foot, out of Africa"},
- "europe":{x:112,y:610,w:204,h:176,date:"45,000 yrs ago",how:"on foot, into the Ice Age"},
- "north-america":{x:350,y:610,w:204,h:176,date:"21,000+ yrs ago",how:"across Beringia"},
- "oceania":{x:588,y:610,w:204,h:176,date:"65,000–50,000 yrs ago",how:"by boat, across the sea"},
- "south-america":{x:228,y:870,w:204,h:176,date:"14,500 yrs ago",how:"south along the coast"},
- "new-jersey":{x:472,y:870,w:204,h:176,date:"12,000+ yrs ago",how:"east, to our home"}
+ "africa":{x:150,y:102,w:280,h:196,date:"300,000 years ago",how:"Where it all began"},
+ "asia":{x:150,y:345,w:212,h:176,date:"70,000–60,000 yrs ago",how:"on foot, out of Africa"},
+ "europe":{x:500,y:610,w:204,h:176,date:"45,000 yrs ago",how:"on foot, into the Ice Age"},
+ "north-america":{x:850,y:610,w:204,h:176,date:"21,000+ yrs ago",how:"across Beringia"},
+ "oceania":{x:150,y:610,w:204,h:176,date:"65,000–50,000 yrs ago",how:"by boat, across the sea"},
+ "south-america":{x:650,y:870,w:204,h:176,date:"14,500 yrs ago",how:"south along the coast"},
+ "new-jersey":{x:890,y:870,w:204,h:176,date:"12,000+ yrs ago",how:"east, to our home"}
 };
 var JLINKS=[["africa","asia"],["asia","europe"],["asia","north-america"],["asia","oceania"],["north-america","south-america"],["north-america","new-jersey"]];
 function journeySVG(){
-  var out=['<svg viewBox="0 0 '+JW+' '+JH+'" role="img" aria-label="Diagram of the human journey: it starts in Africa at the top and branches down to Asia, then Europe, Australia and Oceania, and North America, then South America and New Jersey"><title>The human journey, starting in Africa</title>'];
+  var out=['<svg viewBox="0 0 '+JW+' '+JH+'" role="img" aria-label="Diagram of the human journey: it starts in Africa on the left and branches down and right through Asia. The next row runs left to right: Australia and Oceania, Europe, and North America. North America branches to South America and New Jersey."><title>The human journey, starting in Africa</title>'];
   var travel=!prefersReduced();
   JLINKS.forEach(function(l,i){
     var a=JNODES[l[0]],b=JNODES[l[1]],x1=a.x,y1=a.y+a.h/2,x2=b.x,y2=b.y-b.h/2,my=(y1+y2)/2;
@@ -245,7 +245,7 @@ function journeySVG(){
     out.push('<path class="jlink" d="'+d+'"/><path class="jarrow" d="M'+(x2-8)+' '+(y2-14)+' L'+x2+' '+(y2-3)+' L'+(x2+8)+' '+(y2-14)+'"/>');
     if(travel) out.push('<circle class="traveler" r="5.5"><animateMotion dur="3.6s" begin="'+(i*0.6)+'s" repeatCount="indefinite" path="'+d+'"/></circle>');
   });
-  out.push('<text class="jout" x="368" y="226">Out of Africa</text><text class="jhow" x="368" y="246">The journey begins</text>');
+  out.push('<text class="jout" x="168" y="226">Out of Africa</text><text class="jhow" x="168" y="246">The journey begins</text>');
   GALLERIES.forEach(function(g){
     var n=JNODES[g.id], x=n.x-n.w/2, y=n.y-n.h/2, big=g.id==="africa", t;
     if(big){

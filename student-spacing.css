@@ -71,3 +71,8 @@
     .visual-guide > p + :is(ol,.panel),.guide-heading + section {margin-block-start:24px;}
   }
 }
+
+/* Give the Africa-first migration branches room while retaining swipe access on phones. */
+@media screen {
+  .migration-fold .journey > svg {max-width:1000px;min-width:680px;}
+}

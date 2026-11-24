@@ -1439,6 +1439,70 @@
       "explanation": "The label and story identify this object as Greek Protective Eye (Mati).",
       "prompt": "Describe one detail you noticed and one question you still have.",
       "mysteryClue": ""
+    },
+    {
+      "id": "ART-012",
+      "published": true,
+      "demo": false,
+      "object": "Wooden Clogs (Klomp)",
+      "story": "A klomp (Dutch: [klɔmp] , plural klompen [ˈklɔmpə(n)] ) is a whole-foot clog from the Netherlands. Along with cheese, tulips, and windmills, they are strongly associated with the country and are considered to be a national symbol of the Netherlands.",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · Klomp · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/Klomp"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "Netherlands",
+      "flagKey": "nl",
+      "gallery": "europe",
+      "caseId": "Europe",
+      "inventoryId": "4003",
+      "donor": "The Holland Family",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Klomp",
+      "printText": "A klomp (Dutch: [klɔmp] , plural klompen [ˈklɔmpə(n)] ) is a whole-foot clog from the Netherlands. Along with cheese, tulips, and windmills, they are strongly associated with the country and are considered to be a national symbol of the Netherlands.",
+      "wikipedia": {
+        "title": "Klomp",
+        "url": "https://en.wikipedia.org/wiki/Klomp",
+        "revision": 1345540692,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-24T02:13:32.537Z"
+      },
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Klompen_%28Dutch_Clogs%29%2C_Wooden_Shoes_Museum_in_Drenthe.jpg/1280px-Klompen_%28Dutch_Clogs%29%2C_Wooden_Shoes_Museum_in_Drenthe.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Klomp",
+        "title": "Klomp",
+        "file": "Klompen_(Dutch_Clogs),_Wooden_Shoes_Museum_in_Drenthe.jpg",
+        "author": "OXLAEY.com",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Klompen_(Dutch_Clogs),_Wooden_Shoes_Museum_in_Drenthe.jpg",
+        "checkedAt": "2026-11-24T02:13:32.537Z",
+        "alt": "Wikipedia reference image for Klomp; not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "photoPhrase": "",
+      "image": "assets/ART-012-b26a4d83191d35fd226c.jpg",
+      "imageAlt": "Photograph of Wooden Clogs (Klomp)",
+      "imageCredit": "School museum photo",
+      "title": "Wooden Clogs (Klomp)",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "A klomp (Dutch: [klɔmp] , plural klompen [ˈklɔmpə(n)] ) is a whole-foot clog from the Netherlands.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Wooden Clogs (Klomp)",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Wooden Clogs (Klomp).",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

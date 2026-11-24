@@ -1375,6 +1375,70 @@
       "explanation": "The label and story identify this object as Komboloi (Worry Beads).",
       "prompt": "Describe one detail you noticed and one question you still have.",
       "mysteryClue": ""
+    },
+    {
+      "id": "ART-011",
+      "published": false,
+      "demo": false,
+      "object": "Greek Protective Eye (Mati)",
+      "story": "The evil eye is a supernatural belief in a curse brought about by a malevolent glare, usually inspired by envy. Amulets to protect against it have been found dating to around 5,000 years ago. It is found in many cultures in the Mediterranean region, the Balkans, Caucasus, Eastern Europe, West Asia, Central Asia, South Asia, Africa, the Caribbean, and Latin America, with such cultures often believing that receiving the evil eye will cause misfortune or injury, while others believe it to be a kind of supernatural force that casts or reflects a malevolent gaze back upon those who wish harm upon others (especially innocents). The idea also appears multiple times in Jewish rabbinic literature.\n\nDifferent cultures have pursued measures to protect against the evil eye. Some of the most famous talismans against the evil eye include the nazar amulet, itself a representation of an eye, and the hamsa, a hand-shaped amulet. Older iterations of the symbol were often made of ceramic or clay; however, following the production of glass beads in the Mediterranean region in approximately 1500 BC, evil eye beads were popularised with the Indians, Phoenicians, Persians, Arabs, Greeks, Romans and Ottomans. Illyrians used objects with the shape of phallus, hand, leg, and animal teeth against the evil eye. Ancient Romans used representations of phallus, such as the fascinus, to protect against the evil eye. In modern-day Southern Italy, a variety of amulets and gestures are used for protection, including the cornicello, the cimaruta, and the sign of the horns.\nIn different cultures, the evil eye can be fought against with yet other methods – in Arab culture, saying the phrase \"Masha'Allah\" (ما شاء الله) (\"God has willed it\") alongside a compliment prevents the compliment from attracting the evil eye, whereas in some countries, such as Palestine and Iran, certain specific plants – such as rue – are considered prone to protecting against the evil eye.",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · Evil eye · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/Evil_eye"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "Greece",
+      "flagKey": "gr",
+      "gallery": "europe",
+      "caseId": "Europe",
+      "inventoryId": "4002",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Evil_eye",
+      "printText": "The evil eye is a supernatural belief in a curse brought about by a malevolent glare, usually inspired by envy. Amulets to protect against it have been found dating to around 5,000 years ago. It is found in many cultures thoughout the world.",
+      "wikipedia": {
+        "title": "Evil eye",
+        "url": "https://en.wikipedia.org/wiki/Evil_eye",
+        "revision": 1387082043,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-24T02:02:44.135Z"
+      },
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Kapadokya%27dan_Nazar_Boncu%C4%9Fu.jpg/1280px-Kapadokya%27dan_Nazar_Boncu%C4%9Fu.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Evil_eye",
+        "title": "Evil eye",
+        "file": "Kapadokya'dan_Nazar_Boncuğu.jpg",
+        "author": "Alev Akın",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kapadokya%27dan_Nazar_Boncu%C4%9Fu.jpg",
+        "checkedAt": "2026-11-24T02:02:44.135Z",
+        "alt": "Wikipedia reference image for Evil eye; not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "donor": "The Foukarakis Family",
+      "photoPhrase": "",
+      "image": "assets/ART-011-172bfbc395a2e914a691.jpg",
+      "imageAlt": "Photograph of Greek Protective Eye (Mati)",
+      "imageCredit": "School museum photo",
+      "title": "Greek Protective Eye (Mati)",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "The evil eye is a supernatural belief in a curse brought about by a malevolent glare, usually inspired by envy.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Greek Protective Eye (Mati)",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Greek Protective Eye (Mati).",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

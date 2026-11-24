@@ -1245,6 +1245,71 @@
       "explanation": "The label and story identify this object as Famille Rose Chinese Porcelain.",
       "prompt": "Describe one detail you noticed and one question you still have.",
       "mysteryClue": ""
+    },
+    {
+      "id": "ART-009",
+      "published": true,
+      "demo": false,
+      "object": "Pueblo Storyteller",
+      "story": "A Storyteller Doll is a clay figurine made by the Pueblo people of New Mexico. The first contemporary storyteller was made by Helen Cordero of the Cochiti Pueblo. In 1964, Folk art collector, Alexander Girard, had asked Helen Quintana Cordero to modify her Singing Mother figures into being larger and surrounded by children. The request design sparked memories of her grandfather telling traditional stories of the Pueblo Indians. Her first storyteller figure represented her grandfather, Santiago Quintana, who was a tribal storyteller. It looks like a figure of a storyteller, usually a man or a woman and its mouth is always open. It is surrounded by figures of children and other things, who represent those who are listening to the storyteller. The motif is based on the traditional \"singing mother\" motif which depicts a woman with her mouth open holding one or two children.\nPueblo Cochiti clothes usually have earthy colors, browns, reds, oranges, and other defining features. Each pueblo village has their own design; sometimes man, woman, or animal. Other cultures around the world, especially in South and Central America, adopted the Storyteller Doll to acknowledge their own storytelling traditions. Common elements of the storyteller doll clothes are their traditional clothing patterns and jewelry motifs, usually Squash blossom necklaces, moccasins and hair tied in butterfly knots. However the styles differ depending on the tribe. Other garments that appear often is headwear, like a tableta headdress, clips, blankets draped over the head are also a popular design. As time passed storyteller dolls have become collector items throughout the world.",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · Storyteller (pottery) · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/Storyteller_(pottery)"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "United States of America",
+      "flagKey": "us",
+      "gallery": "north-america",
+      "caseId": "North America",
+      "inventoryId": "5004",
+      "donor": "The Barrett",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Storyteller_(pottery)",
+      "printText": "A Storyteller Doll is a clay figurine made by the Pueblo people of New Mexico. The first contemporary storyteller was made by Helen Cordero of the Cochiti Pueblo. In 1964, Folk art collector, Alexander Girard, had asked Helen Quintana Cordero to modify her Singing Mother figures into being larger and surrounded by children. The request design sparked memories of her grandfather telling traditional stories of the Pueblo Indians. Her first storyteller figure represented her grandfather, Santiago Quintana, who was a tribal storyteller. ",
+      "wikipedia": {
+        "title": "Storyteller (pottery)",
+        "url": "https://en.wikipedia.org/wiki/Storyteller_(pottery)",
+        "revision": 1322876250,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-22T23:59:51.845Z"
+      },
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/New_Mexico_Storyteller_Figure_in_the_Horniman_Museum.jpg/1280px-New_Mexico_Storyteller_Figure_in_the_Horniman_Museum.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Storyteller_(pottery)",
+        "title": "Storyteller (pottery)",
+        "file": "New_Mexico_Storyteller_Figure_in_the_Horniman_Museum.jpg",
+        "author": "Ethan Doyle White",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:New_Mexico_Storyteller_Figure_in_the_Horniman_Museum.jpg",
+        "checkedAt": "2026-11-22T23:59:51.844Z",
+        "alt": "Wikipedia reference image for Storyteller (pottery); not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "photoCropY": 45,
+      "photoPhrase": "",
+      "image": "assets/ART-009-265fed1d88538597ef81.jpg",
+      "imageAlt": "Photograph of Pueblo Storyteller",
+      "imageCredit": "School museum photo",
+      "title": "Pueblo Storyteller",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "A Storyteller Doll is a clay figurine made by the Pueblo people of New Mexico.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Pueblo Storyteller",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Pueblo Storyteller.",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }

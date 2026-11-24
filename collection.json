@@ -1310,6 +1310,71 @@
       "explanation": "The label and story identify this object as Pueblo Storyteller.",
       "prompt": "Describe one detail you noticed and one question you still have.",
       "mysteryClue": ""
+    },
+    {
+      "id": "ART-010",
+      "published": true,
+      "demo": false,
+      "object": "Komboloi (Worry Beads)",
+      "story": "Worry beads or komboloi/kompoloi (Greek: κομπολόι, IPA: [ko(m)boˈloi̯], 'bead collection'; plural: κομπολόγια, IPA: [ko(m)boˈloʝa]) is a string of beads manipulated with one or two hands and used to pass time in Greek and Cypriot culture. Unlike the similar prayer beads used in many religious traditions, worry beads have no religious or ceremonial purpose.",
+      "sources": [
+        {
+          "title": "Wikipedia contributors · Worry beads · CC BY-SA 4.0",
+          "url": "https://en.wikipedia.org/wiki/Worry_beads"
+        }
+      ],
+      "shape": "generic",
+      "color": "#d9e5da",
+      "origin": "Greece",
+      "flagKey": "gr",
+      "gallery": "europe",
+      "caseId": "Europe",
+      "inventoryId": "4001",
+      "donor": "The Foukarakis Family",
+      "wikipediaImageArticle": "https://en.wikipedia.org/wiki/Worry_beads",
+      "printText": "Worry beads or komboloi/kompoloi (Greek: κομπολόι, IPA: [ko(m)boˈloi̯], 'bead collection'; plural: κομπολόγια, IPA: [ko(m)boˈloʝa]) is a string of beads manipulated with one or two hands and used to pass time in Greek and Cypriot culture. Unlike the similar prayer beads used in many religious traditions, worry beads have no religious or ceremonial purpose.",
+      "wikipedia": {
+        "title": "Worry beads",
+        "url": "https://en.wikipedia.org/wiki/Worry_beads",
+        "revision": 1383764841,
+        "license": "CC BY-SA 4.0",
+        "imported": "2026-11-24T01:55:01.164Z"
+      },
+      "referenceImage": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Four_Kombologia.jpg/1280px-Four_Kombologia.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "article": "https://en.wikipedia.org/wiki/Worry_beads",
+        "title": "Worry beads",
+        "file": "Four_Kombologia.jpg",
+        "author": "Wikimedia contributors",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Four_Kombologia.jpg",
+        "checkedAt": "2026-11-24T01:55:01.162Z",
+        "alt": "Wikipedia reference image for Worry beads; not the school’s actual artifact."
+      },
+      "wikipediaImageAuto": true,
+      "photoCropY": 37,
+      "photoPhrase": "",
+      "image": "assets/ART-010-40a3def13a83b35b0963.jpg",
+      "imageAlt": "Photograph of Komboloi (Worry Beads)",
+      "imageCredit": "School museum photo",
+      "title": "Komboloi (Worry Beads)",
+      "category": "Museum collection",
+      "period": "",
+      "material": "",
+      "summary": "Worry beads or komboloi/kompoloi (Greek: κομπολόι, IPA: [ko(m)boˈloi̯], 'bead collection'; plural: κομπολόγια, IPA: [ko(m)boˈloʝa]) is a string of beads manipulated with one or two hands and used to pass time in Greek and Cypriot culture.",
+      "look": "Notice a detail that helps explain how this object was used.",
+      "connection": "What object today serves a similar purpose?",
+      "question": "Which object are you exploring?",
+      "choices": [
+        "Komboloi (Worry Beads)",
+        "Abacus / Suanpan",
+        "Palace Furniture – Oriental Export Style"
+      ],
+      "answer": 0,
+      "explanation": "The label and story identify this object as Komboloi (Worry Beads).",
+      "prompt": "Describe one detail you noticed and one question you still have.",
+      "mysteryClue": ""
     }
   ]
 }
